@@ -2,18 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-29</Name>
-    <LastWriteTime>2021-12-05T03:13:24.8978749Z</LastWriteTime>
+    <LastWriteTime>2021-12-18T10:08:46.4130825Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SourceToStage.dtsx</Name>
-      <LastWriteTime>2021-12-04T20:00:50.7615023Z</LastWriteTime>
+      <LastWriteTime>2021-12-18T10:08:01.778235Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StageToNDS.dtsx</Name>
-      <LastWriteTime>2021-12-05T04:02:33.8297698Z</LastWriteTime>
+      <LastWriteTime>2021-12-18T10:10:28.5350175Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
