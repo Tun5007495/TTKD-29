@@ -2,33 +2,38 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-29</Name>
-    <LastWriteTime>2021-12-31T09:36:54.4978733Z</LastWriteTime>
+    <LastWriteTime>2021-12-31T10:17:54.4934646Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SourceToStage.dtsx</Name>
-      <LastWriteTime>2021-12-31T09:36:54.4228753Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T10:16:08.6332977Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>StageToNDS.dtsx</Name>
-      <LastWriteTime>2021-12-18T17:24:47.1881471Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T09:47:33.126522Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Profiliing.dtsx</Name>
-      <LastWriteTime>2021-12-04T17:05:25.7572245Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T09:47:33.0995262Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Son.dtsx</Name>
-      <LastWriteTime>2021-12-30T10:29:53.2296403Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T09:47:33.1055224Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Thuy.dtsx</Name>
-      <LastWriteTime>2021-12-30T10:30:12.9514817Z</LastWriteTime>
+      <LastWriteTime>2021-12-31T09:47:33.1335242Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Thuy2 1.dtsx</Name>
+      <LastWriteTime>2021-12-31T09:49:03.3814015Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

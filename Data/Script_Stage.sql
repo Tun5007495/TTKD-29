@@ -1,4 +1,4 @@
-CREATE DATABASE [UK_Accidents]
+create database [UK_Accidents]
 USE [UK_Accidents]
 GO
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 12/30/2021 5:20:18 PM ******/
