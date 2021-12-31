@@ -1,3 +1,4 @@
+CREATE DATABASE [UK_Accidents]
 USE [UK_Accidents]
 GO
 /****** Object:  Table [dbo].[Accidents_Stage]    Script Date: 12/30/2021 5:20:18 PM ******/
@@ -25,7 +26,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[AccidentSeverity_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -35,7 +36,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[AgeBand_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -57,7 +58,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Area_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -92,7 +93,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CasualType_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -102,7 +103,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[CasualtySeverity_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -112,7 +113,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[GenderOfCasualty_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -122,7 +123,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[JourneyPurpose_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -132,7 +133,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[LocalAuthorityDistrict_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -170,7 +171,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[RoadType_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
@@ -192,7 +193,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[VehicleType_Stage](
-	[code] [float] NULL,
+	[code] [int] NULL,
 	[label] [nvarchar](255) NULL
 ) ON [PRIMARY]
 GO
