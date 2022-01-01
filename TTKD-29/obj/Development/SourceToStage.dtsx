@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="17"
-  DTS:VersionGUID="{5D1BF441-D4CE-4CDF-8BDB-5C2D3B260B39}">
+  DTS:VersionBuild="20"
+  DTS:VersionGUID="{2ADE717B-FC35-484F-B18C-C0584367F4A3}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5500,94 +5500,94 @@
               startId="Package\CodeBook\Derived Column 3.Outputs[Derived Column Output]" />
             <path
               refId="Package\CodeBook.Paths[Derived Column Output8]"
-              endId="Package\CodeBook\VehicleType_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5 2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output7]"
-              endId="Package\CodeBook\Area_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output6]"
-              endId="Package\CodeBook\RoadType_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output5]"
-              endId="Package\CodeBook\AccidentSeverity_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output9]"
-              endId="Package\CodeBook\LocalAuthorityDistrict_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output3]"
-              endId="Package\CodeBook\JourneyPurpose_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5 2 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output2]"
-              endId="Package\CodeBook\CasualtySeverity_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output1]"
               endId="Package\CodeBook\AgeBand_Stage.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\CodeBook\Derived Column 1.Outputs[Derived Column Output]" />
             <path
-              refId="Package\CodeBook.Paths[Derived Column Output4]"
+              refId="Package\CodeBook.Paths[Derived Column Output7]"
+              endId="Package\CodeBook\CasualtySeverity_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output6]"
+              endId="Package\CodeBook\JourneyPurpose_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5 2 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output5]"
+              endId="Package\CodeBook\LocalAuthorityDistrict_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output9]"
               endId="Package\CodeBook\GenderOfCasualty_Stage.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\CodeBook\Derived Column 6.Outputs[Derived Column Output]" />
             <path
+              refId="Package\CodeBook.Paths[Derived Column Output3]"
+              endId="Package\CodeBook\RoadType_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output2]"
+              endId="Package\CodeBook\Area_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output1]"
+              endId="Package\CodeBook\VehicleType_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output4]"
+              endId="Package\CodeBook\AccidentSeverity_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\CodeBook.Paths[Excel Source Output8]"
+              endId="Package\CodeBook\Derived Column 1.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\CodeBook\AgeBand.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Excel Source Output]"
               endId="Package\CodeBook\Derived Column 5 2.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\VehicleType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output]"
+              refId="Package\CodeBook.Paths[Excel Source Output1]"
               endId="Package\CodeBook\Derived Column 6.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\GenderOfCasualty.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output1]"
+              refId="Package\CodeBook.Paths[Excel Source Output2]"
               endId="Package\CodeBook\Derived Column 3.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\CasualType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output2]"
+              refId="Package\CodeBook.Paths[Excel Source Output3]"
               endId="Package\CodeBook\Derived Column 5 2 1.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\JourneyPurpose.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output3]"
+              refId="Package\CodeBook.Paths[Excel Source Output4]"
               endId="Package\CodeBook\Derived Column 4.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\LocalAuthorityDistrict.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output4]"
+              refId="Package\CodeBook.Paths[Excel Source Output5]"
               endId="Package\CodeBook\Derived Column 2.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\CasualtySeverity.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output5]"
+              refId="Package\CodeBook.Paths[Excel Source Output6]"
               endId="Package\CodeBook\Derived Column 5.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\RoadType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output6]"
+              refId="Package\CodeBook.Paths[Excel Source Output7]"
               endId="Package\CodeBook\Derived Column 5 1.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\Urban.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Excel Source Output7]"
-              endId="Package\CodeBook\Derived Column 1.Inputs[Derived Column Input]"
-              name="Excel Source Output"
-              startId="Package\CodeBook\AgeBand.Outputs[Excel Source Output]" />
             <path
               refId="Package\CodeBook.Paths[Excel Source Output9]"
               endId="Package\CodeBook\Derived Column.Inputs[Derived Column Input]"
@@ -7992,6 +7992,14 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 3"
       DTS:To="Package\LSOA" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{939395DA-1190-4248-ABF2-DD6D2D025726}"
+      DTS:From="Package\CodeBook"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Accidents" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -8016,9 +8024,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         <NodeLayout
           Size="126,42"
           Id="Package\CodeBook"
-          TopLeft="62.1428582011442,181.235296659404" />
+          TopLeft="49.1428582011442,180.235296659404" />
         <NodeLayout
-          Size="103,42"
+          Size="104,42"
           Id="Package\LSOA"
           TopLeft="752.321414218037,75.9225406424156" />
         <NodeLayout
@@ -8031,18 +8039,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           TopLeft="408.720230787397,72.2823466027114" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="168.914285311346,95.8426404809362">
+          TopLeft="168.714285311346,96.0426404809362">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="57.8119011523007,0"
+              EndConnector="58.0119011523008,0"
               Start="0,0"
-              End="50.3119011523007,0">
+              End="50.5119011523008,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="50.3119011523007,0" />
+                    End="50.5119011523008,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8097,18 +8105,40 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="692.585703124288,95.4622463106696">
+          TopLeft="692.785703124288,95.6622463106696">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59.7357110937488,0"
+              EndConnector="59.535711093749,0"
               Start="0,0"
-              End="52.2357110937488,0">
+              End="52.035711093749,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="52.2357110937488,0" />
+                    End="52.035711093749,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="109.678571756245,180.235296659404">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,-60.1617738110952"
+              Start="0,0"
+              End="0,-52.6617738110952">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-52.6617738110952" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8175,13 +8205,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Casualties">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42.4"
+          Size="156,42"
           Id="Package\Casualties\Casualties Table"
           TopLeft="62.499999962747,132.983333089252" />
         <NodeLayout
-          Size="166.4,42.4"
+          Size="166,42"
           Id="Package\Casualties\Casualties Sources"
           TopLeft="60,60" />
         <EdgeLayout
@@ -8203,9 +8233,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8373,40 +8401,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CodeBook.Paths[Excel Source Output]"
-          TopLeft="577.6,324.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="19.5142939859509,33.1294054049522"
-              Start="0,0"
-              End="19.5142939859509,25.6294054049522">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.5647027024761" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.5647027024761"
-                    Point2="0,16.5647027024761"
-                    Point3="4,16.5647027024761" />
-                  <mssgle:LineSegment
-                    End="15.5142939859509,16.5647027024761" />
-                  <mssgle:CubicBezierSegment
-                    Point1="15.5142939859509,16.5647027024761"
-                    Point2="19.5142939859509,16.5647027024761"
-                    Point3="19.5142939859509,20.5647027024761" />
-                  <mssgle:LineSegment
-                    End="19.5142939859509,25.6294054049522" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output8]"
           TopLeft="1077.1428648428,48.8588228430304">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8428,7 +8422,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output7]"
+          Id="Package\CodeBook.Paths[Excel Source Output8]"
           TopLeft="107,322.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8462,7 +8456,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output6]"
+          Id="Package\CodeBook.Paths[Excel Source Output7]"
           TopLeft="888.17143455014,46.1529405222634">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8484,7 +8478,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output5]"
+          Id="Package\CodeBook.Paths[Excel Source Output6]"
           TopLeft="656.314290324523,57.0823523084186">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8506,7 +8500,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output4]"
+          Id="Package\CodeBook.Paths[Excel Source Output5]"
           TopLeft="339.057144779089,325.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8528,7 +8522,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output3]"
+          Id="Package\CodeBook.Paths[Excel Source Output4]"
           TopLeft="412.342857349649,58.6705876668844">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8562,7 +8556,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output2]"
+          Id="Package\CodeBook.Paths[Excel Source Output3]"
           TopLeft="1281.72858128767,53.0352935599623">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8584,7 +8578,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output1]"
+          Id="Package\CodeBook.Paths[Excel Source Output2]"
           TopLeft="828,319">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8618,7 +8612,129 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\CodeBook.Paths[Excel Source Output1]"
+          TopLeft="577.6,324.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.5142939859509,33.1294054049522"
+              Start="0,0"
+              End="19.5142939859509,25.6294054049522">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.5647027024761" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.5647027024761"
+                    Point2="0,16.5647027024761"
+                    Point3="4,16.5647027024761" />
+                  <mssgle:LineSegment
+                    End="15.5142939859509,16.5647027024761" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5142939859509,16.5647027024761"
+                    Point2="19.5142939859509,16.5647027024761"
+                    Point3="19.5142939859509,20.5647027024761" />
+                  <mssgle:LineSegment
+                    End="19.5142939859509,25.6294054049522" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\CodeBook.Paths[Derived Column Output5]"
+          TopLeft="422.300002639635,142.15293468802">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.270594777368"
+              Start="0,0"
+              End="0,36.770594777368">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.770594777368" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output1]"
+          TopLeft="1077.55715052668,124.729404493351">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.4705955066485"
+              Start="0,0"
+              End="0,44.9705955066485">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.9705955066485" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output2]"
+          TopLeft="887.14286309724,124.070582379602">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.1294176203983"
+              Start="0,0"
+              End="0,40.6294176203983">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,40.6294176203983" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output3]"
+          TopLeft="659.385718914198,132.870580191761">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.8470667705406"
+              Start="0,0"
+              End="0,34.3470667705406">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.3470667705406" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output4]"
           TopLeft="113.628571580624,132.600001276241">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8640,97 +8756,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output1]"
-          TopLeft="135.685714699298,392.764703705236">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.7142862373469,46.9058850555687"
-              Start="0,0"
-              End="-30.7142862373469,39.4058850555687">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.4529425277844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.4529425277844"
-                    Point2="0,23.4529425277844"
-                    Point3="-4,23.4529425277844" />
-                  <mssgle:LineSegment
-                    End="-26.7142862373469,23.4529425277844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.7142862373469,23.4529425277844"
-                    Point2="-30.7142862373469,23.4529425277844"
-                    Point3="-30.7142862373469,27.4529425277844" />
-                  <mssgle:LineSegment
-                    End="-30.7142862373469,39.4058850555687" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output2]"
-          TopLeft="341.057144779089,400.870586208324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.1058850555683"
-              Start="0,0"
-              End="0,44.6058850555683">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.6058850555683" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output3]"
-          TopLeft="1280.68573419853,120.423523448825">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.914265801468,51.7764765511749"
-              Start="0,0"
-              End="17.914265801468,44.2764765511749">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.8882382755874" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.8882382755874"
-                    Point2="0,25.8882382755874"
-                    Point3="4,25.8882382755874" />
-                  <mssgle:LineSegment
-                    End="13.914265801468,25.8882382755874" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.914265801468,25.8882382755874"
-                    Point2="17.914265801468,25.8882382755874"
-                    Point3="17.914265801468,29.8882382755874" />
-                  <mssgle:LineSegment
-                    End="17.914265801468,44.2764765511749" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output4]"
+          Id="Package\CodeBook.Paths[Derived Column Output9]"
           TopLeft="597.114293985951,399.329405404952">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8764,41 +8790,31 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output9]"
-          TopLeft="422.300002639635,142.15293468802">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.270594777368"
-              Start="0,0"
-              End="0,36.770594777368">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.770594777368" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\CodeBook.Paths[Derived Column Output6]"
-          TopLeft="659.385718914198,132.870580191761">
+          TopLeft="1280.68573419853,120.423523448825">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.8470667705406"
+              EndConnector="17.914265801468,51.7764765511749"
               Start="0,0"
-              End="0,34.3470667705406">
+              End="17.914265801468,44.2764765511749">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.3470667705406" />
+                    End="0,21.8882382755874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8882382755874"
+                    Point2="0,25.8882382755874"
+                    Point3="4,25.8882382755874" />
+                  <mssgle:LineSegment
+                    End="13.914265801468,25.8882382755874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.914265801468,25.8882382755874"
+                    Point2="17.914265801468,25.8882382755874"
+                    Point3="17.914265801468,29.8882382755874" />
+                  <mssgle:LineSegment
+                    End="17.914265801468,44.2764765511749" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8809,18 +8825,18 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CodeBook.Paths[Derived Column Output7]"
-          TopLeft="887.14286309724,124.070582379602">
+          TopLeft="341.057144779089,400.870586208324">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,48.1294176203983"
+              EndConnector="0,52.1058850555683"
               Start="0,0"
-              End="0,40.6294176203983">
+              End="0,44.6058850555683">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,40.6294176203983" />
+                    End="0,44.6058850555683" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8831,18 +8847,30 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CodeBook.Paths[Derived Column Output8]"
-          TopLeft="1077.55715052668,124.729404493351">
+          TopLeft="135.685714699298,392.764703705236">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.4705955066485"
+              EndConnector="-30.7142862373469,46.9058850555687"
               Start="0,0"
-              End="0,44.9705955066485">
+              End="-30.7142862373469,39.4058850555687">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.9705955066485" />
+                    End="0,19.4529425277844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4529425277844"
+                    Point2="0,23.4529425277844"
+                    Point3="-4,23.4529425277844" />
+                  <mssgle:LineSegment
+                    End="-26.7142862373469,23.4529425277844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.7142862373469,23.4529425277844"
+                    Point2="-30.7142862373469,23.4529425277844"
+                    Point3="-30.7142862373469,27.4529425277844" />
+                  <mssgle:LineSegment
+                    End="-30.7142862373469,39.4058850555687" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9152,17 +9180,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.4,42.4"
+          Size="182,42"
           Id="Package\LSOA\LSOA_Postcode Table"
           TopLeft="552.803566499214,220.654498231565" />
         <NodeLayout
-          Size="123.2,41.6"
+          Size="123,42"
           Id="Package\LSOA\Split pcds"
           TopLeft="589,114" />
         <NodeLayout
-          Size="193.6,42.4"
+          Size="194,42"
           Id="Package\LSOA\LSOA_Postcode Sources"
           TopLeft="329.976847243875,5.16534392364599" />
         <EdgeLayout
@@ -9184,9 +9212,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9220,9 +9246,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9245,13 +9269,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Postcode">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="170.4,42.4"
+          Size="170,42"
           Id="Package\Postcode\UK_Postcode Table"
           TopLeft="99.4062499045391,176.466665713588" />
         <NodeLayout
-          Size="181.6,42.4"
+          Size="182,42"
           Id="Package\Postcode\UK_Postcode Sources"
           TopLeft="68,32" />
         <EdgeLayout
@@ -9285,9 +9309,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9310,13 +9332,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Vehicles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146.4,42.4"
+          Size="146,42"
           Id="Package\Vehicles\Vehicles Table"
           TopLeft="62.499999962747,130.133332031568" />
         <NodeLayout
-          Size="157.6,42.4"
+          Size="158,42"
           Id="Package\Vehicles\Vehicles Sources"
           TopLeft="60,60" />
         <EdgeLayout
@@ -9338,9 +9360,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>

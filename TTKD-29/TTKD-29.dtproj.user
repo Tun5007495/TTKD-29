@@ -8,7 +8,8 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <StartObjectID>SourceToStage.dtsx</StartObjectID>
+        <StartObjectID>Thuy2 1.dtsx</StartObjectID>
+        <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
         <OfflineMode>false</OfflineMode>

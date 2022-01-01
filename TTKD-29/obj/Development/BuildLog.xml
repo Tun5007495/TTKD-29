@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-29</Name>
-    <LastWriteTime>2021-12-31T10:17:54.4934646Z</LastWriteTime>
+    <LastWriteTime>2022-01-01T05:00:04.7315074Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>SourceToStage.dtsx</Name>
-      <LastWriteTime>2021-12-31T10:16:08.6332977Z</LastWriteTime>
+      <LastWriteTime>2022-01-01T04:37:22.5786392Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Thuy2 1.dtsx</Name>
-      <LastWriteTime>2021-12-31T09:49:03.3814015Z</LastWriteTime>
+      <LastWriteTime>2022-01-01T05:00:04.4605066Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
