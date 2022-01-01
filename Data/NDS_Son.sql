@@ -67,6 +67,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[AgeBand](
 	[AgeBandID] [int] identity(1,1) not null PRIMARY KEY,
+	[AgeBandCode] [int] NULL,
 	[AgeBandLabel] [nvarchar](255) NULL,
 	[SourceID] [int] NULL,
 	[CreatedDate] [datetime] NULL,
@@ -127,7 +128,7 @@ CREATE TABLE [dbo].[Casualty](
 	[AccidentID] [varchar](50) NULL,
 	[CasualtyReference][int] NULL,
 	[GenderID]  [int] NULL,
-	[AgeGroupID]  [int] NULL,
+	[Age]  [int] NULL,
 	[AgeBandID]  [int] NULL,
 	[CasualtySeverityID]  [int] NULL,
 	[CasualtyTypeID]  [int] NULL,
