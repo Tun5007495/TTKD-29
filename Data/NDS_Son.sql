@@ -159,7 +159,7 @@ GO
 CREATE TABLE [dbo].[CasualtySeverity](
 	[CasualtySeverityID] [int] identity(1,1) not null PRIMARY KEY,
 	[CasualtySeverityCode] [int] NULL,
-	[CasualtySeverityabel] [nvarchar](255) NULL,
+	[CasualtySeverityLabel] [nvarchar](255) NULL,
 	[SourceID] [int] NULL,
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL
@@ -214,6 +214,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[LSOA](
 	[LSOAID] [int] identity(1,1) not null PRIMARY KEY,
+	[LocationID] [int] NULL,
 	[lsoa11cd] [varchar](50) NULL,
 	[SourceID] [int] NULL,
 	[CreatedDate] [datetime] NULL,
