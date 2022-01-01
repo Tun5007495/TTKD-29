@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/30/2021 5:30:01 PM"
@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{88AD05E9-34D7-4C01-A717-784BCDA18CF9}">
+  DTS:VersionBuild="27"
+  DTS:VersionGUID="{7F0A4337-63E0-42EB-933B-285AD56370CD}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -1651,6 +1651,79 @@ where [refTable].[Accident_Index] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\AgeBand\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\AgeBand\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AgeBand\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\AgeBand\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AgeBand\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AgeBand\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AgeBand\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\AgeBand\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AgeBand\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AgeBand\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AgeBand\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AgeBand\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\AgeBand\AgeBand_Stage"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -1874,6 +1947,12 @@ where [refTable].[Accident_Index] = ?</property>
                       cachedName="CreatedDate"
                       externalMetadataColumnId="Package\AgeBand\Insert into AgeBand_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
                       lineageId="Package\AgeBand\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\AgeBand\Insert into AgeBand_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\AgeBand\Insert into AgeBand_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\AgeBand\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2201,6 +2280,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\AgeBand\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\AgeBand.Paths[Derived Column Output2]"
+              endId="Package\AgeBand\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\AgeBand\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\AgeBand.Paths[Lookup Error Output]"
               endId="Package\AgeBand\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -2212,7 +2296,7 @@ where [refTable].[code] = ?</property>
               startId="Package\AgeBand\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\AgeBand.Paths[OLE DB Source Output]"
-              endId="Package\AgeBand\Lookup.Inputs[Lookup Input]"
+              endId="Package\AgeBand\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\AgeBand\AgeBand_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -2394,6 +2478,79 @@ where [refTable].[code] = ?</property>
                       refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\AgeGroup\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3015,6 +3172,11 @@ where [refTable].[AgeGroupCode] = ?</property>
               name="Derived Column Output"
               startId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\AgeGroup.Paths[Derived Column Output2]"
+              endId="Package\AgeGroup\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\AgeGroup.Paths[Lookup Error Output]"
               endId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -3026,7 +3188,7 @@ where [refTable].[AgeGroupCode] = ?</property>
               startId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\AgeGroup.Paths[OLE DB Source Output]"
-              endId="Package\AgeGroup\Lookup.Inputs[Lookup Input]"
+              endId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -3208,6 +3370,79 @@ where [refTable].[AgeGroupCode] = ?</property>
                       refId="Package\Area\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Area\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Area\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Area\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Area\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Area\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Area\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Area\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Area\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Area\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Area\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Area\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Area\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Area\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -3439,6 +3674,12 @@ where [refTable].[AgeGroupCode] = ?</property>
                       cachedName="CreatedDate"
                       externalMetadataColumnId="Package\Area\Insert into Area_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
                       lineageId="Package\Area\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\Area\Insert into Area_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\Area\Insert into Area_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\Area\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -3766,6 +4007,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\Area\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\Area.Paths[Derived Column Output2]"
+              endId="Package\Area\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Area\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\Area.Paths[Lookup Error Output]"
               endId="Package\Area\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -3777,7 +4023,7 @@ where [refTable].[code] = ?</property>
               startId="Package\Area\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Area.Paths[OLE DB Source Output]"
-              endId="Package\Area\Lookup.Inputs[Lookup Input]"
+              endId="Package\Area\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\Area\Area_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -3959,6 +4205,79 @@ where [refTable].[code] = ?</property>
                       refId="Package\BuildUpRoad\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\BuildUpRoad\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\BuildUpRoad\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\BuildUpRoad\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\BuildUpRoad\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\BuildUpRoad\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4194,6 +4513,12 @@ where [refTable].[code] = ?</property>
                       cachedName="BuildUpRoadLabel"
                       externalMetadataColumnId="Package\BuildUpRoad\Insert into BuiltUpRoad_NDS.Inputs[OLE DB Destination Input].ExternalColumns[BuildUpRoadLabel]"
                       lineageId="Package\BuildUpRoad\BuiltUpRoad_Stage.Outputs[OLE DB Source Output].Columns[BuildUpRoadLabel]" />
+                    <inputColumn
+                      refId="Package\BuildUpRoad\Insert into BuiltUpRoad_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\BuildUpRoad\Insert into BuiltUpRoad_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -4524,6 +4849,11 @@ where [refTable].[BuiltUpRoadCode] = ?</property>
               name="Derived Column Output"
               startId="Package\BuildUpRoad\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\BuildUpRoad.Paths[Derived Column Output2]"
+              endId="Package\BuildUpRoad\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\BuildUpRoad\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\BuildUpRoad.Paths[Lookup Error Output]"
               endId="Package\BuildUpRoad\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -4535,7 +4865,7 @@ where [refTable].[BuiltUpRoadCode] = ?</property>
               startId="Package\BuildUpRoad\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\BuildUpRoad.Paths[OLE DB Source Output]"
-              endId="Package\BuildUpRoad\Lookup.Inputs[Lookup Input]"
+              endId="Package\BuildUpRoad\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\BuildUpRoad\BuiltUpRoad_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -4717,6 +5047,79 @@ where [refTable].[BuiltUpRoadCode] = ?</property>
                       refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualType\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualType\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -4948,6 +5351,12 @@ where [refTable].[BuiltUpRoadCode] = ?</property>
                       cachedName="code"
                       externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[code]"
                       lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5275,6 +5684,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\CasualType.Paths[Derived Column Output2]"
+              endId="Package\CasualType\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\CasualType\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\CasualType.Paths[Lookup Error Output]"
               endId="Package\CasualType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -5286,7 +5700,7 @@ where [refTable].[code] = ?</property>
               startId="Package\CasualType\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CasualType.Paths[OLE DB Source Output]"
-              endId="Package\CasualType\Lookup.Inputs[Lookup Input]"
+              endId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -5468,6 +5882,79 @@ where [refTable].[code] = ?</property>
                       refId="Package\CasualtySeverity\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\CasualtySeverity\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtySeverity\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CasualtySeverity\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CasualtySeverity\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CasualtySeverity\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -6026,6 +6513,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\CasualtySeverity\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\CasualtySeverity.Paths[Derived Column Output2]"
+              endId="Package\CasualtySeverity\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\CasualtySeverity\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\CasualtySeverity.Paths[Lookup Error Output]"
               endId="Package\CasualtySeverity\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -6037,7 +6529,7 @@ where [refTable].[code] = ?</property>
               startId="Package\CasualtySeverity\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\CasualtySeverity.Paths[OLE DB Source Output]"
-              endId="Package\CasualtySeverity\Lookup.Inputs[Lookup Input]"
+              endId="Package\CasualtySeverity\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\CasualtySeverity\CasualtySeverity_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -7846,6 +8338,79 @@ where [refTable].[Accident_Index] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\GenderOfCasualty\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\GenderOfCasualty\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\GenderOfCasualty\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\GenderOfCasualty\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\GenderOfCasualty\GenderOfCasualty_Stage"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -8396,6 +8961,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\GenderOfCasualty\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\GenderOfCasualty.Paths[Derived Column Output2]"
+              endId="Package\GenderOfCasualty\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\GenderOfCasualty\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\GenderOfCasualty.Paths[Lookup Error Output]"
               endId="Package\GenderOfCasualty\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -8407,7 +8977,7 @@ where [refTable].[code] = ?</property>
               startId="Package\GenderOfCasualty\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\GenderOfCasualty.Paths[OLE DB Source Output]"
-              endId="Package\GenderOfCasualty\Lookup.Inputs[Lookup Input]"
+              endId="Package\GenderOfCasualty\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\GenderOfCasualty\GenderOfCasualty_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -9695,6 +10265,79 @@ where postcode=?</property>
               </outputs>
             </component>
             <component
+              refId="Package\JourneyPurpose\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\JourneyPurpose\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\JourneyPurpose\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\JourneyPurpose\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\JourneyPurpose\Insert into JourneyPurpose_NDS"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -10245,6 +10888,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\JourneyPurpose\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\JourneyPurpose.Paths[Derived Column Output2]"
+              endId="Package\JourneyPurpose\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\JourneyPurpose\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\JourneyPurpose.Paths[Lookup Error Output]"
               endId="Package\JourneyPurpose\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -10256,7 +10904,7 @@ where [refTable].[code] = ?</property>
               startId="Package\JourneyPurpose\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\JourneyPurpose.Paths[OLE DB Source Output]"
-              endId="Package\JourneyPurpose\Lookup.Inputs[Lookup Input]"
+              endId="Package\JourneyPurpose\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\JourneyPurpose\JourneyPurpose_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -10446,6 +11094,79 @@ where [refTable].[code] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\LocalAuthorityDistrict\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\LocalAuthorityDistrict\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\LocalAuthorityDistrict\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\LocalAuthorityDistrict\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\LocalAuthorityDistrict\Insert into LocalAuthorityDistrict_NDS"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
@@ -10542,6 +11263,12 @@ where [refTable].[code] = ?</property>
                       cachedName="CreatedDate"
                       externalMetadataColumnId="Package\LocalAuthorityDistrict\Insert into LocalAuthorityDistrict_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
                       lineageId="Package\LocalAuthorityDistrict\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\LocalAuthorityDistrict\Insert into LocalAuthorityDistrict_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\LocalAuthorityDistrict\Insert into LocalAuthorityDistrict_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -10996,6 +11723,11 @@ label=?
               name="Derived Column Output"
               startId="Package\LocalAuthorityDistrict\Add column UpdatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\LocalAuthorityDistrict.Paths[Derived Column Output2]"
+              endId="Package\LocalAuthorityDistrict\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\LocalAuthorityDistrict\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\LocalAuthorityDistrict.Paths[Lookup Error Output]"
               endId="Package\LocalAuthorityDistrict\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -11007,7 +11739,7 @@ label=?
               startId="Package\LocalAuthorityDistrict\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\LocalAuthorityDistrict.Paths[OLE DB Source Output]"
-              endId="Package\LocalAuthorityDistrict\Lookup.Inputs[Lookup Input]"
+              endId="Package\LocalAuthorityDistrict\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\LocalAuthorityDistrict\LocalAuthorityDistrict_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -11393,7 +12125,7 @@ where [refTable].[Lsoa11cd] = ? and [refTable].[GeographyID] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\LSOA\LSOA_Stage.Outputs[OLE DB Source Output].Columns[lsoa1split]};#{Package\LSOA\210:invalid};</property>
+                  name="ParameterMap">#{Package\LSOA\LSOA_Stage.Outputs[OLE DB Source Output].Columns[lsoa1split]};#{Package\LSOA\512:invalid};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -11438,7 +12170,7 @@ where [refTable].[Lsoa11cd] = ? and [refTable].[GeographyID] = ?</property>
                       refId="Package\LSOA\Check LSOA_Stage.Inputs[Lookup Input].Columns[GeographyID]"
                       cachedDataType="i4"
                       cachedName="GeographyID"
-                      lineageId="Package\LSOA\210:invalid">
+                      lineageId="Package\LSOA\512:invalid">
                       <properties>
                         <property
                           dataType="System.String"
@@ -11884,7 +12616,7 @@ where LsoaID=?</property>
                       cachedDataType="i4"
                       cachedName="GeographyID"
                       externalMetadataColumnId="Package\LSOA\update in LSOA_NDS.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\LSOA\210:invalid" />
+                      lineageId="Package\LSOA\512:invalid" />
                     <inputColumn
                       refId="Package\LSOA\update in LSOA_NDS.Inputs[OLE DB Command Input].Columns[pcdssplit]"
                       cachedCodepage="1252"
@@ -12221,6 +12953,79 @@ where LsoaID=?</property>
                       refId="Package\RoadType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\RoadType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\RoadType\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\RoadType\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\RoadType\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\RoadType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\RoadType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\RoadType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\RoadType\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\RoadType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\RoadType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\RoadType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\RoadType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\RoadType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -12779,6 +13584,11 @@ where [refTable].[code] = ?</property>
               name="Derived Column Output"
               startId="Package\RoadType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
             <path
+              refId="Package\RoadType.Paths[Derived Column Output2]"
+              endId="Package\RoadType\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\RoadType\Add SourceID.Outputs[Derived Column Output]" />
+            <path
               refId="Package\RoadType.Paths[Lookup Error Output]"
               endId="Package\RoadType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
               name="Lookup Error Output"
@@ -12790,7 +13600,7 @@ where [refTable].[code] = ?</property>
               startId="Package\RoadType\Lookup.Outputs[Lookup Match Output]" />
             <path
               refId="Package\RoadType.Paths[OLE DB Source Output]"
-              endId="Package\RoadType\Lookup.Inputs[Lookup Input]"
+              endId="Package\RoadType\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\RoadType\RoadType_Stage.Outputs[OLE DB Source Output]" />
           </paths>
@@ -13998,71 +14808,71 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183,42"
           Id="Package\Accident_StageToNDS"
           TopLeft="345.714291431467,316.82353311179" />
         <NodeLayout
-          Size="120.8,41.6"
+          Size="121,42"
           Id="Package\AgeBand"
           TopLeft="436,46" />
         <NodeLayout
-          Size="126.4,41.6"
+          Size="126,42"
           Id="Package\AgeGroup"
           TopLeft="263,122" />
         <NodeLayout
-          Size="100,41.6"
+          Size="100,42"
           Id="Package\Area"
           TopLeft="52,41" />
         <NodeLayout
-          Size="137.6,41.6"
+          Size="138,42"
           Id="Package\BuildUpRoad"
           TopLeft="460,124" />
         <NodeLayout
-          Size="183.2,41.6"
+          Size="183,42"
           Id="Package\Casualty_StageToNDS"
           TopLeft="72.1428668863921,323.117650791023" />
         <NodeLayout
-          Size="132.8,41.6"
+          Size="133,42"
           Id="Package\CasualType"
           TopLeft="673,44" />
         <NodeLayout
-          Size="156,41.6"
+          Size="156,42"
           Id="Package\CasualtySeverity"
           TopLeft="662,130" />
         <NodeLayout
-          Size="100.8,41.6"
+          Size="101,42"
           Id="Package\Date"
           TopLeft="390.57143357092,399.705888337331" />
         <NodeLayout
-          Size="164,41.6"
+          Size="164,42"
           Id="Package\GenderOfCasualty"
           TopLeft="40,218" />
         <NodeLayout
-          Size="129.6,41.6"
+          Size="130,42"
           Id="Package\Geography"
           TopLeft="591,227" />
         <NodeLayout
-          Size="153.6,41.6"
+          Size="154,42"
           Id="Package\JourneyPurpose"
           TopLeft="274,225" />
         <NodeLayout
-          Size="179.2,41.6"
+          Size="179,42"
           Id="Package\LocalAuthorityDistrict"
           TopLeft="198,44" />
         <NodeLayout
-          Size="103.2,41.6"
+          Size="103,42"
           Id="Package\LSOA"
           TopLeft="604.000001192093,314" />
         <NodeLayout
-          Size="126.4,41.6"
+          Size="126,42"
           Id="Package\RoadType"
           TopLeft="62,124" />
         <NodeLayout
-          Size="144,41.6"
+          Size="144,42"
           Id="Package\truncate table"
           TopLeft="608,402.882358142662" />
         <NodeLayout
-          Size="176.8,41.6"
+          Size="177,42"
           Id="Package\Vehicle_StageToNDS"
           TopLeft="75.142866630944,404.058829588874" />
         <EdgeLayout
@@ -14719,42 +15529,6 @@ where [refTable].[Accident_Index] = ?</property>
           Id="Package\AgeBand\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
         <EdgeLayout
-          Id="Package\AgeBand.Paths[OLE DB Source Output]"
-          TopLeft="226.92857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-12.428570856853,35.294120231715"
-              Start="0,0"
-              End="-12.428570856853,27.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.6470601158575"
-                    Point2="0,17.6470601158575"
-                    Point3="-4,17.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-8.42857085685299,17.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-8.42857085685299,17.6470601158575"
-                    Point2="-12.428570856853,17.6470601158575"
-                    Point3="-12.428570856853,21.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-12.428570856853,27.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\AgeBand.Paths[Lookup Match Output]"
           TopLeft="197.000002213887,126.588238640228">
           <EdgeLayout.Curve>
@@ -14857,9 +15631,7 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -14893,9 +15665,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\AgeBand\Add SourceID"
+          TopLeft="352.571428972848,54.152946538826" />
+        <EdgeLayout
+          Id="Package\AgeBand.Paths[OLE DB Source Output]"
+          TopLeft="303.42857307074,28.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49.1428559021076,41.1921614636463"
+              Start="0,0"
+              End="41.6428559021076,41.1921614636463">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="24.4036690076402,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="24.4036690076402,0"
+                    Point2="28.4036690076402,0"
+                    Point3="28.4036690076402,4" />
+                  <mssgle:LineSegment
+                    End="28.4036690076402,37.1921614636463" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.4036690076402,37.1921614636463"
+                    Point2="28.4036690076402,41.1921614636463"
+                    Point3="32.4036690076402,41.1921614636463" />
+                  <mssgle:LineSegment
+                    End="41.6428559021076,41.1921614636463" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AgeBand.Paths[Derived Column Output2]"
+          TopLeft="352.571428972848,80.8196132054926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-81.5714267589606,24.7686254347354"
+              Start="0,0"
+              End="-74.0714267589606,24.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-30.4246388157081,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-30.4246388157081,0"
+                    Point2="-34.4246388157081,0"
+                    Point3="-34.4246388157081,4" />
+                  <mssgle:LineSegment
+                    End="-34.4246388157081,20.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-34.4246388157081,20.7686254347354"
+                    Point2="-34.4246388157081,24.7686254347354"
+                    Point3="-38.4246388157081,24.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-74.0714267589606,24.7686254347354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -14979,42 +15821,6 @@ where [refTable].[Accident_Index] = ?</property>
           Size="198,42"
           Id="Package\AgeGroup\Add column UpdatedDate"
           TopLeft="22.5714289728476,327.000004558002" />
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[OLE DB Source Output]"
-          TopLeft="204.42857307074,158.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13.928570856853,36.294120231715"
-              Start="0,0"
-              End="-13.928570856853,28.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.1470601158575"
-                    Point2="0,18.1470601158575"
-                    Point3="-4,18.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-9.92857085685301,18.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.92857085685301,18.1470601158575"
-                    Point2="-13.928570856853,18.1470601158575"
-                    Point3="-13.928570856853,22.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-13.928570856853,28.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\AgeGroup.Paths[Lookup Match Output]"
           TopLeft="173.000002213887,236.588238640228">
@@ -15118,9 +15924,7 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15154,9 +15958,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\AgeGroup\Add SourceID"
+          TopLeft="346.571428972848,179.152946538826" />
+        <EdgeLayout
+          Id="Package\AgeGroup.Paths[OLE DB Source Output]"
+          TopLeft="283.42857307074,137.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.1428559021076,62.858828130313"
+              Start="0,0"
+              End="55.6428559021076,62.858828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.5714279510538,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.5714279510538,0"
+                    Point2="31.5714279510538,0"
+                    Point3="31.5714279510538,4" />
+                  <mssgle:LineSegment
+                    End="31.5714279510538,58.858828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.5714279510538,58.858828130313"
+                    Point2="31.5714279510538,62.858828130313"
+                    Point3="35.5714279510538,62.858828130313" />
+                  <mssgle:LineSegment
+                    End="55.6428559021076,62.858828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\AgeGroup.Paths[Derived Column Output2]"
+          TopLeft="346.571428972848,205.819613205493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.5714267589606,9.76862543473538"
+              Start="0,0"
+              End="-92.0714267589606,9.76862543473538">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-38.0209690909375,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-38.0209690909375,0"
+                    Point2="-42.0209690909375,0"
+                    Point3="-42.0209690909375,4" />
+                  <mssgle:LineSegment
+                    End="-42.0209690909375,5.76862543473538" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.0209690909375,5.76862543473538"
+                    Point2="-42.0209690909375,9.76862543473538"
+                    Point3="-46.0209690909375,9.76862543473538" />
+                  <mssgle:LineSegment
+                    End="-92.0714267589606,9.76862543473538" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15240,28 +16114,6 @@ where [refTable].[Accident_Index] = ?</property>
           Size="198,42"
           Id="Package\Area\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\Area.Paths[OLE DB Source Output]"
-          TopLeft="215.714287642314,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.294120231715"
-              Start="0,0"
-              End="0,27.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,27.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Area.Paths[Lookup Match Output]"
           TopLeft="197.000002213887,126.588238640228">
@@ -15378,6 +16230,66 @@ where [refTable].[Accident_Index] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Area\Add SourceID"
+          TopLeft="337.571428972848,77.152946538826" />
+        <EdgeLayout
+          Id="Package\Area.Paths[OLE DB Source Output]"
+          TopLeft="216.92857307074,49.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="192.142855902108,27.858828130313"
+              Start="0,0"
+              End="192.142855902108,20.358828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.92941406515649" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.92941406515649"
+                    Point2="0,13.9294140651565"
+                    Point3="4,13.9294140651565" />
+                  <mssgle:LineSegment
+                    End="188.142855902108,13.9294140651565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="188.142855902108,13.9294140651565"
+                    Point2="192.142855902108,13.9294140651565"
+                    Point3="192.142855902108,17.9294140651565" />
+                  <mssgle:LineSegment
+                    End="192.142855902108,20.358828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Area.Paths[Derived Column Output2]"
+          TopLeft="337.571428972848,101.870592589527">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-66.5714267589606,0"
+              Start="0,0"
+              End="-59.0714267589606,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-59.0714267589606,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -15438,66 +16350,30 @@ where [refTable].[Accident_Index] = ?</property>
         <NodeLayout
           Size="264,42"
           Id="Package\BuildUpRoad\Add column UpdatedDate, CreatedDate"
-          TopLeft="293.285718871623,213.788239734148" />
+          TopLeft="293.285718871623,237.788239734148" />
         <NodeLayout
           Size="215,42"
           Id="Package\BuildUpRoad\Insert into BuiltUpRoad_NDS"
-          TopLeft="336.42857639157,300.458828494953" />
+          TopLeft="336.42857639157,324.458828494953" />
         <NodeLayout
           Size="211,42"
           Id="Package\BuildUpRoad\Update in BuiltUpRoad_NDS"
-          TopLeft="61.2857149547461,308.152946538826" />
+          TopLeft="61.2857149547461,332.152946538826" />
         <NodeLayout
           Size="169,42"
           Id="Package\BuildUpRoad\BuiltUpRoad_Stage"
-          TopLeft="150.42857307074,7.29411840851299" />
+          TopLeft="150.42857307074,31.294118408513" />
         <NodeLayout
           Size="113,42"
           Id="Package\BuildUpRoad\Lookup"
-          TopLeft="158.000002213887,84.588238640228" />
+          TopLeft="158.000002213887,108.588238640228" />
         <NodeLayout
           Size="198,42"
           Id="Package\BuildUpRoad\Add column UpdatedDate"
-          TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\BuildUpRoad.Paths[OLE DB Source Output]"
-          TopLeft="234.92857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-20.428570856853,35.294120231715"
-              Start="0,0"
-              End="-20.428570856853,27.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.6470601158575"
-                    Point2="0,17.6470601158575"
-                    Point3="-4,17.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-16.428570856853,17.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-16.428570856853,17.6470601158575"
-                    Point2="-20.428570856853,17.6470601158575"
-                    Point3="-20.428570856853,21.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-20.428570856853,27.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="46.5714289728476,241.000004558002" />
         <EdgeLayout
           Id="Package\BuildUpRoad.Paths[Lookup Match Output]"
-          TopLeft="197.000002213887,126.588238640228">
+          TopLeft="197.000002213887,150.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15533,7 +16409,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\BuildUpRoad.Paths[Lookup Error Output]"
-          TopLeft="232.000002213887,126.588238640228">
+          TopLeft="232.000002213887,150.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15569,7 +16445,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\BuildUpRoad.Paths[Derived Column Output1]"
-          TopLeft="425.285718871623,255.788239734148">
+          TopLeft="425.285718871623,279.788239734148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15598,14 +16474,12 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\BuildUpRoad.Paths[Derived Column Output]"
-          TopLeft="145.571428972848,259.000004558002">
+          TopLeft="145.571428972848,283.000004558002">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -15634,9 +16508,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\BuildUpRoad\Add SourceID"
+          TopLeft="350.571428972848,72.152946538826" />
+        <EdgeLayout
+          Id="Package\BuildUpRoad.Paths[OLE DB Source Output]"
+          TopLeft="319.42857307074,52.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="31.1428559021076,40.858828130313"
+              Start="0,0"
+              End="23.6428559021076,40.858828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="11.5714279510538,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5714279510538,0"
+                    Point2="15.5714279510538,0"
+                    Point3="15.5714279510538,4" />
+                  <mssgle:LineSegment
+                    End="15.5714279510538,36.858828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5714279510538,36.858828130313"
+                    Point2="15.5714279510538,40.858828130313"
+                    Point3="19.5714279510538,40.858828130313" />
+                  <mssgle:LineSegment
+                    End="23.6428559021076,40.858828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\BuildUpRoad.Paths[Derived Column Output2]"
+          TopLeft="350.571428972848,98.8196132054926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-79.5714267589606,30.7686254347354"
+              Start="0,0"
+              End="-72.0714267589606,30.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-29.5806021184604,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-29.5806021184604,0"
+                    Point2="-33.5806021184604,0"
+                    Point3="-33.5806021184604,4" />
+                  <mssgle:LineSegment
+                    End="-33.5806021184604,26.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.5806021184604,26.7686254347354"
+                    Point2="-33.5806021184604,30.7686254347354"
+                    Point3="-37.5806021184604,30.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-72.0714267589606,30.7686254347354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15914,12 +16858,25 @@ where [refTable].[Accident_Index] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Casualty_StageToNDS\Insert into NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Casualty_StageToNDS\Check in NDS">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15929,7 +16886,7 @@ where [refTable].[Accident_Index] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15942,7 +16899,7 @@ where [refTable].[Accident_Index] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15952,7 +16909,7 @@ where [refTable].[Accident_Index] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15972,19 +16929,6 @@ where [refTable].[Accident_Index] = ?</property>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Casualty_StageToNDS\Insert into NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <TaskHost
     design-time-name="Package\CasualType">
     <LayoutInfo>
@@ -15993,66 +16937,30 @@ where [refTable].[Accident_Index] = ?</property>
         <NodeLayout
           Size="264,42"
           Id="Package\CasualType\Add column UpdatedDate, CreatedDate"
-          TopLeft="293.285718871623,213.788239734148" />
+          TopLeft="293.285718871623,222.788239734148" />
         <NodeLayout
           Size="211,42"
           Id="Package\CasualType\Insert into CasualType_NDS"
-          TopLeft="336.42857639157,300.458828494953" />
+          TopLeft="336.42857639157,309.458828494953" />
         <NodeLayout
           Size="208,42"
           Id="Package\CasualType\Update in CasualType_NDS"
-          TopLeft="61.2857149547461,308.152946538826" />
+          TopLeft="61.2857149547461,317.152946538826" />
         <NodeLayout
           Size="165,42"
           Id="Package\CasualType\CasualType_Stage"
-          TopLeft="150.42857307074,7.29411840851299" />
+          TopLeft="150.42857307074,16.294118408513" />
         <NodeLayout
           Size="113,42"
           Id="Package\CasualType\Lookup"
-          TopLeft="158.000002213887,83.588238640228" />
+          TopLeft="158.000002213887,92.588238640228" />
         <NodeLayout
           Size="198,42"
           Id="Package\CasualType\Add column UpdatedDate"
-          TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\CasualType.Paths[OLE DB Source Output]"
-          TopLeft="232.92857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-18.428570856853,34.294120231715"
-              Start="0,0"
-              End="-18.428570856853,26.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.1470601158575"
-                    Point2="0,17.1470601158575"
-                    Point3="-4,17.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-14.428570856853,17.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-14.428570856853,17.1470601158575"
-                    Point2="-18.428570856853,17.1470601158575"
-                    Point3="-18.428570856853,21.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-18.428570856853,26.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="46.5714289728476,226.000004558002" />
         <EdgeLayout
           Id="Package\CasualType.Paths[Lookup Match Output]"
-          TopLeft="197.000002213887,125.588238640228">
+          TopLeft="197.000002213887,134.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16088,7 +16996,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CasualType.Paths[Lookup Error Output]"
-          TopLeft="232.000002213887,125.588238640228">
+          TopLeft="232.000002213887,134.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16124,7 +17032,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CasualType.Paths[Derived Column Output1]"
-          TopLeft="425.285718871623,255.788239734148">
+          TopLeft="425.285718871623,264.788239734148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16153,14 +17061,12 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CasualType.Paths[Derived Column Output]"
-          TopLeft="145.571428972848,259.000004558002">
+          TopLeft="145.571428972848,268.000004558002">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16189,9 +17095,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\CasualType\Add SourceID"
+          TopLeft="365.571428972848,56.152946538826" />
+        <EdgeLayout
+          Id="Package\CasualType.Paths[OLE DB Source Output]"
+          TopLeft="315.42857307074,37.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="50.1428559021076,39.858828130313"
+              Start="0,0"
+              End="42.6428559021076,39.858828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="21.0714279510538,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.0714279510538,0"
+                    Point2="25.0714279510538,0"
+                    Point3="25.0714279510538,4" />
+                  <mssgle:LineSegment
+                    End="25.0714279510538,35.858828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="25.0714279510538,35.858828130313"
+                    Point2="25.0714279510538,39.858828130313"
+                    Point3="29.0714279510538,39.858828130313" />
+                  <mssgle:LineSegment
+                    End="42.6428559021076,39.858828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CasualType.Paths[Derived Column Output2]"
+          TopLeft="365.571428972848,82.8196132054926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-94.5714267589606,30.7686254347354"
+              Start="0,0"
+              End="-87.0714267589606,30.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-35.9108773478182,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.9108773478182,0"
+                    Point2="-39.9108773478182,0"
+                    Point3="-39.9108773478182,4" />
+                  <mssgle:LineSegment
+                    End="-39.9108773478182,26.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-39.9108773478182,26.7686254347354"
+                    Point2="-39.9108773478182,30.7686254347354"
+                    Point3="-43.9108773478182,30.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-87.0714267589606,30.7686254347354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16275,42 +17251,6 @@ where [refTable].[Accident_Index] = ?</property>
           Size="198,42"
           Id="Package\CasualtySeverity\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\CasualtySeverity.Paths[OLE DB Source Output]"
-          TopLeft="244.92857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.428570856853,34.294120231715"
-              Start="0,0"
-              End="-30.428570856853,26.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.1470601158575"
-                    Point2="0,17.1470601158575"
-                    Point3="-4,17.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-26.428570856853,17.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.428570856853,17.1470601158575"
-                    Point2="-30.428570856853,17.1470601158575"
-                    Point3="-30.428570856853,21.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-30.428570856853,26.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\CasualtySeverity.Paths[Lookup Match Output]"
           TopLeft="197.000002213887,125.588238640228">
@@ -16414,9 +17354,7 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -16450,9 +17388,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\CasualtySeverity\Add SourceID"
+          TopLeft="396,45" />
+        <EdgeLayout
+          Id="Package\CasualtySeverity.Paths[Derived Column Output2]"
+          TopLeft="396,66">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-124.999997786113,38.588238640228"
+              Start="0,0"
+              End="-117.499997786113,38.588238640228">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-58.4999988930565,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-58.4999988930565,0"
+                    Point2="-62.4999988930565,0"
+                    Point3="-62.4999988930565,4" />
+                  <mssgle:LineSegment
+                    End="-62.4999988930565,34.588238640228" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-62.4999988930565,34.588238640228"
+                    Point2="-62.4999988930565,38.588238640228"
+                    Point3="-66.4999988930565,38.588238640228" />
+                  <mssgle:LineSegment
+                    End="-117.499997786113,38.588238640228" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CasualtySeverity.Paths[OLE DB Source Output]"
+          TopLeft="339.42857307074,28.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="56.57142692926,32.0392149248203"
+              Start="0,0"
+              End="49.07142692926,32.0392149248203">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.6972467572787,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="28.6972467572787,0"
+                    Point2="32.6972467572787,0"
+                    Point3="32.6972467572787,4" />
+                  <mssgle:LineSegment
+                    End="32.6972467572787,28.0392149248203" />
+                  <mssgle:CubicBezierSegment
+                    Point1="32.6972467572787,28.0392149248203"
+                    Point2="32.6972467572787,32.0392149248203"
+                    Point3="36.6972467572787,32.0392149248203" />
+                  <mssgle:LineSegment
+                    End="49.07142692926,32.0392149248203" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -16590,66 +17598,32 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="264,41.6"
+          Size="264,42"
           Id="Package\GenderOfCasualty\Add column UpdatedDate, CreatedDate"
-          TopLeft="293.285718871623,213.788239734148" />
+          TopLeft="293.285718871623,225.788239734148" />
         <NodeLayout
-          Size="241.6,41.6"
+          Size="242,42"
           Id="Package\GenderOfCasualty\Insert into GenderOfCasualty_NDS"
-          TopLeft="336.42857639157,300.458828494953" />
+          TopLeft="336.42857639157,312.458828494953" />
         <NodeLayout
-          Size="238.4,41.6"
+          Size="238,42"
           Id="Package\GenderOfCasualty\Update in GenderOfCasualty_NDS"
-          TopLeft="61.2857149547461,308.152946538826" />
+          TopLeft="61.2857149547461,320.152946538826" />
         <NodeLayout
-          Size="196,41.6"
+          Size="196,42"
           Id="Package\GenderOfCasualty\GenderOfCasualty_Stage"
-          TopLeft="150.42857307074,7.29411840851299" />
+          TopLeft="150.42857307074,19.294118408513" />
         <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\GenderOfCasualty\Lookup"
-          TopLeft="158.000002213887,84.588238640228" />
+          TopLeft="158.000002213887,96.588238640228" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\GenderOfCasualty\Add column UpdatedDate"
-          TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\GenderOfCasualty.Paths[OLE DB Source Output]"
-          TopLeft="248.42857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-33.928570856853,35.294120231715"
-              Start="0,0"
-              End="-33.928570856853,27.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.6470601158575"
-                    Point2="0,17.6470601158575"
-                    Point3="-4,17.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-29.928570856853,17.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-29.928570856853,17.6470601158575"
-                    Point2="-33.928570856853,17.6470601158575"
-                    Point3="-33.928570856853,21.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-33.928570856853,27.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="46.5714289728476,229.000004558002" />
         <EdgeLayout
           Id="Package\GenderOfCasualty.Paths[Lookup Match Output]"
-          TopLeft="197.000002213887,126.588238640228">
+          TopLeft="197.000002213887,138.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16685,7 +17659,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\GenderOfCasualty.Paths[Lookup Error Output]"
-          TopLeft="232.000002213887,126.588238640228">
+          TopLeft="232.000002213887,138.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16721,7 +17695,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\GenderOfCasualty.Paths[Derived Column Output1]"
-          TopLeft="425.285718871623,255.788239734148">
+          TopLeft="425.285718871623,267.788239734148">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16755,7 +17729,7 @@ where [refTable].[Accident_Index] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\GenderOfCasualty.Paths[Derived Column Output]"
-          TopLeft="145.571428972848,259.000004558002">
+          TopLeft="145.571428972848,271.000004558002">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -16779,6 +17753,78 @@ where [refTable].[Accident_Index] = ?</property>
                     Point3="34.7142859818985,28.576470990412" />
                   <mssgle:LineSegment
                     End="34.7142859818985,41.652941980824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\GenderOfCasualty\Add SourceID"
+          TopLeft="381.571428972848,57.152946538826" />
+        <EdgeLayout
+          Id="Package\GenderOfCasualty.Paths[OLE DB Source Output]"
+          TopLeft="346.42857307074,40.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="35.1428559021076,37.858828130313"
+              Start="0,0"
+              End="27.6428559021076,37.858828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13.5714279510538,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.5714279510538,0"
+                    Point2="17.5714279510538,0"
+                    Point3="17.5714279510538,4" />
+                  <mssgle:LineSegment
+                    End="17.5714279510538,33.858828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="17.5714279510538,33.858828130313"
+                    Point2="17.5714279510538,37.858828130313"
+                    Point3="21.5714279510538,37.858828130313" />
+                  <mssgle:LineSegment
+                    End="27.6428559021076,37.858828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\GenderOfCasualty.Paths[Derived Column Output2]"
+          TopLeft="381.571428972848,83.8196132054926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-110.571426758961,33.7686254347354"
+              Start="0,0"
+              End="-103.071426758961,33.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-42.6631709257999,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-42.6631709257999,0"
+                    Point2="-46.6631709257999,0"
+                    Point3="-46.6631709257999,4" />
+                  <mssgle:LineSegment
+                    End="-46.6631709257999,29.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-46.6631709257999,29.7686254347354"
+                    Point2="-46.6631709257999,33.7686254347354"
+                    Point3="-50.6631709257999,33.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-103.071426758961,33.7686254347354" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -16845,29 +17891,99 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="167.2,41.6"
-          Id="Package\Geography\Update in Location"
-          TopLeft="54.5476200106193,419.427456360622" />
-        <NodeLayout
-          Size="160,41.6"
-          Id="Package\Geography\Postcode_Stage"
-          TopLeft="259.45238509835,33.7058819561265" />
-        <NodeLayout
-          Size="264,41.6"
-          Id="Package\Geography\Add column UpdatedDate, CreatedDate"
-          TopLeft="416.309530899234,323.788239734148" />
-        <NodeLayout
-          Size="169.6,41.6"
+          Size="170,42"
           Id="Package\Geography\Insert into Location"
           TopLeft="460.452388419181,410.458828494953" />
         <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\Geography\Lookup"
           TopLeft="279.023814241497,194.588238640228" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="264,42"
+          Id="Package\Geography\Add column UpdatedDate, CreatedDate"
+          TopLeft="416.309530899234,323.788239734148" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Geography\Update in Location"
+          TopLeft="54.5476200106193,419.427456360622" />
+        <NodeLayout
+          Size="143,42"
+          Id="Package\Geography\Add SourceID"
+          TopLeft="265.595242618298,115.470589854726" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Geography\Postcode_Stage"
+          TopLeft="259.45238509835,33.7058819561265" />
+        <NodeLayout
+          Size="198,42"
           Id="Package\Geography\Add column UpdatedDate"
           TopLeft="35.0714291857213,325.088239825308" />
+        <EdgeLayout
+          Id="Package\Geography.Paths[Derived Column Output1]"
+          TopLeft="546.880959659207,365.788239734148">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.670588760805"
+              Start="0,0"
+              End="0,37.170588760805">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.170588760805" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Geography.Paths[Derived Column Output]"
+          TopLeft="136.20952459817,366.688239825308">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.7392165353143"
+              Start="0,0"
+              End="0,45.2392165353143">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,45.2392165353143" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Geography.Paths[OLE DB Source Output]"
+          TopLeft="338.323813858324,75.3058819561265">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.164707898599"
+              Start="0,0"
+              End="0,32.664707898599">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.664707898599" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Geography.Paths[Lookup Match Output]"
           TopLeft="317.957147574831,236.188238640228">
@@ -16938,76 +18054,6 @@ where [refTable].[Accident_Index] = ?</property>
             <mssgm:EdgeLabel
               BoundingBox="51.776471610118,40.6104716509202,91.7327734375,11.609375"
               RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Geography.Paths[Derived Column Output1]"
-          TopLeft="546.880959659207,365.788239734148">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.670588760805"
-              Start="0,0"
-              End="0,37.170588760805">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,37.170588760805" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Geography.Paths[Derived Column Output]"
-          TopLeft="136.20952459817,366.688239825308">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.7392165353143"
-              Start="0,0"
-              End="0,45.2392165353143">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.2392165353143" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="143.2,41.6"
-          Id="Package\Geography\Add SourceID"
-          TopLeft="265.595242618298,115.470589854726" />
-        <EdgeLayout
-          Id="Package\Geography.Paths[OLE DB Source Output]"
-          TopLeft="338.323813858324,75.3058819561265">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.164707898599"
-              Start="0,0"
-              End="0,32.664707898599">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.664707898599" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17090,63 +18136,29 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="185.6,41.6"
+          Size="186,42"
           Id="Package\JourneyPurpose\JourneyPurpose_Stage"
           TopLeft="150.42857307074,7.29411840851299" />
         <NodeLayout
-          Size="264,41.6"
+          Size="264,42"
           Id="Package\JourneyPurpose\Add column UpdatedDate, CreatedDate"
           TopLeft="293.285718871623,213.788239734148" />
         <NodeLayout
-          Size="228,41.6"
+          Size="228,42"
           Id="Package\JourneyPurpose\Update in JourneyPurpose_NDS"
           TopLeft="61.2857149547461,308.152946538826" />
         <NodeLayout
-          Size="232,41.6"
+          Size="232,42"
           Id="Package\JourneyPurpose\Insert into JourneyPurpose_NDS"
           TopLeft="336.42857639157,300.458828494953" />
         <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\JourneyPurpose\Lookup"
           TopLeft="158.000002213887,84.588238640228" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\JourneyPurpose\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
-        <EdgeLayout
-          Id="Package\JourneyPurpose.Paths[OLE DB Source Output]"
-          TopLeft="243.42857307074,49.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-28.928570856853,35.294120231715"
-              Start="0,0"
-              End="-28.928570856853,27.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.6470601158575"
-                    Point2="0,17.6470601158575"
-                    Point3="-4,17.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-24.928570856853,17.6470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-24.928570856853,17.6470601158575"
-                    Point2="-28.928570856853,17.6470601158575"
-                    Point3="-28.928570856853,21.6470601158575" />
-                  <mssgle:LineSegment
-                    End="-28.928570856853,27.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\JourneyPurpose.Paths[Lookup Match Output]"
           TopLeft="197.000002213887,126.588238640228">
@@ -17287,6 +18299,78 @@ where [refTable].[Accident_Index] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="144,42"
+          Id="Package\JourneyPurpose\Add SourceID"
+          TopLeft="359.571428972848,64.152946538826" />
+        <EdgeLayout
+          Id="Package\JourneyPurpose.Paths[OLE DB Source Output]"
+          TopLeft="336.42857307074,28.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.1428559021076,56.858828130313"
+              Start="0,0"
+              End="15.6428559021076,56.858828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="7.57142795105381,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.57142795105381,0"
+                    Point2="11.5714279510538,0"
+                    Point3="11.5714279510538,4" />
+                  <mssgle:LineSegment
+                    End="11.5714279510538,52.858828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5714279510538,52.858828130313"
+                    Point2="11.5714279510538,56.858828130313"
+                    Point3="15.5714279510538,56.858828130313" />
+                  <mssgle:LineSegment
+                    End="15.6428559021076,56.858828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\JourneyPurpose.Paths[Derived Column Output2]"
+          TopLeft="359.571428972848,90.8196132054926">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-88.5714267589606,14.7686254347354"
+              Start="0,0"
+              End="-81.0714267589606,14.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-33.3787672560751,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-33.3787672560751,0"
+                    Point2="-37.3787672560751,0"
+                    Point3="-37.3787672560751,4" />
+                  <mssgle:LineSegment
+                    End="-37.3787672560751,10.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-37.3787672560751,10.7686254347354"
+                    Point2="-37.3787672560751,14.7686254347354"
+                    Point3="-41.3787672560751,14.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-81.0714267589606,14.7686254347354" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -17363,104 +18447,80 @@ where [refTable].[Accident_Index] = ?</property>
         <NodeLayout
           Size="113,42"
           Id="Package\LocalAuthorityDistrict\Lookup"
-          TopLeft="303.000002213887,192.588238640228" />
+          TopLeft="312.000002213887,199.588238640228" />
         <NodeLayout
           Size="198,42"
           Id="Package\LocalAuthorityDistrict\Add column UpdatedDate"
           TopLeft="194.571428972848,327.000004558002" />
         <EdgeLayout
-          Id="Package\LocalAuthorityDistrict.Paths[OLE DB Source Output]"
-          TopLeft="356.714287642313,108.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,84.294120231715"
-              Start="0,0"
-              End="0,76.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,76.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\LocalAuthorityDistrict.Paths[Lookup Match Output]"
-          TopLeft="342.000002213887,234.588238640228">
+          TopLeft="351.000002213887,241.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-48.428573241039,92.411765917774"
+              EndConnector="-57.428573241039,85.411765917774"
               Start="0,0"
-              End="-48.428573241039,84.911765917774">
+              End="-57.428573241039,77.911765917774">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.7388363433841" />
+                    End="0,30.8801975999286" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.7388363433841"
-                    Point2="0,37.7388363433841"
-                    Point3="-4,37.7388363433841" />
+                    Point1="0,30.8801975999286"
+                    Point2="0,34.8801975999286"
+                    Point3="-4,34.8801975999286" />
                   <mssgle:LineSegment
-                    End="-44.428573241039,37.7388363433841" />
+                    End="-53.428573241039,34.8801975999286" />
                   <mssgle:CubicBezierSegment
-                    Point1="-44.428573241039,37.7388363433841"
-                    Point2="-48.428573241039,37.7388363433841"
-                    Point3="-48.428573241039,41.7388363433841" />
+                    Point1="-53.428573241039,34.8801975999286"
+                    Point2="-57.428573241039,34.8801975999286"
+                    Point3="-57.428573241039,38.8801975999286" />
                   <mssgle:LineSegment
-                    End="-48.428573241039,84.911765917774" />
+                    End="-57.428573241039,77.911765917774" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-72.4056733392695,42.7388363433841,96.3827734375,11.609375"
+              BoundingBox="-76.9056733392695,39.8801975999286,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\LocalAuthorityDistrict.Paths[Lookup Error Output]"
-          TopLeft="377.000002213887,234.588238640228">
+          TopLeft="386.000002213887,241.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="196.285716657736,89.20000109392"
+              EndConnector="187.285716657736,82.20000109392"
               Start="0,0"
-              End="196.285716657736,81.70000109392">
+              End="187.285716657736,74.70000109392">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.4272255776218" />
+                    End="0,29.5685868341663" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.4272255776218"
-                    Point2="0,36.4272255776218"
-                    Point3="4,36.4272255776218" />
+                    Point1="0,29.5685868341663"
+                    Point2="0,33.5685868341663"
+                    Point3="4,33.5685868341663" />
                   <mssgle:LineSegment
-                    End="192.285716657736,36.4272255776218" />
+                    End="183.285716657736,33.5685868341663" />
                   <mssgle:CubicBezierSegment
-                    Point1="192.285716657736,36.4272255776218"
-                    Point2="196.285716657736,36.4272255776218"
-                    Point3="196.285716657736,40.4272255776218" />
+                    Point1="183.285716657736,33.5685868341663"
+                    Point2="187.285716657736,33.5685868341663"
+                    Point3="187.285716657736,37.5685868341663" />
                   <mssgle:LineSegment
-                    End="196.285716657736,81.70000109392" />
+                    End="187.285716657736,74.70000109392" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="52.276471610118,41.4272255776218,91.7327734375,11.609375"
+              BoundingBox="47.776471610118,38.5685868341663,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17483,9 +18543,7 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -17507,9 +18565,79 @@ where [refTable].[Accident_Index] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,42"
+          Id="Package\LocalAuthorityDistrict\Add SourceID"
+          TopLeft="490.285714954746,135.152946538826" />
+        <EdgeLayout
+          Id="Package\LocalAuthorityDistrict.Paths[OLE DB Source Output]"
+          TopLeft="353.92857307074,108.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="207.857141884006,26.858828130313"
+              Start="0,0"
+              End="207.857141884006,19.358828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,9.42941406515649" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,9.42941406515649"
+                    Point2="0,13.4294140651565"
+                    Point3="4,13.4294140651565" />
+                  <mssgle:LineSegment
+                    End="203.857141884006,13.4294140651565" />
+                  <mssgle:CubicBezierSegment
+                    Point1="203.857141884006,13.4294140651565"
+                    Point2="207.857141884006,13.4294140651565"
+                    Point3="207.857141884006,17.4294140651565" />
+                  <mssgle:LineSegment
+                    End="207.857141884006,19.358828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\LocalAuthorityDistrict.Paths[Derived Column Output2]"
+          TopLeft="490.285714954746,156.152946538826">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-65.285712740859,64.435292101402"
+              Start="0,0"
+              End="-57.785712740859,64.435292101402">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-28.6428563704295,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-28.6428563704295,0"
+                    Point2="-32.6428563704295,0"
+                    Point3="-32.6428563704295,4" />
+                  <mssgle:LineSegment
+                    End="-32.6428563704295,60.435292101402" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-32.6428563704295,60.435292101402"
+                    Point2="-32.6428563704295,64.435292101402"
+                    Point3="-36.6428563704295,64.435292101402" />
+                  <mssgle:LineSegment
+                    End="-57.785712740859,64.435292101402" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -17825,63 +18953,29 @@ where [refTable].[Accident_Index] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="112.8,41.6"
+          Size="113,42"
           Id="Package\RoadType\Lookup"
           TopLeft="134.000002213887,194.588238640228" />
         <NodeLayout
-          Size="264,41.6"
+          Size="264,42"
           Id="Package\RoadType\Add column UpdatedDate, CreatedDate"
           TopLeft="269.285718871623,323.788239734148" />
         <NodeLayout
-          Size="200.8,41.6"
+          Size="201,42"
           Id="Package\RoadType\Update in RoadType_NDS"
           TopLeft="37.2857149547461,419.152946538826" />
         <NodeLayout
-          Size="204,41.6"
+          Size="204,42"
           Id="Package\RoadType\Insert into RoadType_NDS"
           TopLeft="312.42857639157,410.458828494953" />
         <NodeLayout
-          Size="158.4,41.6"
+          Size="158,42"
           Id="Package\RoadType\RoadType_Stage"
           TopLeft="125.42857307074,116.294118408513" />
         <NodeLayout
-          Size="198.4,41.6"
+          Size="198,42"
           Id="Package\RoadType\Add column UpdatedDate"
           TopLeft="22.5714289728476,327.000004558002" />
-        <EdgeLayout
-          Id="Package\RoadType.Paths[OLE DB Source Output]"
-          TopLeft="204.42857307074,158.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-13.928570856853,36.294120231715"
-              Start="0,0"
-              End="-13.928570856853,28.794120231715">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,14.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,14.1470601158575"
-                    Point2="0,18.1470601158575"
-                    Point3="-4,18.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-9.92857085685301,18.1470601158575" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-9.92857085685301,18.1470601158575"
-                    Point2="-13.928570856853,18.1470601158575"
-                    Point3="-13.928570856853,22.1470601158575" />
-                  <mssgle:LineSegment
-                    End="-13.928570856853,28.794120231715" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\RoadType.Paths[Lookup Match Output]"
           TopLeft="173.000002213887,236.588238640228">
@@ -18014,6 +19108,78 @@ where [refTable].[Accident_Index] = ?</property>
                     Point3="16.2142859818985,29.076470990412" />
                   <mssgle:LineSegment
                     End="16.2142859818985,42.652941980824" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="143,63"
+          Id="Package\RoadType\Add SourceID"
+          TopLeft="346.571428972848,140.152946538826" />
+        <EdgeLayout
+          Id="Package\RoadType.Paths[OLE DB Source Output]"
+          TopLeft="283.42857307074,137.294118408513">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="63.1428559021076,34.358828130313"
+              Start="0,0"
+              End="55.6428559021076,34.358828130313">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="27.5714279510538,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="27.5714279510538,0"
+                    Point2="31.5714279510538,0"
+                    Point3="31.5714279510538,4" />
+                  <mssgle:LineSegment
+                    End="31.5714279510538,30.358828130313" />
+                  <mssgle:CubicBezierSegment
+                    Point1="31.5714279510538,30.358828130313"
+                    Point2="31.5714279510538,34.358828130313"
+                    Point3="35.5714279510538,34.358828130313" />
+                  <mssgle:LineSegment
+                    End="55.6428559021076,34.358828130313" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\RoadType.Paths[Derived Column Output2]"
+          TopLeft="346.571428972848,180.819613205493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-99.5714267589606,34.7686254347354"
+              Start="0,0"
+              End="-92.0714267589606,34.7686254347354">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-37.30826992477,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-37.30826992477,0"
+                    Point2="-41.30826992477,0"
+                    Point3="-41.30826992477,4" />
+                  <mssgle:LineSegment
+                    End="-41.30826992477,30.7686254347354" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-41.30826992477,30.7686254347354"
+                    Point2="-41.30826992477,34.7686254347354"
+                    Point3="-45.30826992477,34.7686254347354" />
+                  <mssgle:LineSegment
+                    End="-92.0714267589606,34.7686254347354" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
