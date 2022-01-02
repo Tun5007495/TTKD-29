@@ -8,7 +8,7 @@
         <UseWinAuth>false</UseWinAuth>
         <WinAuthUserName />
         <WinAuthDomain />
-        <StartObjectID>Thuy2 1.dtsx</StartObjectID>
+        <StartObjectID>linh2.dtsx</StartObjectID>
         <Run64BitRuntime>false</Run64BitRuntime>
         <UserIDs />
         <UserPasswords />
