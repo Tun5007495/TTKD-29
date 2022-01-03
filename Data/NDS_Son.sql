@@ -142,10 +142,10 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[CasualType](
-	[CasualTypeID] [int] identity(1,1) not null PRIMARY KEY,
-	[CasualTypeCode] [int] NULL,
-	[CasualTypeLabel] [nvarchar](255) NULL,
+CREATE TABLE [dbo].[CasualtyType](
+	[CasualtyTypeID] [int] identity(1,1) not null PRIMARY KEY,
+	[CasualtyTypeCode] [int] NULL,
+	[CasualtyTypeLabel] [nvarchar](255) NULL,
 	[SourceID] [int] NULL,
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL
@@ -261,8 +261,8 @@ CREATE TABLE [dbo].[Vehicle](
 	[VehicleID] [int] identity(1,1) not null PRIMARY KEY,
 	[AccidentID] [int] NULL,
 	[VehicleReference] [int] NULL,
-	[VehicleType] [int] NULL,
-	[JourneyPurpose] [int] NULL,
+	[VehicleTypeID] [int] NULL,
+	[JourneyPurposeID] [int] NULL,
 	[SourceID] [int] NULL,
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL
@@ -312,3 +312,68 @@ CREATE TABLE [dbo].[TimeOfDate](
 	[UpdatedDate] [datetime] NULL
 ) ON [PRIMARY]
 GO
+--Add Foregin Key
+GO
+ALTER TABLE Accident
+ADD CONSTRAINT fk_Accident_AccidentSeverity
+ FOREIGN KEY (AccidentSeverityID)
+ REFERENCES  AccidentSeverity(AccidentSeverityID)
+ GO
+ ALTER TABLE Accident
+ ADD CONSTRAINT fk_Accident_LocalAuthorityDistrict
+ FOREIGN KEY (LocalAuthorityDistrictID)
+ REFERENCES LocalAuthorityDistrict(LocalAuthorityDistrictID)
+ GO
+ ALTER TABLE Accident
+ ADD CONSTRAINT fk_Accident_RoadType
+ FOREIGN KEY (RoadTypeID)
+ REFERENCES  RoadType(RoadTypeID)
+ GO
+ GO
+ ALTER TABLE Accident
+ ADD CONSTRAINT fk_Accident_Area
+ FOREIGN KEY (AreaID)
+ REFERENCES   Area(AreaID)
+ GO
+GO
+ ALTER TABLE Accident
+ ADD CONSTRAINT fk_Accident_Location
+ FOREIGN KEY (LocationID)
+ REFERENCES   Location(LocationID)
+ GO
+  ALTER TABLE Casualty
+ ADD CONSTRAINT fk_Accident_GenderOfCasualty
+ FOREIGN KEY (GenderID)
+ REFERENCES   SexOfCasualty(GenderID)
+ GO
+ GO
+  ALTER TABLE Casualty
+ ADD CONSTRAINT fk_Accident_AgeBand
+ FOREIGN KEY (AgeBandID)
+ REFERENCES   AgeBand(AgeBandID)
+ GO
+  GO
+  ALTER TABLE Casualty
+ ADD CONSTRAINT fk_Accident_CasualtySeverity
+ FOREIGN KEY (CasualtySeverityID)
+ REFERENCES  CasualtySeverity(CasualtySeverityID)
+ GO
+   GO
+  ALTER TABLE Casualty
+ ADD CONSTRAINT fk_Accident_CasualtyType
+ FOREIGN KEY (CasualtyTypeID)
+ REFERENCES  CasualtyType(CasualtyTypeID)
+ GO
+  GO
+  ALTER TABLE Vehicle
+ ADD CONSTRAINT fk_Accident_VehicleType
+ FOREIGN KEY (VehicleTypeID)
+ REFERENCES  VehicleType(VehicleTypeID)
+ GO
+ GO
+  ALTER TABLE Vehicle
+ ADD CONSTRAINT fk_Accident_JourneyPurpose
+ FOREIGN KEY (JourneyPurposeID)
+ REFERENCES  JourneyPurpose(JourneyPurposeID)
+ GO
+  

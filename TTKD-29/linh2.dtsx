@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="36"
-  DTS:VersionGUID="{A6766806-8A88-49D0-8863-E820E8987DB7}">
+  DTS:VersionBuild="37"
+  DTS:VersionGUID="{4709CD59-DAA2-4ABB-9AA4-83E2A21BD152}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5699,874 +5699,6 @@ where [refTable].[AreaCode] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\CasualType"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{ABDAC31B-BA31-44A3-A194-BCFD99AAF09B}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="CasualType"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\CasualType\Add column UpdatedDate"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add column UpdatedDate"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\CasualType\Add column UpdatedDate.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\CasualType\Add column UpdatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\CasualType\Add column UpdatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\Add column UpdatedDate, CreatedDate"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add column UpdatedDate, CreatedDate"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\CasualType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      name="CreatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\CasualType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\Add SourceID"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add SourceID"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Add SourceID.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
-                      name="SourceID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">6</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">6</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\CasualType_Stage"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="CasualType_Stage"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[CasualType_Stage]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CasualType\CasualType_Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[code]"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]"
-                      name="code"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]"
-                      dataType="wstr"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[label]"
-                      length="255"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]"
-                      name="label"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[code]"
-                      dataType="i4"
-                      name="code" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[label]"
-                      dataType="wstr"
-                      length="255"
-                      name="label" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[code]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[code]"
-                      name="code" />
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[label]"
-                      dataType="wstr"
-                      length="255"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[label]"
-                      name="label" />
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\Insert into CasualType_NDS"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert into CasualType_NDS"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[CasualType]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CasualType\Insert into CasualType_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
-                    <inputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
-                      cachedDataType="i4"
-                      cachedName="SourceID"
-                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                      lineageId="Package\CasualType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
-                    <inputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[code]"
-                      cachedDataType="i4"
-                      cachedName="code"
-                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualTypeCode]"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]" />
-                    <inputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[label]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="label"
-                      externalMetadataColumnId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualTypeLabel]"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                      dataType="i4"
-                      name="SourceID" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualTypeID]"
-                      dataType="i4"
-                      name="CasualTypeID" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualTypeCode]"
-                      dataType="i4"
-                      name="CasualTypeCode" />
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualTypeLabel]"
-                      dataType="wstr"
-                      length="255"
-                      name="CasualTypeLabel" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\Lookup"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[CasualType]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[CasualType]) [refTable]
-where [refTable].[CasualTypeCode] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CasualTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualTypeCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualTypeLabel" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CasualType\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CasualType\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\CasualType\Lookup.Inputs[Lookup Input].Columns[code]"
-                      cachedDataType="i4"
-                      cachedName="code"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">CasualTypeCode</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\CasualType\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Lookup.Outputs[Lookup Match Output].Columns[CasualTypeID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\CasualType\Lookup.Outputs[Lookup Match Output].Columns[CasualTypeID]"
-                      name="CasualTypeID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">CasualTypeID</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\CasualType\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\CasualType\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\CasualType\Update in CasualType"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="Update in CasualType"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update CasualType set 
-CasualTypeLabel=?, UpdatedDate=?
- where CasualTypeID=?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\CasualType\Update in CasualType.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].Columns[label]"
-                      cachedDataType="wstr"
-                      cachedLength="255"
-                      cachedName="label"
-                      externalMetadataColumnId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]" />
-                    <inputColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
-                    <inputColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].Columns[CasualTypeID]"
-                      cachedDataType="i4"
-                      cachedName="CasualTypeID"
-                      externalMetadataColumnId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\CasualType\Lookup.Outputs[Lookup Match Output].Columns[CasualTypeID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      dataType="wstr"
-                      length="255"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="dbTimeStamp"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="i4"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\CasualType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\CasualType.Paths[Derived Column Output]"
-              endId="Package\CasualType\Update in CasualType.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\CasualType\Add column UpdatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CasualType.Paths[Derived Column Output1]"
-              endId="Package\CasualType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CasualType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CasualType.Paths[Derived Column Output2]"
-              endId="Package\CasualType\Lookup.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\CasualType\Add SourceID.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CasualType.Paths[Lookup Error Output]"
-              endId="Package\CasualType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\CasualType\Lookup.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\CasualType.Paths[Lookup Match Output]"
-              endId="Package\CasualType\Add column UpdatedDate.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\CasualType\Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\CasualType.Paths[OLE DB Source Output]"
-              endId="Package\CasualType\Add SourceID.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\CasualType\CasualType_Stage.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\CasualtySeverity"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -7430,6 +6562,874 @@ where [refTable].[CasualtySeverityCode] = ?</property>
               endId="Package\CasualtySeverity\Add SourceID.Inputs[Derived Column Input]"
               name="OLE DB Source Output"
               startId="Package\CasualtySeverity\CasualtySeverity_Stage.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\CasualtyType"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{ABDAC31B-BA31-44A3-A194-BCFD99AAF09B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="CasualtyType"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\CasualtyType\Add column UpdatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add column UpdatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Add column UpdatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CasualtyType\Add column UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CasualtyType\Add column UpdatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add column UpdatedDate, CreatedDate"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[GETDATE]()</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">GETDATE()</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\Add SourceID"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Add SourceID"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Add SourceID.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\CasualtyType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">6</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">6</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\CasualtyType\Add SourceID.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\CasualType_Stage"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="CasualType_Stage"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CasualType_Stage]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CasualtyType\CasualType_Stage.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[code]"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]"
+                      name="code"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[label]"
+                      length="255"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]"
+                      name="label"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[code]"
+                      dataType="i4"
+                      name="code" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].ExternalColumns[label]"
+                      dataType="wstr"
+                      length="255"
+                      name="label" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[code]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[code]"
+                      name="code" />
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[label]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[label]"
+                      name="label" />
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\Insert into CasualType_NDS"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert into CasualType_NDS"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[CasualtyType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CasualtyType\Insert into CasualType_NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="CreatedDate"
+                      externalMetadataColumnId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
+                      cachedDataType="i4"
+                      cachedName="SourceID"
+                      externalMetadataColumnId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      lineageId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[code]"
+                      cachedDataType="i4"
+                      cachedName="code"
+                      externalMetadataColumnId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyTypeCode]"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyTypeLabel]"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
+                      dataType="i4"
+                      name="SourceID" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyTypeID]"
+                      dataType="i4"
+                      name="CasualtyTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyTypeCode]"
+                      dataType="i4"
+                      name="CasualtyTypeCode" />
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyTypeLabel]"
+                      dataType="wstr"
+                      length="255"
+                      name="CasualtyTypeLabel" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Insert into CasualType_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\Lookup"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[CasualtyType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[CasualtyType]) [refTable]
+where [refTable].[CasualtyTypeCode] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CasualtyTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyTypeCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyTypeLabel" dataType="DT_WSTR" length="255" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CasualtyType\Lookup.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Lookup.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CasualtyType\Lookup.Inputs[Lookup Input].Columns[code]"
+                      cachedDataType="i4"
+                      cachedName="code"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CasualtyTypeCode</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Lookup.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="RedirectRow"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\CasualtyType\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Lookup.Outputs[Lookup Match Output].Columns[CasualtyTypeID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\CasualtyType\Lookup.Outputs[Lookup Match Output].Columns[CasualtyTypeID]"
+                      name="CasualtyTypeID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">CasualtyTypeID</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Lookup.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\CasualtyType\Lookup.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\CasualtyType\Lookup.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\CasualtyType\Update in CasualType"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="Update in CasualType"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update CasualtyType set 
+CasualtyTypeLabel=?, UpdatedDate=?
+ where CasualtyTypeID=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\CasualtyType\Update in CasualType.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].Columns[label]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="label"
+                      externalMetadataColumnId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output].Columns[label]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="UpdatedDate"
+                      externalMetadataColumnId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
+                    <inputColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].Columns[CasualtyTypeID]"
+                      cachedDataType="i4"
+                      cachedName="CasualtyTypeID"
+                      externalMetadataColumnId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\CasualtyType\Lookup.Outputs[Lookup Match Output].Columns[CasualtyTypeID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="dbTimeStamp"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\CasualtyType\Update in CasualType.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\CasualtyType.Paths[Derived Column Output]"
+              endId="Package\CasualtyType\Update in CasualType.Inputs[OLE DB Command Input]"
+              name="Derived Column Output"
+              startId="Package\CasualtyType\Add column UpdatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CasualtyType.Paths[Derived Column Output1]"
+              endId="Package\CasualtyType\Insert into CasualType_NDS.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CasualtyType.Paths[Derived Column Output2]"
+              endId="Package\CasualtyType\Lookup.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\CasualtyType\Add SourceID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CasualtyType.Paths[Lookup Error Output]"
+              endId="Package\CasualtyType\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
+              name="Lookup Error Output"
+              startId="Package\CasualtyType\Lookup.Outputs[Lookup Error Output]" />
+            <path
+              refId="Package\CasualtyType.Paths[Lookup Match Output]"
+              endId="Package\CasualtyType\Add column UpdatedDate.Inputs[Derived Column Input]"
+              name="Lookup Match Output"
+              startId="Package\CasualtyType\Lookup.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\CasualtyType.Paths[OLE DB Source Output]"
+              endId="Package\CasualtyType\Add SourceID.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\CasualtyType\CasualType_Stage.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -16591,12 +16591,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
                       cachedName="VehicleTypeID"
                       externalMetadataColumnId="Package\Vehicle_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeID]"
                       lineageId="Package\Vehicle_StageToNDS\Check VehicleType_NDS.Outputs[Lookup Match Output].Columns[VehicleTypeID]" />
-                    <inputColumn
-                      refId="Package\Vehicle_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].Columns[JourneyPurposeID]"
-                      cachedDataType="i4"
-                      cachedName="JourneyPurposeID"
-                      externalMetadataColumnId="Package\Vehicle_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[JourneyPurposeID]"
-                      lineageId="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Match Output].Columns[JourneyPurposeID]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -16629,9 +16623,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
                       dataType="i4"
                       name="VehicleTypeID" />
                     <externalMetadataColumn
-                      refId="Package\Vehicle_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[JourneyPurposeID]"
+                      refId="Package\Vehicle_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[JourneyPurpose]"
                       dataType="i4"
-                      name="JourneyPurposeID" />
+                      name="JourneyPurpose" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -16683,7 +16677,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
        [VehicleReference] = ?
       ,[VehicleTypeID] =?
       ,[JourneyPurposeID] =?
-,[SourceID]=?
+      ,[SourceID]=?
       ,[UpdatedDate] = ?
  WHERE 
       [VehicleID] = ?</property>
@@ -17251,12 +17245,12 @@ where [refTable].[VehicleTypeCode] = ?</property>
       DTS:From="Package\AgeBand"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 8"
-      DTS:To="Package\CasualType" />
+      DTS:To="Package\CasualtyType" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
       DTS:CreationName=""
       DTS:DTSID="{3FD9D410-D377-47D2-9178-9D8E8D102717}"
-      DTS:From="Package\CasualType"
+      DTS:From="Package\CasualtyType"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 9"
       DTS:To="Package\CasualtySeverity" />
@@ -17294,8 +17288,8 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Id="Package\Casualty_StageToNDS"
           TopLeft="72.1428668863921,323.117650791023" />
         <NodeLayout
-          Size="133.5,42"
-          Id="Package\CasualType"
+          Size="141.5,42"
+          Id="Package\CasualtyType"
           TopLeft="606,39.5" />
         <NodeLayout
           Size="156,42"
@@ -17577,24 +17571,24 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="739.5,60.5">
+          TopLeft="747.5,60.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="59.6666666666666,39"
+              EndConnector="27,39"
               Start="0,0"
-              End="59.6666666666666,31.5">
+              End="27,31.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="55.6666666666666,0" />
+                    End="23,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="55.6666666666666,0"
-                    Point2="59.6666666666666,0"
-                    Point3="59.6666666666666,4" />
+                    Point1="23,0"
+                    Point2="27,0"
+                    Point3="27,4" />
                   <mssgle:LineSegment
-                    End="59.6666666666666,31.5" />
+                    End="27,31.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -19371,40 +19365,40 @@ where [refTable].[VehicleTypeCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\CasualType">
+    design-time-name="Package\CasualtyType">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="165.333333333334,42"
-          Id="Package\CasualType\CasualType_Stage"
+          Size="165.5,42"
+          Id="Package\CasualtyType\CasualType_Stage"
           TopLeft="150.42857307074,16.294118408513" />
         <NodeLayout
           Size="198,42"
-          Id="Package\CasualType\Add column UpdatedDate"
+          Id="Package\CasualtyType\Add column UpdatedDate"
           TopLeft="46.5714289728476,226.000004558002" />
         <NodeLayout
           Size="264,42"
-          Id="Package\CasualType\Add column UpdatedDate, CreatedDate"
+          Id="Package\CasualtyType\Add column UpdatedDate, CreatedDate"
           TopLeft="293.285718871623,222.788239734148" />
         <NodeLayout
-          Size="113.333333333334,42"
-          Id="Package\CasualType\Lookup"
+          Size="113.5,42"
+          Id="Package\CasualtyType\Lookup"
           TopLeft="158.000002213887,92.588238640228" />
         <NodeLayout
-          Size="142.666666666667,42"
-          Id="Package\CasualType\Add SourceID"
+          Size="142.5,42"
+          Id="Package\CasualtyType\Add SourceID"
           TopLeft="365.571428972848,56.152946538826" />
         <NodeLayout
           Size="208,42"
-          Id="Package\CasualType\Update in CasualType"
+          Id="Package\CasualtyType\Update in CasualType"
           TopLeft="61.2857149547461,317.152946538826" />
         <NodeLayout
-          Size="210.666666666667,42"
-          Id="Package\CasualType\Insert into CasualType_NDS"
+          Size="210.5,42"
+          Id="Package\CasualtyType\Insert into CasualType_NDS"
           TopLeft="336.42857639157,309.458828494953" />
         <EdgeLayout
-          Id="Package\CasualType.Paths[OLE DB Source Output]"
+          Id="Package\CasualtyType.Paths[OLE DB Source Output]"
           TopLeft="315.42857307074,37.294118408513">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19434,13 +19428,11 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CasualType.Paths[Lookup Match Output]"
+          Id="Package\CasualtyType.Paths[Lookup Match Output]"
           TopLeft="197.000002213887,134.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19476,7 +19468,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CasualType.Paths[Lookup Error Output]"
+          Id="Package\CasualtyType.Paths[Lookup Error Output]"
           TopLeft="232.000002213887,134.588238640228">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19512,7 +19504,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CasualType.Paths[Derived Column Output2]"
+          Id="Package\CasualtyType.Paths[Derived Column Output2]"
           TopLeft="365.571428972848,82.8196132054926">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19542,13 +19534,11 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CasualType.Paths[Derived Column Output1]"
+          Id="Package\CasualtyType.Paths[Derived Column Output1]"
           TopLeft="425.285718871623,264.788239734148">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19578,13 +19568,11 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CasualType.Paths[Derived Column Output]"
+          Id="Package\CasualtyType.Paths[Derived Column Output]"
           TopLeft="145.571428972848,268.000004558002">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -19614,16 +19602,14 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\CasualType\CasualType_Stage">
+    design-time-name="Package\CasualtyType\CasualType_Stage">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19636,22 +19622,22 @@ where [refTable].[VehicleTypeCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CasualType\Lookup">
+    design-time-name="Package\CasualtyType\Lookup">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[CasualType]</Value>
+          type="q3:string">[dbo].[CasualtyType]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19659,7 +19645,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\CasualType\Insert into CasualType_NDS">
+    design-time-name="Package\CasualtyType\Insert into CasualType_NDS">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
