@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TTKD-29</Name>
-    <LastWriteTime>2022-01-03T15:04:25.4590349Z</LastWriteTime>
+    <LastWriteTime>2022-01-03T16:17:41.6838656Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -33,7 +33,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>linh2.dtsx</Name>
-      <LastWriteTime>2022-01-03T15:03:33.3394595Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T15:59:31.2210873Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
@@ -48,7 +48,7 @@
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>DDS.dtsx</Name>
-      <LastWriteTime>2022-01-03T11:53:43.2835584Z</LastWriteTime>
+      <LastWriteTime>2022-01-03T16:37:38.8003181Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

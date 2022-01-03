@@ -34,6 +34,7 @@ CREATE TABLE [dbo].[Accident](
 	[NumberOfCasualties] [int] NULL,
 	[LocalAuthorityDistrictID] [int] NULL,
 	[Time] [time](7) NULL,
+	[Date] [date] NULL,
 	[TimeOfDayID] [int] NULL,
 	[DateID] [int] NULL,
 	[RoadTypeID] [int] NULL,
