@@ -35,11 +35,8 @@ CREATE TABLE [dbo].[Accident](
 	[LocalAuthorityDistrictID] [int] NULL,
 	[Time] [time](7) NULL,
 	[Date] [date] NULL,
-	[TimeOfDayID] [int] NULL,
-	[DateID] [int] NULL,
 	[RoadTypeID] [int] NULL,
 	[SpeedLimit] [int] NULL,
-	[BuiltUpRoundID] [int] NULL,
 	[AreaID] [int] NULL,
 	[LocationID] [int] NULL,
 	[SourceID] [int] NULL,
@@ -299,20 +296,7 @@ CREATE TABLE [dbo].[Date](
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL
 ) ON [PRIMARY]
-GO
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[TimeOfDate](
-	[TimeOfDateID]  [int] identity(1,1) not null PRIMARY KEY,
-	[TimeOfDateMeaning] [varchar](50) NOT NULL,
-	[SourceID] [int] NULL,
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL
-) ON [PRIMARY]
-GO
 --Add Foregin Key
 GO
 ALTER TABLE Accident
