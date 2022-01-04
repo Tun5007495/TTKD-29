@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{DAAC8B79-9316-4345-AA6C-DE07FAA7C1E4}">
+  DTS:VersionBuild="42"
+  DTS:VersionGUID="{EA55E3A0-F1CC-4362-A91B-3110B20BD701}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -26,6 +26,18 @@
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
           DTS:ConnectionString="Data Source=.;Initial Catalog=UK_Accidents;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{9B212883-57DF-4CF1-8FEE-E62CA7635302}"
+      DTS:ObjectName="LocalHost.UK_Accidents_DDS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=.;Initial Catalog=UK_Accidents_DDS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -2252,6 +2264,292 @@ where [refTable].[RoadTypeCode] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\Accident_StageToNDS\Check real change"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Check real change"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Accident]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Accident]) [refTable]
+where [refTable].[NumberOfVehicles] = ? and [refTable].[NumberOfCasualties] = ? and [refTable].[SpeedLimit] = ? and [refTable].[Date] = ? and [refTable].[Time] = ? and [refTable].[LocationID] = ? and [refTable].[AccidentSeverityID] = ? and [refTable].[LocalAuthorityDistrictID] = ? and [refTable].[RoadTypeID] = ? and [refTable].[AreaID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentIndex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AccidentSeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfVehicles" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfCasualties" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocalAuthorityDistrictID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AreaID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Number_of_Vehicles]};#{Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]};#{Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Speed_limit]};#{Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Date]};#{Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Time]};#{Package\Accident_StageToNDS\Check in LSOA_NDS.Outputs[Lookup Match Output].Columns[LocationID]};#{Package\Accident_StageToNDS\Check in AccidentSeverity_NDS.Outputs[Lookup Match Output].Columns[AccidentSeverityID]};#{Package\Accident_StageToNDS\Check in LocalAuthorityDistrict_NDS.Outputs[Lookup Match Output].Columns[LocalAuthorityDistrictID]};#{Package\Accident_StageToNDS\Check in RoadType_NDS.Outputs[Lookup Match Output].Columns[RoadTypeID]};#{Package\Accident_StageToNDS\Check in Area_NDS.Outputs[Lookup Match Output].Columns[AreaID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Accident_StageToNDS\Check real change.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[RoadTypeID]"
+                      cachedDataType="i4"
+                      cachedName="RoadTypeID"
+                      lineageId="Package\Accident_StageToNDS\Check in RoadType_NDS.Outputs[Lookup Match Output].Columns[RoadTypeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">RoadTypeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[LocationID]"
+                      cachedDataType="i4"
+                      cachedName="LocationID"
+                      lineageId="Package\Accident_StageToNDS\Check in LSOA_NDS.Outputs[Lookup Match Output].Columns[LocationID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LocationID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[AreaID]"
+                      cachedDataType="i4"
+                      cachedName="AreaID"
+                      lineageId="Package\Accident_StageToNDS\Check in Area_NDS.Outputs[Lookup Match Output].Columns[AreaID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AreaID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[AccidentSeverityID]"
+                      cachedDataType="i4"
+                      cachedName="AccidentSeverityID"
+                      lineageId="Package\Accident_StageToNDS\Check in AccidentSeverity_NDS.Outputs[Lookup Match Output].Columns[AccidentSeverityID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AccidentSeverityID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[LocalAuthorityDistrictID]"
+                      cachedDataType="i4"
+                      cachedName="LocalAuthorityDistrictID"
+                      lineageId="Package\Accident_StageToNDS\Check in LocalAuthorityDistrict_NDS.Outputs[Lookup Match Output].Columns[LocalAuthorityDistrictID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">LocalAuthorityDistrictID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Time]"
+                      cachedDataType="dbTime2"
+                      cachedName="Time"
+                      cachedScale="7"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Time]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Time</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Speed_limit]"
+                      cachedDataType="i4"
+                      cachedName="Speed_limit"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Speed_limit]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">SpeedLimit</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Number_of_Vehicles]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Vehicles"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Number_of_Vehicles]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NumberOfVehicles</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Number_of_Casualties]"
+                      cachedDataType="i4"
+                      cachedName="Number_of_Casualties"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Number_of_Casualties]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">NumberOfCasualties</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Accident_StageToNDS\CreatedDate, UpdatedDate"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
@@ -2499,6 +2797,12 @@ where [refTable].[RoadTypeCode] = ?</property>
                       cachedName="Speed_limit"
                       externalMetadataColumnId="Package\Accident_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[SpeedLimit]"
                       lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Speed_limit]" />
+                    <inputColumn
+                      refId="Package\Accident_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].Columns[Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Date"
+                      externalMetadataColumnId="Package\Accident_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Accident_StageToNDS\Accident_Stage.Outputs[OLE DB Source Output].Columns[Date]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -2573,6 +2877,10 @@ where [refTable].[RoadTypeCode] = ?</property>
                       refId="Package\Accident_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[BuiltUpRoundID]"
                       dataType="i4"
                       name="BuiltUpRoundID" />
+                    <externalMetadataColumn
+                      refId="Package\Accident_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="dbDate"
+                      name="Date" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -2981,14 +3289,14 @@ where [refTable].[RoadTypeCode] = ?</property>
               startId="Package\Accident_StageToNDS\CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Accident_StageToNDS.Paths[Derived Column Output1]"
-              endId="Package\Accident_StageToNDS\Update into NDS.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\Accident_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Accident_StageToNDS.Paths[Derived Column Output2]"
               endId="Package\Accident_StageToNDS\Check in LSOA_NDS.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Accident_StageToNDS\Add SourceID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Accident_StageToNDS.Paths[Derived Column Output2]"
+              endId="Package\Accident_StageToNDS\Check real change.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Accident_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Accident_StageToNDS.Paths[Lookup Error Output]"
               endId="Package\Accident_StageToNDS\CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
@@ -3024,6 +3332,11 @@ where [refTable].[RoadTypeCode] = ?</property>
               endId="Package\Accident_StageToNDS\Check in NDS.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Accident_StageToNDS\Check in Area_NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Accident_StageToNDS.Paths[Lookup No Match Output]"
+              endId="Package\Accident_StageToNDS\Update into NDS.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Accident_StageToNDS\Check real change.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Accident_StageToNDS.Paths[OLE DB Source Output]"
               endId="Package\Accident_StageToNDS\Add SourceID.Inputs[Derived Column Input]"
@@ -7795,7 +8108,7 @@ where [refTable].[AccidentIndex] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentIndex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AccidentSeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfVehicles" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfCasualties" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocalAuthorityDistrictID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AreaID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentIndex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AccidentSeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfVehicles" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfCasualties" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocalAuthorityDistrictID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TimeOfDayID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BuiltUpRoundID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AreaID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -8556,7 +8869,7 @@ where [refTable].[GenderCode] = ?</property>
                   expressionType="Notify"
                   name="SqlCommandParam"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Casualty]) [refTable]
-where [refTable].[CasualtyReference] = ?</property>
+where [refTable].[CasualtyReference] = ? and [refTable].[AccidentID] = ?</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the type of connection used to access the reference dataset."
@@ -8587,12 +8900,12 @@ where [refTable].[CasualtyReference] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CasualtyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentID" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CasualtyReference" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GenderID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeBandID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtySeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CasualtyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyReference" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GenderID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeBandID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtySeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Casualty_StageToNDS\Casualty_Stage.Outputs[OLE DB Source Output].Columns[Casualty_Reference]};</property>
+                  name="ParameterMap">#{Package\Casualty_StageToNDS\Casualty_Stage.Outputs[OLE DB Source Output].Columns[Casualty_Reference]};#{Package\Casualty_StageToNDS\Check in Accident_NDS.Outputs[Lookup Match Output].Columns[AccidentID]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -8625,6 +8938,22 @@ where [refTable].[CasualtyReference] = ?</property>
                           dataType="System.String"
                           description="Specifies the column in the reference table that a column joins."
                           name="JoinToReferenceColumn">CasualtyReference</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check in NDS.Inputs[Lookup Input].Columns[AccidentID]"
+                      cachedDataType="i4"
+                      cachedName="AccidentID"
+                      lineageId="Package\Casualty_StageToNDS\Check in Accident_NDS.Outputs[Lookup Match Output].Columns[AccidentID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AccidentID</property>
                         <property
                           dataType="System.Null"
                           description="Specifies the column in the reference table from which a column is copied."
@@ -8686,6 +9015,227 @@ where [refTable].[CasualtyReference] = ?</property>
                       refId="Package\Casualty_StageToNDS\Check in NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Casualty_StageToNDS\Check in NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Casualty_StageToNDS\Check real change"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Check real change"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Casualty]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Casualty]) [refTable]
+where [refTable].[Age] = ? and [refTable].[GenderID] = ? and [refTable].[AgeBandID] = ? and [refTable].[CasualtySeverityID] = ? and [refTable].[CasualtyTypeID] = ? and [refTable].[CasualtyID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="CasualtyID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyReference" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="GenderID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Age" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeBandID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtySeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CasualtyTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Casualty_StageToNDS\Casualty_Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]};#{Package\Casualty_StageToNDS\Check in Gender_NDS.Outputs[Lookup Match Output].Columns[GenderID]};#{Package\Casualty_StageToNDS\Check in AgeBand_NDS.Outputs[Lookup Match Output].Columns[AgeBandID]};#{Package\Casualty_StageToNDS\Check in CasualtySeverity_NDS.Outputs[Lookup Match Output].Columns[CasualtySeverityID]};#{Package\Casualty_StageToNDS\Check in CasualtyType_NDS.Outputs[Lookup Match Output].Columns[CasualtyTypeID]};#{Package\Casualty_StageToNDS\Check in NDS.Outputs[Lookup Match Output].Columns[CasualtyID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Casualty_StageToNDS\Check real change.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[Age_of_Casualty]"
+                      cachedDataType="i4"
+                      cachedName="Age_of_Casualty"
+                      lineageId="Package\Casualty_StageToNDS\Casualty_Stage.Outputs[OLE DB Source Output].Columns[Age_of_Casualty]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Age</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[AgeBandID]"
+                      cachedDataType="i4"
+                      cachedName="AgeBandID"
+                      lineageId="Package\Casualty_StageToNDS\Check in AgeBand_NDS.Outputs[Lookup Match Output].Columns[AgeBandID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">AgeBandID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[CasualtyID]"
+                      cachedDataType="i4"
+                      cachedName="CasualtyID"
+                      lineageId="Package\Casualty_StageToNDS\Check in NDS.Outputs[Lookup Match Output].Columns[CasualtyID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CasualtyID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[CasualtySeverityID]"
+                      cachedDataType="i4"
+                      cachedName="CasualtySeverityID"
+                      lineageId="Package\Casualty_StageToNDS\Check in CasualtySeverity_NDS.Outputs[Lookup Match Output].Columns[CasualtySeverityID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CasualtySeverityID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[CasualtyTypeID]"
+                      cachedDataType="i4"
+                      cachedName="CasualtyTypeID"
+                      lineageId="Package\Casualty_StageToNDS\Check in CasualtyType_NDS.Outputs[Lookup Match Output].Columns[CasualtyTypeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">CasualtyTypeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input].Columns[GenderID]"
+                      cachedDataType="i4"
+                      cachedName="GenderID"
+                      lineageId="Package\Casualty_StageToNDS\Check in Gender_NDS.Outputs[Lookup Match Output].Columns[GenderID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">GenderID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -8957,9 +9507,7 @@ where [refTable].[CasualtyReference] = ?</property>
                       name="CasualtyID" />
                     <externalMetadataColumn
                       refId="Package\Casualty_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[AccidentID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="AccidentID" />
                     <externalMetadataColumn
                       refId="Package\Casualty_StageToNDS\Insert into NDS.Inputs[OLE DB Destination Input].ExternalColumns[CasualtyReference]"
@@ -9284,14 +9832,14 @@ where [refTable].[CasualtyReference] = ?</property>
               startId="Package\Casualty_StageToNDS\CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Casualty_StageToNDS.Paths[Derived Column Output1]"
-              endId="Package\Casualty_StageToNDS\Update in NDS.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\Casualty_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
               endId="Package\Casualty_StageToNDS\Check in Accident_NDS.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Casualty_StageToNDS\Add SourceID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
+              endId="Package\Casualty_StageToNDS\Check real change.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Casualty_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Casualty_StageToNDS.Paths[Lookup Error Output]"
               endId="Package\Casualty_StageToNDS\CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
@@ -9327,6 +9875,11 @@ where [refTable].[CasualtyReference] = ?</property>
               endId="Package\Casualty_StageToNDS\Check in NDS.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Casualty_StageToNDS\Check in CasualtyType_NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Casualty_StageToNDS.Paths[Lookup No Match Output]"
+              endId="Package\Casualty_StageToNDS\Update in NDS.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Casualty_StageToNDS\Check real change.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Casualty_StageToNDS.Paths[OLE DB Source Output]"
               endId="Package\Casualty_StageToNDS\Add SourceID.Inputs[Derived Column Input]"
@@ -15792,7 +16345,7 @@ where [refTable].[AccidentIndex] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentIndex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AccidentSeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfVehicles" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfCasualties" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocalAuthorityDistrictID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AreaID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentIndex" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AccidentSeverityID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfVehicles" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="NumberOfCasualties" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocalAuthorityDistrictID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Time" dataType="DT_DBTIME2" length="0" precision="0" scale="7" codePage="0"/&gt;&lt;referenceColumn name="Date" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="TimeOfDayID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="RoadTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SpeedLimit" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="BuiltUpRoundID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AreaID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="LocationID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -16225,6 +16778,179 @@ where [refTable].[JourneyPurposeCode] = ?</property>
                       refId="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Vehicle_StageToNDS\Check real change"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Check real change"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[Vehicle]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[Vehicle]) [refTable]
+where [refTable].[VehicleTypeID] = ? and [refTable].[JourneyPurposeID] = ? and [refTable].[VehicleID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="VehicleID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AccidentID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VehicleReference" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="VehicleTypeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="JourneyPurposeID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Vehicle_StageToNDS\Check VehicleType_NDS.Outputs[Lookup Match Output].Columns[VehicleTypeID]};#{Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Match Output].Columns[JourneyPurposeID]};#{Package\Vehicle_StageToNDS\Check in NDS.Outputs[Lookup Match Output].Columns[VehicleID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Vehicle_StageToNDS\Check real change.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input].Columns[VehicleTypeID]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeID"
+                      lineageId="Package\Vehicle_StageToNDS\Check VehicleType_NDS.Outputs[Lookup Match Output].Columns[VehicleTypeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">VehicleTypeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input].Columns[JourneyPurposeID]"
+                      cachedDataType="i4"
+                      cachedName="JourneyPurposeID"
+                      lineageId="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Match Output].Columns[JourneyPurposeID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">JourneyPurposeID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input].Columns[VehicleID]"
+                      cachedDataType="i4"
+                      cachedName="VehicleID"
+                      lineageId="Package\Vehicle_StageToNDS\Check in NDS.Outputs[Lookup Match Output].Columns[VehicleID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">VehicleID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -17098,14 +17824,14 @@ where [refTable].[VehicleTypeCode] = ?</property>
               startId="Package\Vehicle_StageToNDS\CreatedDate, UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Vehicle_StageToNDS.Paths[Derived Column Output1]"
-              endId="Package\Vehicle_StageToNDS\Update in NDS.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\Vehicle_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
               endId="Package\Vehicle_StageToNDS\Check Accident_NDS.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\Vehicle_StageToNDS\Add SourceID.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
+              endId="Package\Vehicle_StageToNDS\Check real change.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Vehicle_StageToNDS\UpdatedDate.Outputs[Derived Column Output]" />
             <path
               refId="Package\Vehicle_StageToNDS.Paths[Lookup Error Output]"
               endId="Package\Vehicle_StageToNDS\CreatedDate, UpdatedDate.Inputs[Derived Column Input]"
@@ -17131,6 +17857,11 @@ where [refTable].[VehicleTypeCode] = ?</property>
               endId="Package\Vehicle_StageToNDS\Check in NDS.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\Vehicle_StageToNDS.Paths[Lookup No Match Output]"
+              endId="Package\Vehicle_StageToNDS\Update in NDS.Inputs[OLE DB Command Input]"
+              name="Lookup No Match Output"
+              startId="Package\Vehicle_StageToNDS\Check real change.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Vehicle_StageToNDS.Paths[OLE DB Source Output]"
               endId="Package\Vehicle_StageToNDS\Add SourceID.Inputs[Derived Column Input]"
@@ -17714,9 +18445,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Id="Package\Accident_StageToNDS\Check in LocalAuthorityDistrict_NDS"
           TopLeft="730.5,114.5" />
         <NodeLayout
-          Size="195.5,42"
-          Id="Package\Accident_StageToNDS\Check in RoadType_NDS"
-          TopLeft="417.5,109.5" />
+          Size="157,41.5"
+          Id="Package\Accident_StageToNDS\Update into NDS"
+          TopLeft="163.428572389544,478.307695954094" />
         <NodeLayout
           Size="205,41.5"
           Id="Package\Accident_StageToNDS\CreatedDate, UpdatedDate"
@@ -17746,35 +18477,13 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Id="Package\Accident_StageToNDS\Check in Area_NDS"
           TopLeft="115.5,102" />
         <NodeLayout
-          Size="157,41.5"
-          Id="Package\Accident_StageToNDS\Update into NDS"
-          TopLeft="170.428572389544,342.307695954094" />
+          Size="195.5,42"
+          Id="Package\Accident_StageToNDS\Check in RoadType_NDS"
+          TopLeft="417.5,109.5" />
         <NodeLayout
           Size="150.5,41.5"
           Id="Package\Accident_StageToNDS\Accident_Stage"
           TopLeft="87.428575369777,24.3393668054044" />
-        <EdgeLayout
-          Id="Package\Accident_StageToNDS.Paths[Derived Column Output]"
-          TopLeft="605.758248862143,242.839368993246">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,35.7194582254673"
-              Start="0,0"
-              End="0,28.2194582254673">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,28.2194582254673" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Accident_StageToNDS.Paths[OLE DB Source Output]"
           TopLeft="237.928575369777,43.9196834027022">
@@ -17949,7 +18658,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-1.47710439827997,5,96.3827734375,11.609375"
+              BoundingBox="-1.47710439827996,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17978,7 +18687,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accident_StageToNDS.Paths[Derived Column Output2]"
+          Id="Package\Accident_StageToNDS.Paths[Derived Column Output1]"
           TopLeft="410.25,44.0814481353963">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -18000,25 +18709,75 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Accident_StageToNDS.Paths[Derived Column Output1]"
-          TopLeft="249.785715380493,307.192310244789">
+          Id="Package\Accident_StageToNDS.Paths[Derived Column Output]"
+          TopLeft="605.758248862143,242.839368993246">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,35.1153857093056"
+              EndConnector="0,35.7194582254673"
               Start="0,0"
-              End="0,27.6153857093056">
+              End="0,28.2194582254673">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,27.6153857093056" />
+                    End="0,28.2194582254673" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165.5,42"
+          Id="Package\Accident_StageToNDS\Check real change"
+          TopLeft="165.428575369777,351.807695954094" />
+        <EdgeLayout
+          Id="Package\Accident_StageToNDS.Paths[Derived Column Output2]"
+          TopLeft="249.41071687061,307.192310244789">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.615385709305"
+              Start="0,0"
+              End="0,37.115385709305">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.115385709305" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Accident_StageToNDS.Paths[Lookup No Match Output]"
+          TopLeft="245.05357387966,393.807695954094">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.5"
+              Start="0,0"
+              End="0,77">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,77" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,32.6953125,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -19341,76 +20100,54 @@ where [refTable].[VehicleTypeCode] = ?</property>
         <NodeLayout
           Size="182.5,42"
           Id="Package\Casualty_StageToNDS\Check in Gender_NDS"
-          TopLeft="711.428571428571,60.7142857142857" />
+          TopLeft="729.285714285714,60.7142857142857" />
         <NodeLayout
           Size="190,42"
           Id="Package\Casualty_StageToNDS\Check in AgeBand_NDS"
-          TopLeft="710,147.857142857143" />
+          TopLeft="727.857142857143,147.857142857143" />
         <NodeLayout
           Size="112,41.5"
           Id="Package\Casualty_StageToNDS\Update in NDS"
-          TopLeft="148.904761904762,468.081235903455" />
+          TopLeft="167.476190476191,545.938378760598" />
         <NodeLayout
           Size="151.5,41.5"
           Id="Package\Casualty_StageToNDS\Insert into NDS"
-          TopLeft="371.714291857214,474.94958328529" />
+          TopLeft="389.571434714357,474.94958328529" />
         <NodeLayout
           Size="225.5,42"
           Id="Package\Casualty_StageToNDS\Check in CasualtySeverity_NDS"
-          TopLeft="379.285714285714,149.285714285714" />
+          TopLeft="397.142857142857,149.285714285714" />
         <NodeLayout
           Size="140,41.5"
           Id="Package\Casualty_StageToNDS\UpdatedDate"
-          TopLeft="135.380952453938,380.414568142868" />
+          TopLeft="153.238095311081,380.414568142868" />
         <NodeLayout
           Size="204.5,41.5"
           Id="Package\Casualty_StageToNDS\CreatedDate, UpdatedDate"
-          TopLeft="346.571434325102,379.442579272277" />
+          TopLeft="364.428577182245,379.442579272277" />
         <NodeLayout
           Size="211,42"
           Id="Package\Casualty_StageToNDS\Check in CasualtyType_NDS"
-          TopLeft="495.714285714286,249.285714285714" />
+          TopLeft="513.571428571429,249.285714285714" />
         <NodeLayout
           Size="188,42"
           Id="Package\Casualty_StageToNDS\Check in Accident_NDS"
-          TopLeft="466.4285714529,59" />
+          TopLeft="484.285714310043,59" />
         <NodeLayout
           Size="141.5,41.5"
           Id="Package\Casualty_StageToNDS\Check in NDS"
-          TopLeft="258.571431575989,311.366948001328" />
+          TopLeft="276.428574433132,311.366948001328" />
         <NodeLayout
           Size="151,42"
           Id="Package\Casualty_StageToNDS\Casualty_Stage"
-          TopLeft="82.0476219548663,64" />
+          TopLeft="99.9047648120092,64" />
         <NodeLayout
           Size="144,42"
           Id="Package\Casualty_StageToNDS\Add SourceID"
-          TopLeft="260.857142857143,64.8095238095238" />
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output1]"
-          TopLeft="205.14285717935,421.914568142868">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.1666677605866"
-              Start="0,0"
-              End="0,38.6666677605866">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,38.6666677605866" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+          TopLeft="278.714285714286,64.8095238095238" />
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Derived Column Output]"
-          TopLeft="448.142863091158,420.942579272277">
+          TopLeft="466.000005948301,420.942579272277">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19432,7 +20169,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[OLE DB Source Output]"
-          TopLeft="233.047621954866,85.4047619047619">
+          TopLeft="250.904764812009,85.4047619047619">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19454,7 +20191,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output5]"
-          TopLeft="495.714285714286,270.285714285714">
+          TopLeft="513.571428571429,270.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19490,7 +20227,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output4]"
-          TopLeft="492.035714285714,191.285714285714">
+          TopLeft="509.892857142857,191.285714285714">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19526,7 +20263,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output3]"
-          TopLeft="710,169.571428571429">
+          TopLeft="727.857142857143,169.571428571429">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19550,7 +20287,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output2]"
-          TopLeft="803.839285714286,102.714285714286">
+          TopLeft="821.696428571429,102.714285714286">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19574,7 +20311,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output1]"
-          TopLeft="654.4285714529,80.8571428571428">
+          TopLeft="672.285714310043,80.8571428571428">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19598,7 +20335,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output]"
-          TopLeft="307.071431575989,352.866948001328">
+          TopLeft="324.928574433132,352.866948001328">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19634,7 +20371,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Lookup Error Output]"
-          TopLeft="351.571431575989,352.866948001328">
+          TopLeft="369.428574433132,352.866948001328">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19669,8 +20406,8 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
-          TopLeft="404.857142857143,82.9047619047619">
+          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output1]"
+          TopLeft="422.714285714286,82.9047619047619">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -19690,6 +20427,56 @@ where [refTable].[VehicleTypeCode] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="165.5,42"
+          Id="Package\Casualty_StageToNDS\Check real change"
+          TopLeft="139.190479097724,463.86695018917" />
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
+          TopLeft="222.589287204402,421.914568142868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.9523820463015"
+              Start="0,0"
+              End="0,34.4523820463015">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.4523820463015" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Lookup No Match Output]"
+          TopLeft="222.708334786957,505.86695018917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.0714285714284"
+              Start="0,0"
+              End="0,32.5714285714284">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5714285714284" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,10.4810267857142,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -19699,7 +20486,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -19709,7 +20496,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19722,7 +20509,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -19732,7 +20519,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19840,7 +20627,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -19850,7 +20637,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:int">0</Value>
+          type="q4:string">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -22161,13 +22948,17 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Id="Package\Vehicle_StageToNDS\Check Accident_NDS"
           TopLeft="632.333333333333,39.3333333333333" />
         <NodeLayout
+          Size="144,41.5"
+          Id="Package\Vehicle_StageToNDS\Vehicle_Stage"
+          TopLeft="205.714288621533,39.1666666666667" />
+        <NodeLayout
           Size="144,42"
           Id="Package\Vehicle_StageToNDS\Add SourceID"
           TopLeft="422,35.5686309043374" />
         <NodeLayout
           Size="112,41.5"
           Id="Package\Vehicle_StageToNDS\Update in NDS"
-          TopLeft="447.5,325.676473998693" />
+          TopLeft="441.5,345.676473998693" />
         <NodeLayout
           Size="193,42"
           Id="Package\Vehicle_StageToNDS\Check VehicleType_NDS"
@@ -22176,10 +22967,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Size="141.5,41.5"
           Id="Package\Vehicle_StageToNDS\Check in NDS"
           TopLeft="585.595241099799,137.176471810852" />
-        <NodeLayout
-          Size="144,41.5"
-          Id="Package\Vehicle_StageToNDS\Vehicle_Stage"
-          TopLeft="205.714288621533,39.1666666666667" />
         <EdgeLayout
           Id="Package\Vehicle_StageToNDS.Paths[OLE DB Source Output]"
           TopLeft="349.714288621533,58.242648785502">
@@ -22359,7 +23146,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
+          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output1]"
           TopLeft="566,58.4509821188353">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -22372,40 +23159,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
                   Capacity="5">
                   <mssgle:LineSegment
                     End="58.8333333333333,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output1]"
-          TopLeft="495.119047692033,245.84313957144">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="8.38095230796716,79.8333344272533"
-              Start="0,0"
-              End="8.38095230796716,72.3333344272533">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.9166672136266" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,35.9166672136266"
-                    Point2="0,39.9166672136266"
-                    Point3="4,39.9166672136266" />
-                  <mssgle:LineSegment
-                    End="4.38095230796716,39.9166672136266" />
-                  <mssgle:CubicBezierSegment
-                    Point1="4.38095230796716,39.9166672136266"
-                    Point2="8.38095230796716,39.9166672136266"
-                    Point3="8.38095230796716,43.9166672136266" />
-                  <mssgle:LineSegment
-                    End="8.38095230796716,72.3333344272533" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -22446,6 +23199,80 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="165.5,42"
+          Id="Package\Vehicle_StageToNDS\Check real change"
+          TopLeft="402.214288621533,270.176473998693" />
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
+          TopLeft="495.119047692033,245.84313957144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.1547590705,24.333334427253"
+              Start="0,0"
+              End="-10.1547590705,16.833334427253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.1666672136265" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.1666672136265"
+                    Point2="0,12.1666672136265"
+                    Point3="-4,12.1666672136265" />
+                  <mssgle:LineSegment
+                    End="-6.15475907050001,12.1666672136265" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.15475907050001,12.1666672136265"
+                    Point2="-10.1547590705,12.1666672136265"
+                    Point3="-10.1547590705,16.1666672136265" />
+                  <mssgle:LineSegment
+                    End="-10.1547590705,16.833334427253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Lookup No Match Output]"
+          TopLeft="484.964288621533,312.176473998693">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.535711378467,33.5"
+              Start="0,0"
+              End="12.535711378467,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.75"
+                    Point2="0,16.75"
+                    Point3="4,16.75" />
+                  <mssgle:LineSegment
+                    End="8.535711378467,16.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.535711378467,16.75"
+                    Point2="12.535711378467,16.75"
+                    Point3="12.535711378467,20.75" />
+                  <mssgle:LineSegment
+                    End="12.535711378467,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.5385310295165,21.75,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22493,7 +23320,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -22503,10 +23330,23 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicle_StageToNDS\Vehicle_Stage">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -22553,19 +23393,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Vehicle_StageToNDS\Vehicle_Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -22855,6 +23682,75 @@ where [refTable].[VehicleTypeCode] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accident_StageToNDS\Check real change">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Casualty_StageToNDS\Check real change">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Casualty]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Vehicle_StageToNDS\Check real change">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Vehicle]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>

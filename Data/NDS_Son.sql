@@ -126,7 +126,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Casualty](
 	[CasualtyID] [int] identity(1,1) not null PRIMARY KEY,
-	[AccidentID] [varchar](50) NULL,
+	[AccidentID] int NULL,
 	[CasualtyReference][int] NULL,
 	[GenderID]  [int] NULL,
 	[Age]  [int] NULL,
