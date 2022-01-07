@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="NDS"
   DTS:PackageType="5"
-  DTS:VersionBuild="49"
-  DTS:VersionGUID="{B199FC31-1D84-4F4C-8195-D7F56AF1113C}">
+  DTS:VersionBuild="52"
+  DTS:VersionGUID="{56C5584F-1C0E-4B20-BDA7-049FFBA589B9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4203,937 +4203,6 @@ where [refTable].[AgeBandCode] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\AgeGroup"
-      DTS:CreationName="Microsoft.Pipeline"
-      DTS:Description="Data Flow Task"
-      DTS:DTSID="{3BE21999-CC5B-4893-985C-932D55B95940}"
-      DTS:ExecutableType="Microsoft.Pipeline"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="AgeGroup"
-      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <pipeline
-          version="1">
-          <components>
-            <component
-              refId="Package\AgeGroup\Add column UpdatedDate"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add column UpdatedDate"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Add column UpdatedDate.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\AgeGroup\Add column UpdatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\AgeGroup\Add column UpdatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add column UpdatedDate, CreatedDate"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]"
-                      name="UpdatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]"
-                      name="CreatedDate"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">[GETDATE]()</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">GETDATE()</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\Add SourceID"
-              componentClassID="Microsoft.DerivedColumn"
-              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
-              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
-              name="Add SourceID"
-              usesDispositions="true">
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]"
-                  description="Input to the Derived Column Transformation"
-                  name="Derived Column Input">
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output]"
-                  description="Default Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  name="Derived Column Output"
-                  synchronousInputId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Computation"
-                      errorRowDisposition="FailComponent"
-                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]"
-                      name="SourceID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Expression"
-                          name="Expression">6</property>
-                        <property
-                          containsID="true"
-                          dataType="System.String"
-                          description="Derived Column Friendly Expression"
-                          expressionType="Notify"
-                          name="FriendlyExpression">6</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output]"
-                  description="Error Output of the Derived Column Transformation"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Derived Column Error Output"
-                  synchronousInputId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\AgeGroup_Stage"
-              componentClassID="Microsoft.OLEDBSource"
-              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
-              description="OLE DB Source"
-              name="AgeGroup_Stage"
-              usesDispositions="true"
-              version="7">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[AgeGroup_Stage]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.String"
-                  description="The variable that contains the SQL command to be executed."
-                  name="SqlCommandVariable"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">0</property>
-                <property
-                  dataType="System.String"
-                  description="The mappings between the parameters in the SQL command and variables."
-                  name="ParameterMapping"></property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AgeGroup\AgeGroup_Stage.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output]"
-                  name="OLE DB Source Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupCode]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroupCode]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupCode]"
-                      name="AgeGroupCode"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupLabel]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroupLabel]"
-                      length="50"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupLabel]"
-                      name="AgeGroupLabel"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeFrom]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeFrom]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeFrom]"
-                      name="AgeFrom"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroup]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroup]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroup]"
-                      name="AgeGroup"
-                      truncationRowDisposition="FailComponent" />
-                  </outputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroupCode]"
-                      dataType="i4"
-                      name="AgeGroupCode" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroupLabel]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="AgeGroupLabel" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeFrom]"
-                      dataType="i4"
-                      name="AgeFrom" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].ExternalColumns[AgeGroup]"
-                      dataType="i4"
-                      name="AgeGroup" />
-                  </externalMetadataColumns>
-                </output>
-                <output
-                  refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output]"
-                  isErrorOut="true"
-                  name="OLE DB Source Error Output">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroupCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroupCode]"
-                      name="AgeGroupCode" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroupLabel]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroupLabel]"
-                      name="AgeGroupLabel" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeFrom]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeFrom]"
-                      name="AgeFrom" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroup]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[AgeGroup]"
-                      name="AgeGroup" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\Insert into AgeGroup_NDS"
-              componentClassID="Microsoft.OLEDBDestination"
-              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
-              description="OLE DB Destination"
-              name="Insert into AgeGroup_NDS"
-              usesDispositions="true"
-              version="4">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[AgeGroup]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies the variable that contains the name of the database object used to open a rowset."
-                  name="OpenRowsetVariable"></property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Forces the use of the DefaultCodePage property value when describing character data."
-                  name="AlwaysUseDefaultCodePage">false</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the mode used to access the database."
-                  name="AccessMode"
-                  typeConverter="AccessMode">3</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepIdentity">false</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
-                  name="FastLoadKeepNulls">false</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
-                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
-                  name="FastLoadMaxInsertCommitSize">2147483647</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AgeGroup\Insert into AgeGroup_NDS.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input]"
-                  errorOrTruncationOperation="Insert"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[CreatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="CreatedDate"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output].Columns[CreatedDate]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[AgeGroupCode]"
-                      cachedDataType="i4"
-                      cachedName="AgeGroupCode"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroupCode]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupCode]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[AgeGroupLabel]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="AgeGroupLabel"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroupLabel]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupLabel]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[AgeFrom]"
-                      cachedDataType="i4"
-                      cachedName="AgeFrom"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeFrom]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeFrom]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[AgeGroup]"
-                      cachedDataType="i4"
-                      cachedName="AgeGroup"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroup]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroup]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].Columns[SourceID]"
-                      cachedDataType="i4"
-                      cachedName="SourceID"
-                      externalMetadataColumnId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                      lineageId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output].Columns[SourceID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[SourceID]"
-                      dataType="i4"
-                      name="SourceID" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[CreatedDate]"
-                      dataType="dbTimeStamp"
-                      name="CreatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[UpdatedDate]"
-                      dataType="dbTimeStamp"
-                      name="UpdatedDate" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroupID]"
-                      dataType="i4"
-                      name="AgeGroupID" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroupCode]"
-                      dataType="i4"
-                      name="AgeGroupCode" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroupLabel]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="AgeGroupLabel" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeFrom]"
-                      dataType="i4"
-                      name="AgeFrom" />
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input].ExternalColumns[AgeGroup]"
-                      dataType="i4"
-                      name="AgeGroup" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Insert into AgeGroup_NDS.Outputs[OLE DB Destination Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Insert into AgeGroup_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Insert into AgeGroup_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Insert into AgeGroup_NDS.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\Lookup"
-              componentClassID="Microsoft.Lookup"
-              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
-              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
-              name="Lookup"
-              usesDispositions="true"
-              version="6">
-              <properties>
-                <property
-                  dataType="System.String"
-                  description="Specifies the SQL statement that generates the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[AgeGroup]</property>
-                <property
-                  dataType="System.String"
-                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
-                  expressionType="Notify"
-                  name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[AgeGroup]) [refTable]
-where [refTable].[AgeGroupCode] = ?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the type of connection used to access the reference dataset."
-                  name="ConnectionType"
-                  typeConverter="LookupConnectionType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the cache type of the lookup table."
-                  name="CacheType"
-                  typeConverter="CacheType">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
-                  name="NoMatchBehavior"
-                  typeConverter="LookupNoMatchBehavior">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
-                  name="NoMatchCachePercentage">0</property>
-                <property
-                  dataType="System.Int32"
-                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
-                  name="MaxMemoryUsage">25</property>
-                <property
-                  dataType="System.Int64"
-                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
-                  name="MaxMemoryUsage64">25</property>
-                <property
-                  dataType="System.String"
-                  description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="AgeGroupID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeGroupCode" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeGroupLabel" dataType="DT_STR" length="50" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="AgeFrom" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="AgeGroup" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="SourceID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CreatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="UpdatedDate" dataType="DT_DBTIMESTAMP" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
-                <property
-                  containsID="true"
-                  dataType="System.String"
-                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupCode]};</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-                <property
-                  dataType="System.Boolean"
-                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
-                  name="TreatDuplicateKeysAsError">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AgeGroup\Lookup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="Connection manager used to access lookup data."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Lookup.Inputs[Lookup Input]"
-                  name="Lookup Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\AgeGroup\Lookup.Inputs[Lookup Input].Columns[AgeGroupCode]"
-                      cachedDataType="i4"
-                      cachedName="AgeGroupCode"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupCode]">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table that a column joins."
-                          name="JoinToReferenceColumn">AgeGroupCode</property>
-                        <property
-                          dataType="System.Null"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn" />
-                      </properties>
-                    </inputColumn>
-                  </inputColumns>
-                  <externalMetadataColumns />
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output]"
-                  errorOrTruncationOperation="Lookup"
-                  errorRowDisposition="RedirectRow"
-                  exclusionGroup="1"
-                  name="Lookup Match Output"
-                  synchronousInputId="Package\AgeGroup\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output].Columns[AgeGroupID]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output].Columns[AgeGroupID]"
-                      name="AgeGroupID"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.String"
-                          description="Specifies the column in the reference table from which a column is copied."
-                          name="CopyFromReferenceColumn">AgeGroupID</property>
-                      </properties>
-                    </outputColumn>
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Lookup.Outputs[Lookup No Match Output]"
-                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
-                  exclusionGroup="1"
-                  name="Lookup No Match Output"
-                  synchronousInputId="Package\AgeGroup\Lookup.Inputs[Lookup Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="Lookup Error Output"
-                  synchronousInputId="Package\AgeGroup\Lookup.Inputs[Lookup Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-            <component
-              refId="Package\AgeGroup\Update in AgeGroup"
-              componentClassID="Microsoft.OLEDBCommand"
-              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
-              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
-              name="Update in AgeGroup"
-              usesDispositions="true"
-              version="2">
-              <properties>
-                <property
-                  dataType="System.Int32"
-                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
-                  name="CommandTimeout">0</property>
-                <property
-                  dataType="System.String"
-                  description="The SQL command to be executed."
-                  expressionType="Notify"
-                  name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update AgeGroup set 
- AgeGroupLabel=?, UpdatedDate=?
- where  AgeGroupID=?</property>
-                <property
-                  dataType="System.Int32"
-                  description="Specifies the column code page to use when code page information is unavailable from the data source."
-                  name="DefaultCodePage">1252</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\AgeGroup\Update in AgeGroup.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
-                  description="The OLE DB runtime connection used to access the database."
-                  name="OleDbConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input]"
-                  errorOrTruncationOperation="Command Execution"
-                  errorRowDisposition="FailComponent"
-                  hasSideEffects="true"
-                  name="OLE DB Command Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].Columns[AgeGroupLabel]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="AgeGroupLabel"
-                      externalMetadataColumnId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output].Columns[AgeGroupLabel]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].Columns[UpdatedDate]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="UpdatedDate"
-                      externalMetadataColumnId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Output].Columns[UpdatedDate]" />
-                    <inputColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].Columns[AgeGroupID]"
-                      cachedDataType="i4"
-                      cachedName="AgeGroupID"
-                      externalMetadataColumnId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      lineageId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output].Columns[AgeGroupID]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Param_0">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      dataType="dbTimeStamp"
-                      name="Param_1">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
-                      dataType="i4"
-                      name="Param_2">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
-              <outputs>
-                <output
-                  refId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Output]"
-                  exclusionGroup="1"
-                  name="OLE DB Command Output"
-                  synchronousInputId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input]">
-                  <externalMetadataColumns />
-                </output>
-                <output
-                  refId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Error Output]"
-                  exclusionGroup="1"
-                  isErrorOut="true"
-                  name="OLE DB Command Error Output"
-                  synchronousInputId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input]">
-                  <outputColumns>
-                    <outputColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
-                      name="ErrorCode"
-                      specialFlags="1" />
-                    <outputColumn
-                      refId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      dataType="i4"
-                      lineageId="Package\AgeGroup\Update in AgeGroup.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
-                      name="ErrorColumn"
-                      specialFlags="2" />
-                  </outputColumns>
-                  <externalMetadataColumns />
-                </output>
-              </outputs>
-            </component>
-          </components>
-          <paths>
-            <path
-              refId="Package\AgeGroup.Paths[Derived Column Output]"
-              endId="Package\AgeGroup\Update in AgeGroup.Inputs[OLE DB Command Input]"
-              name="Derived Column Output"
-              startId="Package\AgeGroup\Add column UpdatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\AgeGroup.Paths[Derived Column Output1]"
-              endId="Package\AgeGroup\Insert into AgeGroup_NDS.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\AgeGroup.Paths[Derived Column Output2]"
-              endId="Package\AgeGroup\Lookup.Inputs[Lookup Input]"
-              name="Derived Column Output"
-              startId="Package\AgeGroup\Add SourceID.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\AgeGroup.Paths[Lookup Error Output]"
-              endId="Package\AgeGroup\Add column UpdatedDate, CreatedDate.Inputs[Derived Column Input]"
-              name="Lookup Error Output"
-              startId="Package\AgeGroup\Lookup.Outputs[Lookup Error Output]" />
-            <path
-              refId="Package\AgeGroup.Paths[Lookup Match Output]"
-              endId="Package\AgeGroup\Add column UpdatedDate.Inputs[Derived Column Input]"
-              name="Lookup Match Output"
-              startId="Package\AgeGroup\Lookup.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\AgeGroup.Paths[OLE DB Source Output]"
-              endId="Package\AgeGroup\Add SourceID.Inputs[Derived Column Input]"
-              name="OLE DB Source Output"
-              startId="Package\AgeGroup\AgeGroup_Stage.Outputs[OLE DB Source Output]" />
-          </paths>
-        </pipeline>
-      </DTS:ObjectData>
-    </DTS:Executable>
-    <DTS:Executable
       DTS:refId="Package\Area"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
@@ -8692,13 +7761,13 @@ where [refTable].[CasualtyTypeCode] = ?</property>
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[SexOfCasualty]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[GenderOfCasualty]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[SexOfCasualty]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[GenderOfCasualty]) [refTable]
 where [refTable].[GenderCode] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -10275,7 +9344,7 @@ where [refTable].[Age] = ? and [refTable].[GenderID] = ? and [refTable].[AgeBand
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[SexOfCasualty]</property>
+                  name="OpenRowset">[dbo].[GenderOfCasualty]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -10432,13 +9501,13 @@ where [refTable].[Age] = ? and [refTable].[GenderID] = ? and [refTable].[AgeBand
                   description="Specifies the SQL statement that generates the lookup table."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[SexOfCasualty]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[GenderOfCasualty]</property>
                 <property
                   dataType="System.String"
                   description="Specifies a SQL statement that uses parameters to generate the lookup table."
                   expressionType="Notify"
                   name="SqlCommandParam"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[SexOfCasualty]) [refTable]
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[GenderOfCasualty]) [refTable]
 where [refTable].[GenderCode] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -10594,7 +9663,7 @@ where [refTable].[GenderCode] = ?</property>
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update SexOfCasualty set 
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">update GenderOfCasualty set 
 Genderlabel=?, UpdatedDate=?
  where  GenderID=?</property>
                 <property
@@ -17879,11 +16948,11 @@ where [refTable].[VehicleTypeCode] = ?</property>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
       DTS:CreationName=""
-      DTS:DTSID="{EF32B564-A644-4FEB-9F5F-FE8C3D113D42}"
+      DTS:DTSID="{71034A24-2C90-42AE-9530-B26B841FBEC6}"
       DTS:From="Package\VehicleType"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 10"
-      DTS:To="Package\AgeGroup" />
+      DTS:To="Package\RoadType" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 11]"
       DTS:CreationName=""
@@ -17892,14 +16961,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 11"
       DTS:To="Package\truncate table" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 12]"
-      DTS:CreationName=""
-      DTS:DTSID="{067F506E-3188-466C-BCE3-0A3F7A01F08E}"
-      DTS:From="Package\AgeGroup"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 12"
-      DTS:To="Package\RoadType" />
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 13]"
       DTS:CreationName=""
@@ -18000,101 +17061,85 @@ where [refTable].[VehicleTypeCode] = ?</property>
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182.5,42"
+          Size="182.4,41.6"
           Id="Package\Accident_StageToNDS"
           TopLeft="424.214291431467,334.32353311179" />
         <NodeLayout
-          Size="156.5,42"
+          Size="156.8,41.6"
           Id="Package\AccidentSeverity"
-          TopLeft="647.555555555556,181.944444444444" />
+          TopLeft="513.984124709419,139.120914432095" />
         <NodeLayout
-          Size="121.5,42"
+          Size="121.6,41.6"
           Id="Package\AgeBand"
           TopLeft="514.5,63.5" />
         <NodeLayout
-          Size="126.5,42.5"
-          Id="Package\AgeGroup"
-          TopLeft="341.5,139.5" />
-        <NodeLayout
-          Size="100.5,42"
+          Size="100.8,41.6"
           Id="Package\Area"
           TopLeft="130.5,58.5" />
         <NodeLayout
-          Size="183.5,42"
+          Size="183.2,41.6"
           Id="Package\Casualty_StageToNDS"
           TopLeft="150.642866886392,340.617650791023" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\CasualtySeverity"
-          TopLeft="775,117" />
+          TopLeft="715.314284534357,136.882353220019" />
         <NodeLayout
-          Size="141.5,42"
+          Size="141.6,41.6"
           Id="Package\CasualtyType"
           TopLeft="684.5,57" />
         <NodeLayout
-          Size="164,42"
+          Size="164,41.6"
           Id="Package\GenderOfCasualty"
           TopLeft="118.5,235.5" />
         <NodeLayout
-          Size="154,42"
+          Size="153.6,41.6"
           Id="Package\JourneyPurpose"
-          TopLeft="352.5,242.5" />
+          TopLeft="358.928571538049,231.029411603835" />
         <NodeLayout
-          Size="178.5,42"
+          Size="178.4,41.6"
           Id="Package\LocalAuthorityDistrict"
           TopLeft="276.5,61.5" />
         <NodeLayout
-          Size="118.5,42.5"
+          Size="118.4,42.4"
           Id="Package\Location"
-          TopLeft="669.5,244.5" />
+          TopLeft="663.785714188401,227.676470352292" />
         <NodeLayout
-          Size="102.5,42"
+          Size="102.4,41.6"
           Id="Package\LSOA"
           TopLeft="682.500001192093,331.5" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\RoadType"
           TopLeft="140.5,141.5" />
         <NodeLayout
-          Size="144.5,42"
+          Size="144.8,41.6"
           Id="Package\truncate table"
-          TopLeft="401.5,423.382358142662" />
+          TopLeft="427.928571878647,418.794122784196" />
         <NodeLayout
-          Size="177.5,42"
+          Size="177.6,41.6"
           Id="Package\Vehicle_StageToNDS"
           TopLeft="153.642866630944,421.558829588874" />
         <NodeLayout
-          Size="135.5,42"
+          Size="135.2,41.6"
           Id="Package\VehicleType"
-          TopLeft="493.833333333333,138.833333333333" />
+          TopLeft="325.9761876176,144.950980477954" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="853,159">
+          TopLeft="715.314284534357,158.801633826057">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-127.194444444444,22.9444444444444"
+              EndConnector="-44.5301598249373,0"
               Start="0,0"
-              End="-127.194444444444,15.4444444444444">
+              End="-37.0301598249373,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,7.47222222222221" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,7.47222222222221"
-                    Point2="0,11.4722222222222"
-                    Point3="-4,11.4722222222222" />
-                  <mssgle:LineSegment
-                    End="-123.194444444444,11.4722222222222" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-123.194444444444,11.4722222222222"
-                    Point2="-127.194444444444,11.4722222222222"
-                    Point3="-127.194444444444,15.4722222222222" />
-                  <mssgle:LineSegment
-                    End="-127.194444444444,15.4444444444444" />
+                    End="-37.0301598249373,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18126,63 +17171,19 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 10]"
-          TopLeft="493.833333333333,160.291666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-25.8333333333333,0"
-              Start="0,0"
-              End="-18.3333333333333,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-18.3333333333333,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 11]"
-          TopLeft="331.142866630944,443.470593865768">
+          TopLeft="331.242866630944,440.976476186535">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70.357133369056,0"
+              EndConnector="96.6857052477034,0"
               Start="0,0"
-              End="62.857133369056,0">
+              End="89.1857052477034,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="62.857133369056,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 12]"
-          TopLeft="341.5,161.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-75,0"
-              Start="0,0"
-              End="-67.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-67.5,0" />
+                    End="89.1857052477034,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18215,18 +17216,18 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 14]"
-          TopLeft="282.5,260">
+          TopLeft="282.5,254.064705801918">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="70,0"
+              EndConnector="76.4285715380494,0"
               Start="0,0"
-              End="62.5,0">
+              End="68.9285715380494,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="62.5,0" />
+                    End="68.9285715380494,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18237,18 +17238,18 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 15]"
-          TopLeft="506.5,264.666666666667">
+          TopLeft="512.528571538049,250.352940978063">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="163,0"
+              EndConnector="151.257142650351,0"
               Start="0,0"
-              End="155.5,0">
+              End="143.757142650351,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="155.5,0" />
+                    End="143.757142650351,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18303,18 +17304,30 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="731.33333392938,287.166666666667">
+          TopLeft="722.985714188401,270.076470352292">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.3333333333333"
+              EndConnector="10.7142870036923,61.4235296477083"
               Start="0,0"
-              End="0,36.8333333333333">
+              End="10.7142870036923,53.9235296477083">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,36.8333333333333" />
+                    End="0,26.7117648238542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,26.7117648238542"
+                    Point2="0,30.7117648238542"
+                    Point3="4,30.7117648238542" />
+                  <mssgle:LineSegment
+                    End="6.71428700369233,30.7117648238542" />
+                  <mssgle:CubicBezierSegment
+                    Point1="6.71428700369233,30.7117648238542"
+                    Point2="10.7142870036923,30.7117648238542"
+                    Point3="10.7142870036923,34.7117648238542" />
+                  <mssgle:LineSegment
+                    End="10.7142870036923,53.9235296477083" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18325,24 +17338,18 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
-          TopLeft="647.555555555556,203.333333333333">
+          TopLeft="513.984124709419,162.835947455025">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-85.9722222222222,-22.5"
+              EndConnector="-52.8079370918196,0"
               Start="0,0"
-              End="-85.9722222222222,-15">
+              End="-45.3079370918196,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-81.9722222222222,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-81.9722222222222,0"
-                    Point2="-85.9722222222222,0"
-                    Point3="-85.9722222222222,-4" />
-                  <mssgle:LineSegment
-                    End="-85.9722222222222,-15" />
+                    End="-45.3079370918196,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18419,24 +17426,52 @@ where [refTable].[VehicleTypeCode] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="826,78">
+          TopLeft="755.3,98.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="27,39"
+              EndConnector="38.0142845343569,38.282353220019"
               Start="0,0"
-              End="27,31.5">
+              End="38.0142845343569,30.782353220019">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="23,0" />
+                    End="0,15.1411766100095" />
                   <mssgle:CubicBezierSegment
-                    Point1="23,0"
-                    Point2="27,0"
-                    Point3="27,4" />
+                    Point1="0,15.1411766100095"
+                    Point2="0,19.1411766100095"
+                    Point3="4,19.1411766100095" />
                   <mssgle:LineSegment
-                    End="27,31.5" />
+                    End="34.0142845343569,19.1411766100095" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.0142845343569,19.1411766100095"
+                    Point2="38.0142845343569,19.1411766100095"
+                    Point3="38.0142845343569,23.1411766100095" />
+                  <mssgle:LineSegment
+                    End="38.0142845343569,30.782353220019" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="325.9761876176,164.025490238977">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-59.0761876175999,0"
+              Start="0,0"
+              End="-51.5761876175999,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-51.5761876175999,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18466,9 +17501,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Id="Package\Accident_StageToNDS\UpdatedDate"
           TopLeft="180.642858371443,265.692310244789" />
         <NodeLayout
-          Size="157,41.5"
-          Id="Package\Accident_StageToNDS\Update into NDS"
-          TopLeft="163.428572389544,478.307695954094" />
+          Size="165.5,42"
+          Id="Package\Accident_StageToNDS\Check real change"
+          TopLeft="165.428575369777,351.807695954094" />
         <NodeLayout
           Size="173,41.5"
           Id="Package\Accident_StageToNDS\Check in LSOA_NDS"
@@ -18477,6 +17512,10 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Size="225.5,42"
           Id="Package\Accident_StageToNDS\Check in AccidentSeverity_NDS"
           TopLeft="726.428572389544,32.2511349110208" />
+        <NodeLayout
+          Size="157,41.5"
+          Id="Package\Accident_StageToNDS\Update into NDS"
+          TopLeft="163.428572389544,478.307695954094" />
         <NodeLayout
           Size="144,42"
           Id="Package\Accident_StageToNDS\Add SourceID"
@@ -18497,10 +17536,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
           Size="150.5,41.5"
           Id="Package\Accident_StageToNDS\Accident_Stage"
           TopLeft="87.428575369777,24.3393668054044" />
-        <NodeLayout
-          Size="165.5,42"
-          Id="Package\Accident_StageToNDS\Check real change"
-          TopLeft="165.428575369777,351.807695954094" />
         <NodeLayout
           Size="205,41.5"
           Id="Package\Accident_StageToNDS\CreatedDate, UpdatedDate"
@@ -18524,7 +17559,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18750,7 +17787,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18772,7 +17811,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -18794,7 +17835,9 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18835,6 +17878,29 @@ where [refTable].[VehicleTypeCode] = ?</property>
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[LocalAuthorityDistrict]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Accident_StageToNDS\Check real change">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[Accident]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -18938,29 +18004,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Accident_StageToNDS\Check real change">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[Accident]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -19567,337 +18610,36 @@ where [refTable].[VehicleTypeCode] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\AgeGroup">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
-        <NodeLayout
-          Size="158,42"
-          Id="Package\AgeGroup\AgeGroup_Stage"
-          TopLeft="125.42857307074,116.294118408513" />
-        <NodeLayout
-          Size="113.333333333334,42"
-          Id="Package\AgeGroup\Lookup"
-          TopLeft="134.000002213887,194.588238640228" />
-        <NodeLayout
-          Size="264,42"
-          Id="Package\AgeGroup\Add column UpdatedDate, CreatedDate"
-          TopLeft="269.285718871623,323.788239734148" />
-        <NodeLayout
-          Size="204,42"
-          Id="Package\AgeGroup\Insert into AgeGroup_NDS"
-          TopLeft="312.42857639157,410.458828494953" />
-        <NodeLayout
-          Size="200,42"
-          Id="Package\AgeGroup\Update in AgeGroup"
-          TopLeft="37.2857149547461,419.152946538826" />
-        <NodeLayout
-          Size="142.666666666667,42"
-          Id="Package\AgeGroup\Add SourceID"
-          TopLeft="346.571428972848,179.152946538826" />
-        <NodeLayout
-          Size="198,42"
-          Id="Package\AgeGroup\Add column UpdatedDate"
-          TopLeft="22.5714289728476,327.000004558002" />
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[Derived Column Output]"
-          TopLeft="121.571428972848,369.000004558002">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="15.7142859818985,50.152941980824"
-              Start="0,0"
-              End="15.7142859818985,42.652941980824">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.076470990412" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.076470990412"
-                    Point2="0,25.076470990412"
-                    Point3="4,25.076470990412" />
-                  <mssgle:LineSegment
-                    End="11.7142859818985,25.076470990412" />
-                  <mssgle:CubicBezierSegment
-                    Point1="11.7142859818985,25.076470990412"
-                    Point2="15.7142859818985,25.076470990412"
-                    Point3="15.7142859818985,29.076470990412" />
-                  <mssgle:LineSegment
-                    End="15.7142859818985,42.652941980824" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[OLE DB Source Output]"
-          TopLeft="283.42857307074,137.294118408513">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="63.1428559021076,62.858828130313"
-              Start="0,0"
-              End="55.6428559021076,62.858828130313">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="27.5714279510538,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="27.5714279510538,0"
-                    Point2="31.5714279510538,0"
-                    Point3="31.5714279510538,4" />
-                  <mssgle:LineSegment
-                    End="31.5714279510538,58.858828130313" />
-                  <mssgle:CubicBezierSegment
-                    Point1="31.5714279510538,58.858828130313"
-                    Point2="31.5714279510538,62.858828130313"
-                    Point3="35.5714279510538,62.858828130313" />
-                  <mssgle:LineSegment
-                    End="55.6428559021076,62.858828130313" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[Lookup Match Output]"
-          TopLeft="173.000002213887,236.588238640228">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-51.4285732410394,90.411765917774"
-              Start="0,0"
-              End="-51.4285732410394,82.911765917774">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.9220824166826" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.9220824166826"
-                    Point2="0,36.9220824166826"
-                    Point3="-4,36.9220824166826" />
-                  <mssgle:LineSegment
-                    End="-47.4285732410394,36.9220824166826" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-47.4285732410394,36.9220824166826"
-                    Point2="-51.4285732410394,36.9220824166826"
-                    Point3="-51.4285732410394,40.9220824166826" />
-                  <mssgle:LineSegment
-                    End="-51.4285732410394,82.911765917774" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-73.9056733392697,41.9220824166826,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[Lookup Error Output]"
-          TopLeft="208.000002213887,236.588238640228">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="193.285716657736,87.20000109392"
-              Start="0,0"
-              End="193.285716657736,79.70000109392">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,31.6104716509202" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,31.6104716509202"
-                    Point2="0,35.6104716509202"
-                    Point3="4,35.6104716509202" />
-                  <mssgle:LineSegment
-                    End="189.285716657736,35.6104716509202" />
-                  <mssgle:CubicBezierSegment
-                    Point1="189.285716657736,35.6104716509202"
-                    Point2="193.285716657736,35.6104716509202"
-                    Point3="193.285716657736,39.6104716509202" />
-                  <mssgle:LineSegment
-                    End="193.285716657736,79.70000109392" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="50.776471610118,40.6104716509202,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[Derived Column Output2]"
-          TopLeft="346.571428972848,205.819613205493">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-99.5714267589606,9.76862543473538"
-              Start="0,0"
-              End="-92.0714267589606,9.76862543473538">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-38.0209690909375,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-38.0209690909375,0"
-                    Point2="-42.0209690909375,0"
-                    Point3="-42.0209690909375,4" />
-                  <mssgle:LineSegment
-                    End="-42.0209690909375,5.76862543473538" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-42.0209690909375,5.76862543473538"
-                    Point2="-42.0209690909375,9.76862543473538"
-                    Point3="-46.0209690909375,9.76862543473538" />
-                  <mssgle:LineSegment
-                    End="-92.0714267589606,9.76862543473538" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\AgeGroup.Paths[Derived Column Output1]"
-          TopLeft="401.285718871623,365.788239734148">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="13.142857519947,44.670588760805"
-              Start="0,0"
-              End="13.142857519947,37.170588760805">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.3352943804025" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.3352943804025"
-                    Point2="0,22.3352943804025"
-                    Point3="4,22.3352943804025" />
-                  <mssgle:LineSegment
-                    End="9.14285751994703,22.3352943804025" />
-                  <mssgle:CubicBezierSegment
-                    Point1="9.14285751994703,22.3352943804025"
-                    Point2="13.142857519947,22.3352943804025"
-                    Point3="13.142857519947,26.3352943804025" />
-                  <mssgle:LineSegment
-                    End="13.142857519947,37.170588760805" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\AgeGroup\AgeGroup_Stage">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\AgeGroup\Lookup">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[AgeGroup]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\AgeGroup\Insert into AgeGroup_NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <TaskHost
     design-time-name="Package\Area">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="133.5,42"
+          Size="133.6,41.6"
           Id="Package\Area\Area_Stage"
           TopLeft="150.42857307074,7.29411840851299" />
         <NodeLayout
-          Size="198,42"
+          Size="198.4,41.6"
           Id="Package\Area\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
         <NodeLayout
-          Size="264,42"
+          Size="264,41.6"
           Id="Package\Area\Add column UpdatedDate, CreatedDate"
           TopLeft="293.285718871623,213.788239734148" />
         <NodeLayout
-          Size="113.5,42"
+          Size="113.6,41.6"
           Id="Package\Area\Lookup"
           TopLeft="158.000002213887,84.588238640228" />
         <NodeLayout
-          Size="142.5,42"
+          Size="142.4,41.6"
           Id="Package\Area\Add SourceID"
           TopLeft="337.571428972848,77.152946538826" />
         <NodeLayout
-          Size="174.5,42"
+          Size="174.4,41.6"
           Id="Package\Area\Update in Area"
           TopLeft="61.2857149547461,309.152946538826" />
         <NodeLayout
-          Size="178.5,42"
+          Size="178.4,41.6"
           Id="Package\Area\Insert into Area_NDS"
           TopLeft="336.42857639157,300.458828494953" />
         <EdgeLayout
@@ -20130,53 +18872,173 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="182.5,42"
+          Size="182.4,41.6"
           Id="Package\Casualty_StageToNDS\Check in Gender_NDS"
           TopLeft="729.285714285714,60.7142857142857" />
         <NodeLayout
-          Size="190,42"
+          Size="190.4,41.6"
           Id="Package\Casualty_StageToNDS\Check in AgeBand_NDS"
           TopLeft="727.857142857143,147.857142857143" />
         <NodeLayout
-          Size="112,41.5"
+          Size="112,41.6"
           Id="Package\Casualty_StageToNDS\Update in NDS"
           TopLeft="167.476190476191,545.938378760598" />
         <NodeLayout
-          Size="151.5,41.5"
+          Size="151.2,41.6"
           Id="Package\Casualty_StageToNDS\Insert into NDS"
           TopLeft="389.571434714357,474.94958328529" />
         <NodeLayout
-          Size="225.5,42"
-          Id="Package\Casualty_StageToNDS\Check in CasualtySeverity_NDS"
-          TopLeft="397.142857142857,149.285714285714" />
-        <NodeLayout
-          Size="140,41.5"
-          Id="Package\Casualty_StageToNDS\UpdatedDate"
-          TopLeft="153.238095311081,380.414568142868" />
-        <NodeLayout
-          Size="204.5,41.5"
-          Id="Package\Casualty_StageToNDS\CreatedDate, UpdatedDate"
-          TopLeft="364.428577182245,379.442579272277" />
-        <NodeLayout
-          Size="211,42"
-          Id="Package\Casualty_StageToNDS\Check in CasualtyType_NDS"
-          TopLeft="513.571428571429,249.285714285714" />
-        <NodeLayout
-          Size="188,42"
-          Id="Package\Casualty_StageToNDS\Check in Accident_NDS"
-          TopLeft="484.285714310043,59" />
-        <NodeLayout
-          Size="141.5,41.5"
+          Size="141.6,41.6"
           Id="Package\Casualty_StageToNDS\Check in NDS"
           TopLeft="276.428574433132,311.366948001328" />
         <NodeLayout
-          Size="151,42"
+          Size="225.6,41.6"
+          Id="Package\Casualty_StageToNDS\Check in CasualtySeverity_NDS"
+          TopLeft="397.142857142857,149.285714285714" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Casualty_StageToNDS\UpdatedDate"
+          TopLeft="153.238095311081,380.414568142868" />
+        <NodeLayout
+          Size="204.8,41.6"
+          Id="Package\Casualty_StageToNDS\CreatedDate, UpdatedDate"
+          TopLeft="364.428577182245,379.442579272277" />
+        <NodeLayout
+          Size="165.6,41.6"
+          Id="Package\Casualty_StageToNDS\Check real change"
+          TopLeft="139.190479097724,463.86695018917" />
+        <NodeLayout
+          Size="211.2,41.6"
+          Id="Package\Casualty_StageToNDS\Check in CasualtyType_NDS"
+          TopLeft="513.571428571429,249.285714285714" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Casualty_StageToNDS\Check in Accident_NDS"
+          TopLeft="484.285714310043,59" />
+        <NodeLayout
+          Size="151.2,41.6"
           Id="Package\Casualty_StageToNDS\Casualty_Stage"
           TopLeft="99.9047648120092,64" />
         <NodeLayout
-          Size="144,42"
+          Size="144,41.6"
           Id="Package\Casualty_StageToNDS\Add SourceID"
           TopLeft="278.714285714286,64.8095238095238" />
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output]"
+          TopLeft="324.928574433132,352.866948001328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-101.690479122052,27.5476201415401"
+              Start="0,0"
+              End="-101.690479122052,20.0476201415401">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,7.20385389404357" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,7.20385389404357"
+                    Point2="0,11.2038538940436"
+                    Point3="-4,11.2038538940436" />
+                  <mssgle:LineSegment
+                    End="-97.6904791220516,11.2038538940436" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-97.6904791220516,11.2038538940436"
+                    Point2="-101.690479122052,11.2038538940436"
+                    Point3="-101.690479122052,15.2038538940436" />
+                  <mssgle:LineSegment
+                    End="-101.690479122052,20.0476201415401" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-99.0366262797758,16.2038538940436,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Lookup Error Output]"
+          TopLeft="369.428574433132,352.866948001328">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="97.2500027491126,26.5756312709485"
+              Start="0,0"
+              End="97.2500027491126,19.0756312709485">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,6.80853766575263" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,6.80853766575263"
+                    Point2="0,10.8085376657526"
+                    Point3="4,10.8085376657526" />
+                  <mssgle:LineSegment
+                    End="93.2500027491126,10.8085376657526" />
+                  <mssgle:CubicBezierSegment
+                    Point1="93.2500027491126,10.8085376657526"
+                    Point2="97.2500027491126,10.8085376657526"
+                    Point3="97.2500027491126,14.8085376657526" />
+                  <mssgle:LineSegment
+                    End="97.2500027491126,19.0756312709485" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="2.75861465580629,15.8085376657526,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
+          TopLeft="222.589287204402,421.914568142868">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,41.9523820463015"
+              Start="0,0"
+              End="0,34.4523820463015">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.4523820463015" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output1]"
+          TopLeft="422.714285714286,82.9047619047619">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="61.571428595757,0"
+              Start="0,0"
+              End="54.071428595757,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="54.071428595757,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Casualty_StageToNDS.Paths[Derived Column Output]"
           TopLeft="466.000005948301,420.942579272277">
@@ -20219,6 +19081,30 @@ where [refTable].[VehicleTypeCode] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Casualty_StageToNDS.Paths[Lookup No Match Output]"
+          TopLeft="222.708334786957,505.86695018917">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.0714285714284"
+              Start="0,0"
+              End="0,32.5714285714284">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5714285714284" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,10.4810267857142,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -20365,150 +19251,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Lookup Match Output]"
-          TopLeft="324.928574433132,352.866948001328">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-101.690479122052,27.5476201415401"
-              Start="0,0"
-              End="-101.690479122052,20.0476201415401">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,7.20385389404357" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,7.20385389404357"
-                    Point2="0,11.2038538940436"
-                    Point3="-4,11.2038538940436" />
-                  <mssgle:LineSegment
-                    End="-97.6904791220516,11.2038538940436" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-97.6904791220516,11.2038538940436"
-                    Point2="-101.690479122052,11.2038538940436"
-                    Point3="-101.690479122052,15.2038538940436" />
-                  <mssgle:LineSegment
-                    End="-101.690479122052,20.0476201415401" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-99.0366262797758,16.2038538940436,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Lookup Error Output]"
-          TopLeft="369.428574433132,352.866948001328">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="97.2500027491126,26.5756312709485"
-              Start="0,0"
-              End="97.2500027491126,19.0756312709485">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,6.80853766575263" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,6.80853766575263"
-                    Point2="0,10.8085376657526"
-                    Point3="4,10.8085376657526" />
-                  <mssgle:LineSegment
-                    End="93.2500027491126,10.8085376657526" />
-                  <mssgle:CubicBezierSegment
-                    Point1="93.2500027491126,10.8085376657526"
-                    Point2="97.2500027491126,10.8085376657526"
-                    Point3="97.2500027491126,14.8085376657526" />
-                  <mssgle:LineSegment
-                    End="97.2500027491126,19.0756312709485" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="2.75861465580629,15.8085376657526,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output1]"
-          TopLeft="422.714285714286,82.9047619047619">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="61.571428595757,0"
-              Start="0,0"
-              End="54.071428595757,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="54.071428595757,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165.5,42"
-          Id="Package\Casualty_StageToNDS\Check real change"
-          TopLeft="139.190479097724,463.86695018917" />
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Derived Column Output2]"
-          TopLeft="222.589287204402,421.914568142868">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,41.9523820463015"
-              Start="0,0"
-              End="0,34.4523820463015">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.4523820463015" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Casualty_StageToNDS.Paths[Lookup No Match Output]"
-          TopLeft="222.708334786957,505.86695018917">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,40.0714285714284"
-              Start="0,0"
-              End="0,32.5714285714284">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,32.5714285714284" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-55.80638671875,10.4810267857142,111.6127734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -20518,17 +19260,17 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[SexOfCasualty]</Value>
+          type="q3:string">[dbo].[GenderOfCasualty]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -21307,31 +20049,31 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="196,42"
+          Size="196,41.6"
           Id="Package\GenderOfCasualty\GenderOfCasualty_Stage"
           TopLeft="150.42857307074,19.294118408513" />
         <NodeLayout
-          Size="198,42"
+          Size="198.4,41.6"
           Id="Package\GenderOfCasualty\Add column UpdatedDate"
           TopLeft="46.5714289728476,229.000004558002" />
         <NodeLayout
-          Size="264,42"
+          Size="264,41.6"
           Id="Package\GenderOfCasualty\Add column UpdatedDate, CreatedDate"
           TopLeft="293.285718871623,225.788239734148" />
         <NodeLayout
-          Size="113.333333333334,42"
+          Size="113.6,41.6"
           Id="Package\GenderOfCasualty\Lookup"
           TopLeft="158.000002213887,96.588238640228" />
         <NodeLayout
-          Size="142.666666666667,42"
+          Size="142.4,41.6"
           Id="Package\GenderOfCasualty\Add SourceID"
           TopLeft="381.571428972848,57.152946538826" />
         <NodeLayout
-          Size="238,42"
+          Size="238.4,41.6"
           Id="Package\GenderOfCasualty\Update in GenderOfCasualty"
           TopLeft="61.2857149547461,320.152946538826" />
         <NodeLayout
-          Size="242,42"
+          Size="241.6,41.6"
           Id="Package\GenderOfCasualty\Insert into GenderOfCasualty_NDS"
           TopLeft="336.42857639157,312.458828494953" />
         <EdgeLayout
@@ -21365,9 +20107,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21473,9 +20213,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21509,9 +20247,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21545,9 +20281,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -21572,17 +20306,17 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[SexOfCasualty]</Value>
+          type="q3:string">[dbo].[GenderOfCasualty]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -21608,31 +20342,31 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="232,42"
+          Size="232,41.6"
           Id="Package\JourneyPurpose\Insert into JourneyPurpose_NDS"
           TopLeft="336.42857639157,300.458828494953" />
         <NodeLayout
-          Size="113.5,42"
+          Size="113.6,41.6"
           Id="Package\JourneyPurpose\Lookup"
           TopLeft="158.000002213887,84.588238640228" />
         <NodeLayout
-          Size="264,42"
+          Size="264,41.6"
           Id="Package\JourneyPurpose\Add column UpdatedDate, CreatedDate"
           TopLeft="293.285718871623,213.788239734148" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\JourneyPurpose\JourneyPurpose_Stage"
           TopLeft="150.42857307074,7.29411840851299" />
         <NodeLayout
-          Size="144,42"
+          Size="144,41.6"
           Id="Package\JourneyPurpose\Add SourceID"
           TopLeft="359.571428972848,64.152946538826" />
         <NodeLayout
-          Size="228,42"
+          Size="228,41.6"
           Id="Package\JourneyPurpose\Update in JourneyPurpose"
           TopLeft="61.2857149547461,308.152946538826" />
         <NodeLayout
-          Size="198,42"
+          Size="198.4,41.6"
           Id="Package\JourneyPurpose\Add column UpdatedDate"
           TopLeft="46.5714289728476,217.000004558002" />
         <EdgeLayout
@@ -21666,9 +20400,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21774,9 +20506,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21810,9 +20540,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -21846,9 +20574,7 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -22983,45 +21709,181 @@ where [refTable].[VehicleTypeCode] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="193,42"
+          Id="Package\Vehicle_StageToNDS\Check VehicleType_NDS"
+          TopLeft="889.166666666667,39.1666666666667" />
+        <NodeLayout
           Size="140,41.5"
           Id="Package\Vehicle_StageToNDS\UpdatedDate"
           TopLeft="425.119047692033,204.34313957144" />
-        <NodeLayout
-          Size="151,41.5"
-          Id="Package\Vehicle_StageToNDS\Insert into NDS"
-          TopLeft="924.047625190547,310.401964237671" />
-        <NodeLayout
-          Size="211.5,42"
-          Id="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS"
-          TopLeft="1145,43.3333333333333" />
         <NodeLayout
           Size="205,41.5"
           Id="Package\Vehicle_StageToNDS\CreatedDate, UpdatedDate"
           TopLeft="772.857148610816,208.990198319896" />
         <NodeLayout
+          Size="211.5,42"
+          Id="Package\Vehicle_StageToNDS\Check JourneyPurpose_NDS"
+          TopLeft="1145,43.3333333333333" />
+        <NodeLayout
           Size="176.5,42"
           Id="Package\Vehicle_StageToNDS\Check Accident_NDS"
           TopLeft="632.333333333333,39.3333333333333" />
         <NodeLayout
-          Size="144,41.5"
-          Id="Package\Vehicle_StageToNDS\Vehicle_Stage"
-          TopLeft="205.714288621533,39.1666666666667" />
+          Size="151,41.5"
+          Id="Package\Vehicle_StageToNDS\Insert into NDS"
+          TopLeft="924.047625190547,310.401964237671" />
         <NodeLayout
           Size="144,42"
           Id="Package\Vehicle_StageToNDS\Add SourceID"
           TopLeft="422,35.5686309043374" />
         <NodeLayout
-          Size="112,41.5"
-          Id="Package\Vehicle_StageToNDS\Update in NDS"
-          TopLeft="441.5,345.676473998693" />
+          Size="165.5,42"
+          Id="Package\Vehicle_StageToNDS\Check real change"
+          TopLeft="402.214288621533,270.176473998693" />
         <NodeLayout
-          Size="193,42"
-          Id="Package\Vehicle_StageToNDS\Check VehicleType_NDS"
-          TopLeft="889.166666666667,39.1666666666667" />
+          Size="144,41.5"
+          Id="Package\Vehicle_StageToNDS\Vehicle_Stage"
+          TopLeft="205.714288621533,39.1666666666667" />
         <NodeLayout
           Size="141.5,41.5"
           Id="Package\Vehicle_StageToNDS\Check in NDS"
           TopLeft="585.595241099799,137.176471810852" />
+        <NodeLayout
+          Size="112,41.5"
+          Id="Package\Vehicle_StageToNDS\Update in NDS"
+          TopLeft="441.5,345.676473998693" />
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Lookup Error Output]"
+          TopLeft="678.595241099799,178.676471810852">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="196.761907511017,30.3137265090436"
+              Start="0,0"
+              End="196.761907511017,22.8137265090436">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.32885312946429" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.32885312946429"
+                    Point2="0,12.3288531294643"
+                    Point3="4,12.3288531294643" />
+                  <mssgle:LineSegment
+                    End="192.761907511017,12.3288531294643" />
+                  <mssgle:CubicBezierSegment
+                    Point1="192.761907511017,12.3288531294643"
+                    Point2="196.761907511017,12.3288531294643"
+                    Point3="196.761907511017,16.3288531294643" />
+                  <mssgle:LineSegment
+                    End="196.761907511017,22.8137265090436" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="52.5145670367587,17.3288531294643,91.7327734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
+          TopLeft="495.119047692033,245.84313957144">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-10.1547590705,24.333334427253"
+              Start="0,0"
+              End="-10.1547590705,16.833334427253">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,8.1666672136265" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,8.1666672136265"
+                    Point2="0,12.1666672136265"
+                    Point3="-4,12.1666672136265" />
+                  <mssgle:LineSegment
+                    End="-6.15475907050001,12.1666672136265" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-6.15475907050001,12.1666672136265"
+                    Point2="-10.1547590705,12.1666672136265"
+                    Point3="-10.1547590705,16.1666672136265" />
+                  <mssgle:LineSegment
+                    End="-10.1547590705,16.833334427253" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output1]"
+          TopLeft="566,58.4509821188353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="66.3333333333333,0"
+              Start="0,0"
+              End="58.8333333333333,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="58.8333333333333,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output]"
+          TopLeft="875.357148610816,250.490198319896">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.190476579731,59.9117659177751"
+              Start="0,0"
+              End="124.190476579731,52.4117659177751">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,25.9558829588875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,25.9558829588875"
+                    Point2="0,29.9558829588875"
+                    Point3="4,29.9558829588875" />
+                  <mssgle:LineSegment
+                    End="120.190476579731,29.9558829588875" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.190476579731,29.9558829588875"
+                    Point2="124.190476579731,29.9558829588875"
+                    Point3="124.190476579731,33.9558829588875" />
+                  <mssgle:LineSegment
+                    End="124.190476579731,52.4117659177751" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\Vehicle_StageToNDS.Paths[OLE DB Source Output]"
           TopLeft="349.714288621533,58.242648785502">
@@ -23041,7 +21903,45 @@ where [refTable].[VehicleTypeCode] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Vehicle_StageToNDS.Paths[Lookup No Match Output]"
+          TopLeft="484.964288621533,312.176473998693">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.535711378467,33.5"
+              Start="0,0"
+              End="12.535711378467,26">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.75"
+                    Point2="0,16.75"
+                    Point3="4,16.75" />
+                  <mssgle:LineSegment
+                    End="8.535711378467,16.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.535711378467,16.75"
+                    Point2="12.535711378467,16.75"
+                    Point3="12.535711378467,20.75" />
+                  <mssgle:LineSegment
+                    End="12.535711378467,26" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-49.5385310295165,21.75,111.6127734375,11.609375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -23161,172 +22061,6 @@ where [refTable].[VehicleTypeCode] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-117.679483422633,15.438854393195,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Lookup Error Output]"
-          TopLeft="678.595241099799,178.676471810852">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="196.761907511017,30.3137265090436"
-              Start="0,0"
-              End="196.761907511017,22.8137265090436">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.32885312946429" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.32885312946429"
-                    Point2="0,12.3288531294643"
-                    Point3="4,12.3288531294643" />
-                  <mssgle:LineSegment
-                    End="192.761907511017,12.3288531294643" />
-                  <mssgle:CubicBezierSegment
-                    Point1="192.761907511017,12.3288531294643"
-                    Point2="196.761907511017,12.3288531294643"
-                    Point3="196.761907511017,16.3288531294643" />
-                  <mssgle:LineSegment
-                    End="196.761907511017,22.8137265090436" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="52.5145670367587,17.3288531294643,91.7327734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output1]"
-          TopLeft="566,58.4509821188353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="66.3333333333333,0"
-              Start="0,0"
-              End="58.8333333333333,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="58.8333333333333,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output]"
-          TopLeft="875.357148610816,250.490198319896">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="124.190476579731,59.9117659177751"
-              Start="0,0"
-              End="124.190476579731,52.4117659177751">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,25.9558829588875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,25.9558829588875"
-                    Point2="0,29.9558829588875"
-                    Point3="4,29.9558829588875" />
-                  <mssgle:LineSegment
-                    End="120.190476579731,29.9558829588875" />
-                  <mssgle:CubicBezierSegment
-                    Point1="120.190476579731,29.9558829588875"
-                    Point2="124.190476579731,29.9558829588875"
-                    Point3="124.190476579731,33.9558829588875" />
-                  <mssgle:LineSegment
-                    End="124.190476579731,52.4117659177751" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="165.5,42"
-          Id="Package\Vehicle_StageToNDS\Check real change"
-          TopLeft="402.214288621533,270.176473998693" />
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Derived Column Output2]"
-          TopLeft="495.119047692033,245.84313957144">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-10.1547590705,24.333334427253"
-              Start="0,0"
-              End="-10.1547590705,16.833334427253">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,8.1666672136265" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,8.1666672136265"
-                    Point2="0,12.1666672136265"
-                    Point3="-4,12.1666672136265" />
-                  <mssgle:LineSegment
-                    End="-6.15475907050001,12.1666672136265" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-6.15475907050001,12.1666672136265"
-                    Point2="-10.1547590705,12.1666672136265"
-                    Point3="-10.1547590705,16.1666672136265" />
-                  <mssgle:LineSegment
-                    End="-10.1547590705,16.833334427253" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Vehicle_StageToNDS.Paths[Lookup No Match Output]"
-          TopLeft="484.964288621533,312.176473998693">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="12.535711378467,33.5"
-              Start="0,0"
-              End="12.535711378467,26">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,12.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,12.75"
-                    Point2="0,16.75"
-                    Point3="4,16.75" />
-                  <mssgle:LineSegment
-                    End="8.535711378467,16.75" />
-                  <mssgle:CubicBezierSegment
-                    Point1="8.535711378467,16.75"
-                    Point2="12.535711378467,16.75"
-                    Point3="12.535711378467,20.75" />
-                  <mssgle:LineSegment
-                    End="12.535711378467,26" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-49.5385310295165,21.75,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>

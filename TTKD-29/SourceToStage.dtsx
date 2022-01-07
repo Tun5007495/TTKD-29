@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="28"
-  DTS:VersionGUID="{54187C39-45B1-445C-816B-06A0067EC832}">
+  DTS:VersionBuild="34"
+  DTS:VersionGUID="{A61ECB5F-0C13-4DD1-8E6C-B5875029181E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -30,7 +30,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\KhanhSon\Desktop\Data\Accidents1114.csv">
+          DTS:ConnectionString="D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\Data\Accidents1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -39,7 +39,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{20FB8F75-E3C1-4AEE-85AF-6D0B8B0EFE91}"
+              DTS:DTSID="{408A073D-2B63-4827-A8E6-38CB0EE7191E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -48,7 +48,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Easting_OSGR"
-              DTS:DTSID="{B44A4040-260B-449E-8211-EEA07D3E3367}"
+              DTS:DTSID="{BE90655A-821A-4C9D-889B-A71EDC6A0D88}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -57,7 +57,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Location_Northing_OSGR"
-              DTS:DTSID="{24C7FA6E-44EB-4CA8-9D4E-FD17A587F073}"
+              DTS:DTSID="{082C30D9-7D98-40F9-907F-8FC596585FCF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -66,7 +66,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Longitude"
-              DTS:DTSID="{AA63525C-F262-47E7-A91E-27AF37EA7E82}"
+              DTS:DTSID="{DDE31802-C18B-494D-8EC6-8E44CB841E20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -75,7 +75,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Latitude"
-              DTS:DTSID="{90375A95-405C-4656-B682-0D69C909A9D7}"
+              DTS:DTSID="{8ADE04E0-F601-4B7D-B562-83D19F984923}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -84,7 +84,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Police_Force"
-              DTS:DTSID="{50843237-2143-4E57-B20A-6B8BC39165D9}"
+              DTS:DTSID="{7B52CAB3-400D-4D1F-AA40-4AD7DA25032D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -93,7 +93,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Severity"
-              DTS:DTSID="{712D023B-4ABA-4617-BBC9-96CE03A21B1A}"
+              DTS:DTSID="{8E5ECCC9-9FC2-4350-8D49-3B0320B4E013}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -102,7 +102,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Vehicles"
-              DTS:DTSID="{98A0B534-F253-46A1-87E3-E420812B5818}"
+              DTS:DTSID="{6612262B-6F90-4C5B-B9AF-1F7C199790E7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -111,7 +111,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Number_of_Casualties"
-              DTS:DTSID="{F3615C0B-DC64-49E0-A085-7C3622805806}"
+              DTS:DTSID="{76AC26A3-8519-48B1-A1A2-A1A877A84498}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -120,7 +120,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Date"
-              DTS:DTSID="{962BA55F-766A-4CB3-AB1D-6C147687B790}"
+              DTS:DTSID="{E3BD9109-06C6-4C13-9429-D6900222850D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -129,7 +129,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Day_of_Week"
-              DTS:DTSID="{273725D5-C0C2-4231-9945-7FD99022736E}"
+              DTS:DTSID="{3107B090-4AAE-4DC2-88A2-2D29DF37DCA3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -138,7 +138,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Time"
-              DTS:DTSID="{7455ED29-AA69-4668-A55A-E9DF614B52E3}"
+              DTS:DTSID="{3650F83A-CF71-4370-90A5-C75D63B6C609}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -147,7 +147,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(District)"
-              DTS:DTSID="{ECB47EF7-DE62-49EC-B346-34E1B2F4E921}"
+              DTS:DTSID="{E0D564C4-1B4D-4E8C-B635-FEB6ACC267DF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -156,7 +156,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Local_Authority_(Highway)"
-              DTS:DTSID="{15BE3A97-163A-4A25-875A-45573F8F2726}"
+              DTS:DTSID="{022A1825-4ADA-4691-A37E-5BD328CB91B0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -165,7 +165,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Class"
-              DTS:DTSID="{CF42F2FB-ADDC-4097-B243-3FB1D9060839}"
+              DTS:DTSID="{CA047DE9-08CD-4AD6-AA08-C34EAFC151A6}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -174,7 +174,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Road_Number"
-              DTS:DTSID="{B837B279-1E86-4C61-A288-406CEE0B8B00}"
+              DTS:DTSID="{A136A4A4-7788-4F8C-AD2B-52E593139537}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -183,7 +183,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Type"
-              DTS:DTSID="{C5C18C7F-1E10-4E62-8E49-83170C6AC4AD}"
+              DTS:DTSID="{F1F54999-536F-4323-AF2D-D85109314D7B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -192,7 +192,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Speed_limit"
-              DTS:DTSID="{EC4B2395-689A-418D-ABD7-01240AF3BC03}"
+              DTS:DTSID="{70E9643E-C456-4990-8DC7-7B8313DFBD27}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -201,7 +201,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Detail"
-              DTS:DTSID="{65B1F6E8-91B2-4262-A73B-4D4DED38C1DB}"
+              DTS:DTSID="{0987B452-A206-46DC-9252-80C5354BBC39}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -210,7 +210,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Control"
-              DTS:DTSID="{9B665220-93A9-4396-BE92-45A27C4D3355}"
+              DTS:DTSID="{081E0EFD-E7E9-4C90-A6E6-D14ECA268B8A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -219,7 +219,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Class"
-              DTS:DTSID="{8C092CDC-7A79-4F20-B653-D98348FAF360}"
+              DTS:DTSID="{BB29FEED-F402-4FAC-9D93-74EA3A8D3DE2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -228,7 +228,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="2nd_Road_Number"
-              DTS:DTSID="{662335DB-863C-4A51-9CEC-10C0462836B8}"
+              DTS:DTSID="{22099CE1-368F-45B7-B067-42854945FE22}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -237,7 +237,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Human_Control"
-              DTS:DTSID="{EA1DED20-A5DD-4260-94A2-2BD5E8A2A63B}"
+              DTS:DTSID="{50067A45-EB5A-4D01-9A69-74776DB9CE31}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -246,7 +246,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Crossing-Physical_Facilities"
-              DTS:DTSID="{21213925-6261-4874-B1AA-58B25FFC1744}"
+              DTS:DTSID="{087012C6-A63F-440B-94A3-185C9ADFDE24}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -255,7 +255,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Light_Conditions"
-              DTS:DTSID="{46403772-E61C-4D48-ACFC-C224069A0C07}"
+              DTS:DTSID="{8DB8BEB9-1063-4A36-AFB2-164A10C1144D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -264,7 +264,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Weather_Conditions"
-              DTS:DTSID="{31D120DF-F9BE-4CD3-9B69-F0E81979FC32}"
+              DTS:DTSID="{D2C740D8-A54B-40A9-8313-AE22541E784B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -273,7 +273,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Road_Surface_Conditions"
-              DTS:DTSID="{86E02F5B-8640-4323-9155-261766D53790}"
+              DTS:DTSID="{5BE6FA84-A085-4005-9A6C-F7881CE0FCA2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -282,7 +282,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Special_Conditions_at_Site"
-              DTS:DTSID="{3A4DF956-C612-4011-801B-116064E6AB61}"
+              DTS:DTSID="{37317246-4A2F-4BB3-BBF9-DA98B596F8B1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -291,7 +291,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Carriageway_Hazards"
-              DTS:DTSID="{A730D1E4-DC2A-43F1-9F55-30D44EE0BFEE}"
+              DTS:DTSID="{264639B5-95D8-4073-8636-1D364FF25E78}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -300,7 +300,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Urban_or_Rural_Area"
-              DTS:DTSID="{12F2252A-BF96-4C05-BB44-F1917166CD5B}"
+              DTS:DTSID="{738BAD46-28E7-4350-8853-ACDFE70D88BB}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -309,7 +309,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Did_Police_Officer_Attend_Scene_of_Accident"
-              DTS:DTSID="{A0152A0E-392E-4A0D-AF15-8B1BC91B0CB6}"
+              DTS:DTSID="{B074AB7C-F368-46A2-A452-0E3697EC49B8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -318,7 +318,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="LSOA_of_Accident_Location"
-              DTS:DTSID="{B9A7610B-CB06-46D7-9650-66C0742F3BB7}"
+              DTS:DTSID="{A9F3BC23-3124-47C7-9F1A-EE95BE91EE68}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -338,7 +338,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\KhanhSon\Desktop\Data\Casualties1114.csv">
+          DTS:ConnectionString="D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\Data\Casualties1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -347,7 +347,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{ACF96096-5173-4455-A3B9-D306463EF299}"
+              DTS:DTSID="{DCED9C21-BEDC-430A-AC1C-BFAF2B117837}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -356,7 +356,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{4C512E7D-FC75-4FE5-81CB-7A14DFD19E58}"
+              DTS:DTSID="{CD6147EB-D4DC-4FA1-8EA3-4FA9DCA17FCE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -365,7 +365,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Reference"
-              DTS:DTSID="{8081DF01-838D-4FDC-8056-549704D02E70}"
+              DTS:DTSID="{15E6B1C9-B44F-46ED-97B8-5663A74D796D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -374,7 +374,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Class"
-              DTS:DTSID="{B39530D0-B294-4971-8381-BEE5341591C4}"
+              DTS:DTSID="{FF4CE898-CA6F-451A-855F-58F8260F0EFD}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -383,7 +383,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Casualty"
-              DTS:DTSID="{1EC9DE5E-EE73-4CE7-8543-5CEC20D9AB42}"
+              DTS:DTSID="{B850595C-CCF6-40F0-8E9A-39F6E1E5CE44}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +392,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Casualty"
-              DTS:DTSID="{85606500-BAAC-423B-A904-2CBEA6D1D8D8}"
+              DTS:DTSID="{6819426C-A660-437E-913B-175C7FD7CE38}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -401,7 +401,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Casualty"
-              DTS:DTSID="{B96DC5C4-548C-4409-A8CD-4CB140FD077E}"
+              DTS:DTSID="{9FB0C6EA-1C48-4482-93BD-FF34A4AEE9C1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -410,7 +410,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Severity"
-              DTS:DTSID="{23BE6B1F-2A9F-4D5E-9653-62C7547280FC}"
+              DTS:DTSID="{71080527-6025-478E-8618-9712238B3FD3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -419,7 +419,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Location"
-              DTS:DTSID="{0967142C-8B87-4914-BD19-BEDB087AC034}"
+              DTS:DTSID="{FC5F4B5D-DA4D-43D3-B930-C550294ABF82}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +428,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Movement"
-              DTS:DTSID="{54CC957D-5F64-4C7F-8B3A-26CAAD0D7A4F}"
+              DTS:DTSID="{9DA28231-D42C-4876-85B6-52B376658A18}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -437,7 +437,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Car_Passenger"
-              DTS:DTSID="{B8170397-1763-4231-9A52-3A74123CF2F3}"
+              DTS:DTSID="{6D8F723F-DB98-4401-A056-5A7EA405CAE4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -446,7 +446,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Bus_or_Coach_Passenger"
-              DTS:DTSID="{95F8337F-F0FE-4B4B-B781-B3859831B178}"
+              DTS:DTSID="{CD444A38-944B-4C10-9863-ECE363379A75}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -455,7 +455,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Pedestrian_Road_Maintenance_Worker"
-              DTS:DTSID="{2F92F3F1-99F8-490B-AC76-F5532D78729C}"
+              DTS:DTSID="{8F498385-732E-4F29-8240-B7B1BB5441FE}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -464,7 +464,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Type"
-              DTS:DTSID="{CE4D560A-0A84-49C2-94A7-19874F094B71}"
+              DTS:DTSID="{A0CA998F-0DFA-4057-A5BD-E7A00920F592}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -473,7 +473,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Casualty_Home_Area_Type"
-              DTS:DTSID="{D2DFE3A4-664F-44EE-B1A5-7A9EC0FA89E5}"
+              DTS:DTSID="{55CDBAA0-8EAA-4BD4-92D2-11A18BE5BFA6}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -488,7 +488,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Users\KhanhSon\Desktop\Data\UK Accidents - Codebook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.Jet.OLEDB.4.0;Data Source=D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\TTKD-29\Data\CodeBook.xls;Extended Properties=&quot;EXCEL 8.0;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -496,18 +496,6 @@
       DTS:CreationName="OLEDB"
       DTS:DTSID="{329E06FC-2DA6-492A-938A-14B920FD632C}"
       DTS:ObjectName="LocalHost.METADATA">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=.;Initial Catalog=METADATA;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.METADATA 1]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{78F4AA52-C27F-40B8-BE1B-1BF37F101921}"
-      DTS:ObjectName="LocalHost.METADATA 1">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
@@ -553,7 +541,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\KhanhSon\Desktop\Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
+          DTS:ConnectionString="D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\Data\PCD_OA_LSOA_MSOA_LAD_AUG21_UK_LU.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -562,7 +550,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd7"
-              DTS:DTSID="{BB29FF2E-430B-4D48-83E4-DE2CB23BAD8A}"
+              DTS:DTSID="{F06AF5EF-66C6-485A-84C4-077706AB54A3}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -571,7 +559,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcd8"
-              DTS:DTSID="{47951EC6-1B37-45DE-949E-2D6033441BE7}"
+              DTS:DTSID="{CB8CB699-DA3F-4E2F-B86B-FFB749534663}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -580,7 +568,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="pcds"
-              DTS:DTSID="{E9EC6F54-FBE5-4B28-AD7E-2707418D19CB}"
+              DTS:DTSID="{A2D209CF-6ECB-4AF2-9A15-D3082ADBAC20}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -589,7 +577,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="dointr"
-              DTS:DTSID="{F3B55464-945D-463C-BCE0-FA42E5325148}"
+              DTS:DTSID="{F597A323-203A-4915-B385-6D1B370C6DF1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -598,7 +586,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="doterm"
-              DTS:DTSID="{20471DE9-D1E6-49B2-860F-625EBD1388E8}"
+              DTS:DTSID="{C5A92AF5-B320-4824-9B28-63AEE4E1B6CC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -607,7 +595,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="usertype"
-              DTS:DTSID="{9465093A-4ABE-4B66-ADD1-CA7AD44B6DC6}"
+              DTS:DTSID="{FADEE7A8-52E8-4F02-B486-A48C02EC7B13}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -616,7 +604,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="oa11cd"
-              DTS:DTSID="{79B8B261-F443-4F65-8B89-4F0502DFF6E8}"
+              DTS:DTSID="{7570E57E-79C9-40FF-B634-56B5491BA249}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -625,7 +613,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11cd"
-              DTS:DTSID="{8F1672E7-6B49-4F0D-845F-E10C48E41A8A}"
+              DTS:DTSID="{72C98868-4127-406F-AF15-32D8DF9088B9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -634,7 +622,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11cd"
-              DTS:DTSID="{E28AB6C0-6004-437D-BA0D-B68F51337691}"
+              DTS:DTSID="{5DD9E061-8CDB-48C5-B9E1-00EB7E1861BC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -643,7 +631,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladcd"
-              DTS:DTSID="{BB4A5ADB-4694-4B28-89CF-3EB06A006B8F}"
+              DTS:DTSID="{8B656AFA-B1D0-41C0-8D0E-FF178FA6C342}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -652,7 +640,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lsoa11nm"
-              DTS:DTSID="{D6991F83-1AA2-45C1-AC0D-77DB03E38AD7}"
+              DTS:DTSID="{92367EF3-C2C5-4B34-95A2-150FA7B86934}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -661,7 +649,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="msoa11nm"
-              DTS:DTSID="{1DFC4F1B-7C32-40A4-823D-3FE66FA85A03}"
+              DTS:DTSID="{FCE2B72F-F6DC-483B-995F-A322F2E94FD0}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -670,7 +658,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnm"
-              DTS:DTSID="{47CA01CF-F9AA-4275-9922-813BCCAC4812}"
+              DTS:DTSID="{1120F123-2065-4779-9826-F112224CDD3D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -679,7 +667,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="ladnmw"
-              DTS:DTSID="{410FDC9F-350F-4B8C-B4A6-49BD32408B3B}"
+              DTS:DTSID="{9E0AAEFE-7334-4E08-831C-4AE198530232}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -699,7 +687,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\KhanhSon\Desktop\Data\postcodes.csv">
+          DTS:ConnectionString="D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\Data\postcodes.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -708,7 +696,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="postcode"
-              DTS:DTSID="{9EFBD7DA-0CB1-4A28-804D-F7BB3A836288}"
+              DTS:DTSID="{D0DE7C90-834D-4719-948F-010A7C4C4168}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -717,7 +705,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="easting"
-              DTS:DTSID="{EE9D6A4E-5CC1-41EA-8400-43307D6F5DB4}"
+              DTS:DTSID="{679FC51B-FBF0-4E28-9FCF-394B71E0F795}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -726,7 +714,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="northing"
-              DTS:DTSID="{68A9F828-D402-4146-B2F2-AEE9C71F0F63}"
+              DTS:DTSID="{66B5C99F-45C5-462A-970E-D56F19EAF983}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -735,7 +723,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="latitude"
-              DTS:DTSID="{3A46E055-D7F7-4CC2-AFA6-56B4106B326D}"
+              DTS:DTSID="{9DC149FE-F1DC-4C64-A8CD-AA1F0280D818}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -744,7 +732,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="longitude"
-              DTS:DTSID="{791217B5-641D-4B06-A30C-90CF9E5CAB2F}"
+              DTS:DTSID="{B50F4890-80C5-4D48-BE84-9586779EA3F5}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -753,7 +741,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="city"
-              DTS:DTSID="{CDBB35BC-BBC9-4DA1-87AC-A619EE507662}"
+              DTS:DTSID="{995A84E3-E8C1-4FB6-9D97-41B6A0BFEC81}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -762,7 +750,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="county"
-              DTS:DTSID="{5D21A431-55EB-4BFE-BB34-C53864A97B04}"
+              DTS:DTSID="{C2650D88-00A4-449C-8BE6-A447F82DEC4C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -771,7 +759,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_code"
-              DTS:DTSID="{D65CF0D5-0891-4B11-902C-6A48038FF422}"
+              DTS:DTSID="{2DD28C67-F99E-4BBB-BF4C-7EF9F700BD36}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -780,7 +768,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="country_name"
-              DTS:DTSID="{76BA27A6-C7E3-40CF-9247-62BE8208A443}"
+              DTS:DTSID="{B43133B5-82A5-4A04-AF24-C5FAF1BB15E4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -789,7 +777,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="iso3166-2"
-              DTS:DTSID="{8E6675F4-A3E2-4CFF-838B-C94D45B2250A}"
+              DTS:DTSID="{7A69F155-A4F2-492D-B969-14813268749E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -798,7 +786,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_code"
-              DTS:DTSID="{A9BA1E09-29DE-41F5-A3AE-34433BAC01F8}"
+              DTS:DTSID="{5AAA548C-A268-4BE2-9157-97CD837C5B3E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -807,7 +795,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="region_name"
-              DTS:DTSID="{F0FC2BE2-F987-46D1-B6FB-D39D07E89870}"
+              DTS:DTSID="{5C0F3554-EADB-40E9-B6A9-0B10B2EC1DD9}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -827,7 +815,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\KhanhSon\Desktop\Data\Vehicles1114.csv">
+          DTS:ConnectionString="D:\OneDirve\OneDrive - VNU-HCMUS\Desktop\BI\BI-TTKD-29\Data\Vehicles1114.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -836,7 +824,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Accident_Index"
-              DTS:DTSID="{0E2BB986-AFDA-41D3-AF6B-F7C05242079B}"
+              DTS:DTSID="{558D331F-8315-4AB6-B85F-476D34C8DC97}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -845,7 +833,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Reference"
-              DTS:DTSID="{0520CD8D-EC2C-4DD0-9966-EFBF97D57264}"
+              DTS:DTSID="{34BF8AC2-ED60-4AF0-BD66-5C1FE05C9034}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -854,7 +842,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Type"
-              DTS:DTSID="{7891CE26-762E-4B14-ADCD-56117ABB3644}"
+              DTS:DTSID="{05AE5D14-6648-40AF-B251-5F91A3F82D0B}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -863,7 +851,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Towing_and_Articulation"
-              DTS:DTSID="{7E883C52-F129-4F04-835B-475519D7B173}"
+              DTS:DTSID="{AE796089-273D-4115-AA4E-B99B8276B025}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -872,7 +860,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Manoeuvre"
-              DTS:DTSID="{63FC862C-FDB4-4054-8630-3617511D4D3B}"
+              DTS:DTSID="{A84BBA85-C8E3-4183-A489-3F4CEC5FA218}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -881,7 +869,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Location-Restricted_Lane"
-              DTS:DTSID="{400AE570-D29E-40EF-A06D-6EF1F000340E}"
+              DTS:DTSID="{DFFE0237-7F22-4444-85F9-F1913800463C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -890,7 +878,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Junction_Location"
-              DTS:DTSID="{F4C03C24-ADFA-4BC8-85DB-6250FAA8B320}"
+              DTS:DTSID="{3DCC25F2-C011-4E9B-8C04-D2CF46DCF1D8}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -899,7 +887,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Skidding_and_Overturning"
-              DTS:DTSID="{F4FFCAEC-6885-4A0D-AD00-2AB4DC10F4C0}"
+              DTS:DTSID="{AD231C88-EFF9-435B-BED6-2B5E76E452D1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -908,7 +896,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_in_Carriageway"
-              DTS:DTSID="{D443D12A-04B0-45EE-9E82-71313FB69593}"
+              DTS:DTSID="{7BCFBAF1-79BC-41D6-B942-292A3EDF6C54}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -917,7 +905,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Vehicle_Leaving_Carriageway"
-              DTS:DTSID="{5805A5F3-9670-4106-80EC-1F96EAB66948}"
+              DTS:DTSID="{EA5960AE-4825-4FB0-9945-51F0BB439E3F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -926,7 +914,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Hit_Object_off_Carriageway"
-              DTS:DTSID="{E84AD4F9-C00E-4B92-97E4-6C8683522642}"
+              DTS:DTSID="{A6E9E49D-1C0A-49D6-9F3C-3F16AF2EE587}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -935,7 +923,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="1st_Point_of_Impact"
-              DTS:DTSID="{477B9192-DCE0-4BA4-95D9-C752951FD5E4}"
+              DTS:DTSID="{C2D4104A-2D52-4E5F-B0C2-401B3E80FA6E}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -944,7 +932,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Was_Vehicle_Left_Hand_Drive?"
-              DTS:DTSID="{17A225AD-1323-4228-9F28-2D4C88574BEB}"
+              DTS:DTSID="{2ACE1397-ADF6-426C-B590-4908F8F709EF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -953,7 +941,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Journey_Purpose_of_Driver"
-              DTS:DTSID="{4A3DF1BA-050E-4AC3-9874-5CAF2EFD945F}"
+              DTS:DTSID="{9DF5390D-9422-40F9-81E0-95EC1A99C2A2}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -962,7 +950,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sex_of_Driver"
-              DTS:DTSID="{B23320E2-21B4-441E-B3C7-ECD5AF605525}"
+              DTS:DTSID="{B8A0642B-F96D-433F-A4BB-FCD9FC10FB6C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -971,7 +959,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Driver"
-              DTS:DTSID="{71F5CC62-A3B6-46E0-B9F6-4503EB5DCBDE}"
+              DTS:DTSID="{7AFACA28-5B3D-4857-A4F6-09D6B51434D4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -980,7 +968,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_Band_of_Driver"
-              DTS:DTSID="{2E5DA023-46C7-490A-B6B7-CD0A34FAC6CA}"
+              DTS:DTSID="{5E96837A-1063-4060-83B5-32F19A8F51F7}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -989,7 +977,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Engine_Capacity_(CC)"
-              DTS:DTSID="{D13A0FC5-DEEA-4655-A7EA-21336BCE5D8E}"
+              DTS:DTSID="{105CB9C7-6C58-4839-94F0-05568E087D68}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -998,7 +986,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Propulsion_Code"
-              DTS:DTSID="{76CBA15A-FEC1-4E78-841E-70B9ACD702A2}"
+              DTS:DTSID="{A7576BDC-9CCA-453C-94B7-3C4A63C4C93A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1007,7 +995,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Age_of_Vehicle"
-              DTS:DTSID="{55B87D81-1396-4810-9AB1-FC961DFE5252}"
+              DTS:DTSID="{B3CCDB17-46EE-4E71-A1B7-341DB056F178}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1016,7 +1004,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_IMD_Decile"
-              DTS:DTSID="{8B2321C7-65A2-4F34-9EBC-E8FE1C3A9397}"
+              DTS:DTSID="{2D761C3B-7615-44AB-BA0D-1F2BC021221C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1025,7 +1013,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Driver_Home_Area_Type"
-              DTS:DTSID="{390E0B6B-F367-4E03-AD0F-5E8775F5B1BB}"
+              DTS:DTSID="{A5631654-8582-4B19-B1E3-BA1AB0AF030D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -5562,94 +5550,94 @@
               startId="Package\CodeBook\Derived Column 3.Outputs[Derived Column Output]" />
             <path
               refId="Package\CodeBook.Paths[Derived Column Output8]"
-              endId="Package\CodeBook\AgeBand_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output7]"
-              endId="Package\CodeBook\CasualtySeverity_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 2.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output6]"
-              endId="Package\CodeBook\JourneyPurpose_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5 2 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output5]"
-              endId="Package\CodeBook\AccidentSeverity_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output9]"
-              endId="Package\CodeBook\LocalAuthorityDistrict_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 4.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output3]"
-              endId="Package\CodeBook\RoadType_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output2]"
-              endId="Package\CodeBook\Area_Stage.Inputs[OLE DB Destination Input]"
-              name="Derived Column Output"
-              startId="Package\CodeBook\Derived Column 5 1.Outputs[Derived Column Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Derived Column Output1]"
               endId="Package\CodeBook\VehicleType_Stage.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\CodeBook\Derived Column 5 2.Outputs[Derived Column Output]" />
             <path
-              refId="Package\CodeBook.Paths[Derived Column Output4]"
+              refId="Package\CodeBook.Paths[Derived Column Output7]"
+              endId="Package\CodeBook\Area_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output6]"
+              endId="Package\CodeBook\RoadType_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output5]"
+              endId="Package\CodeBook\LocalAuthorityDistrict_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 4.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output9]"
               endId="Package\CodeBook\GenderOfCasualty_Stage.Inputs[OLE DB Destination Input]"
               name="Derived Column Output"
               startId="Package\CodeBook\Derived Column 6.Outputs[Derived Column Output]" />
             <path
+              refId="Package\CodeBook.Paths[Derived Column Output3]"
+              endId="Package\CodeBook\JourneyPurpose_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 5 2 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output2]"
+              endId="Package\CodeBook\CasualtySeverity_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 2.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output1]"
+              endId="Package\CodeBook\AgeBand_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Derived Column Output4]"
+              endId="Package\CodeBook\AccidentSeverity_Stage.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\CodeBook\Derived Column.Outputs[Derived Column Output]" />
+            <path
               refId="Package\CodeBook.Paths[Excel Source Output8]"
+              endId="Package\CodeBook\Derived Column 2.Inputs[Derived Column Input]"
+              name="Excel Source Output"
+              startId="Package\CodeBook\CasualtySeverity.Outputs[Excel Source Output]" />
+            <path
+              refId="Package\CodeBook.Paths[Excel Source Output]"
               endId="Package\CodeBook\Derived Column 5.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\RoadType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output]"
+              refId="Package\CodeBook.Paths[Excel Source Output1]"
               endId="Package\CodeBook\Derived Column 5 1.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\Urban.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output1]"
+              refId="Package\CodeBook.Paths[Excel Source Output2]"
               endId="Package\CodeBook\Derived Column 1.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\AgeBand.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output2]"
+              refId="Package\CodeBook.Paths[Excel Source Output3]"
               endId="Package\CodeBook\Derived Column 5 2.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\VehicleType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output3]"
+              refId="Package\CodeBook.Paths[Excel Source Output4]"
               endId="Package\CodeBook\Derived Column 6.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\GenderOfCasualty.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output4]"
+              refId="Package\CodeBook.Paths[Excel Source Output5]"
               endId="Package\CodeBook\Derived Column 3.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\CasualType.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output5]"
+              refId="Package\CodeBook.Paths[Excel Source Output6]"
               endId="Package\CodeBook\Derived Column 5 2 1.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\JourneyPurpose.Outputs[Excel Source Output]" />
             <path
-              refId="Package\CodeBook.Paths[Excel Source Output6]"
+              refId="Package\CodeBook.Paths[Excel Source Output7]"
               endId="Package\CodeBook\Derived Column 4.Inputs[Derived Column Input]"
               name="Excel Source Output"
               startId="Package\CodeBook\LocalAuthorityDistrict.Outputs[Excel Source Output]" />
-            <path
-              refId="Package\CodeBook.Paths[Excel Source Output7]"
-              endId="Package\CodeBook\Derived Column 2.Inputs[Derived Column Input]"
-              name="Excel Source Output"
-              startId="Package\CodeBook\CasualtySeverity.Outputs[Excel Source Output]" />
             <path
               refId="Package\CodeBook.Paths[Excel Source Output9]"
               endId="Package\CodeBook\Derived Column.Inputs[Derived Column Input]"
@@ -8076,27 +8064,27 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="122.5,42"
+          Size="122.4,41.6"
           Id="Package\Accidents"
           TopLeft="45.7142853113462,78.0735228483088" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\Casualties"
           TopLeft="226.726186463647,72.0117581135636" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\CodeBook"
           TopLeft="49.1428582011442,180.235296659404" />
         <NodeLayout
-          Size="104,42"
+          Size="104,41.6"
           Id="Package\LSOA"
           TopLeft="752.321414218037,75.9225406424156" />
         <NodeLayout
-          Size="121.5,42"
+          Size="121.6,41.6"
           Id="Package\Postcode"
           TopLeft="571.785703124288,73.4019519789237" />
         <NodeLayout
-          Size="117.5,42"
+          Size="117.6,41.6"
           Id="Package\Vehicles"
           TopLeft="408.720230787397,72.2823466027114" />
         <EdgeLayout
@@ -8216,13 +8204,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Accidents">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="154.666666666667,42"
+          Size="154.4,41.6"
           Id="Package\Accidents\Accidents_Stage"
           TopLeft="70.7976189400419,195.000979498668" />
         <NodeLayout
-          Size="164,42"
+          Size="164,41.6"
           Id="Package\Accidents\Accidents Sources"
           TopLeft="60,60" />
         <EdgeLayout
@@ -8244,9 +8232,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8271,11 +8257,11 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\Casualties\Casualties Table"
           TopLeft="62.499999962747,132.983333089252" />
         <NodeLayout
-          Size="166,42"
+          Size="166.4,41.6"
           Id="Package\Casualties\Casualties Sources"
           TopLeft="60,60" />
         <EdgeLayout
@@ -8322,123 +8308,123 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 6"
           TopLeft="520.714293985951,357.729405404952" />
         <NodeLayout
-          Size="178,42"
+          Size="177.6,41.6"
           Id="Package\CodeBook\LocalAuthorityDistrict"
           TopLeft="323.142857349649,17.0705876668844" />
         <NodeLayout
-          Size="132,42"
+          Size="132,41.6"
           Id="Package\CodeBook\Area_Stage"
           TopLeft="822,172.2" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 5 2 1"
           TopLeft="1204.28573419853,78.8235234488251" />
         <NodeLayout
-          Size="106,42"
+          Size="105.6,41.6"
           Id="Package\CodeBook\Urban"
           TopLeft="836.8571429058,4.5529405222634" />
         <NodeLayout
-          Size="188,42"
+          Size="188,41.6"
           Id="Package\CodeBook\CasualtySeverity_Stage"
           TopLeft="251,452.976471263892" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 5 2"
           TopLeft="1002.11430105336,83.1294044933515" />
         <NodeLayout
-          Size="186,42"
+          Size="185.6,41.6"
           Id="Package\CodeBook\JourneyPurpose_Stage"
           TopLeft="1205.8,172.2" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\AgeBand_Stage"
           TopLeft="28.5714284619509,439.670588760805" />
         <NodeLayout
-          Size="170.5,42"
+          Size="170.4,41.6"
           Id="Package\CodeBook\Derived Column 5 1"
           TopLeft="800.685726194479,82.4705823796017" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\CodeBook\RoadType_Stage"
           TopLeft="583.5714285471,174.717646962301" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\CodeBook\CasualtySeverity"
           TopLeft="263,283.8" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 5"
           TopLeft="580.000009281295,91.2705801917606" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\JourneyPurpose"
           TopLeft="1206.3714283768,11.4352935599623" />
         <NodeLayout
-          Size="120,42"
+          Size="120,41.6"
           Id="Package\CodeBook\AgeBand"
           TopLeft="47,281.2" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 4"
           TopLeft="348.571433911519,100.55293468802" />
         <NodeLayout
-          Size="126,42"
+          Size="126.4,41.6"
           Id="Package\CodeBook\RoadType"
           TopLeft="593.42857136775,15.4823523084186" />
         <NodeLayout
-          Size="132,42"
+          Size="132,41.6"
           Id="Package\CodeBook\CasualType"
           TopLeft="762,277.4" />
         <NodeLayout
-          Size="165.5,42"
+          Size="165.6,41.6"
           Id="Package\CodeBook\CasualType_Stage"
           TopLeft="750.71428572645,458.811765553135" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 3"
           TopLeft="828.57144208587,358.811762636013" />
         <NodeLayout
-          Size="166.5,42"
+          Size="166.4,41.6"
           Id="Package\CodeBook\VehicleType_Stage"
           TopLeft="993,177.2" />
         <NodeLayout
-          Size="194.5,42"
+          Size="194.4,41.6"
           Id="Package\CodeBook\GenderOfCasualty_Stage"
           TopLeft="490.428571538049,453.705883050047" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 2"
           TopLeft="260.714289558177,359.270586208324" />
         <NodeLayout
-          Size="188,42"
+          Size="188,41.6"
           Id="Package\CodeBook\AccidentSeverity_Stage"
           TopLeft="20.1428568387519,175.176470534612" />
         <NodeLayout
-          Size="210,42"
+          Size="209.6,41.6"
           Id="Package\CodeBook\LocalAuthorityDistrict_Stage"
           TopLeft="314.42857136775,186.423529465388" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column 1"
           TopLeft="59.2857146992978,351.164703705236" />
         <NodeLayout
-          Size="134,42"
+          Size="134.4,41.6"
           Id="Package\CodeBook\VehicleType"
           TopLeft="1008.57142863225,7.25882284303044" />
         <NodeLayout
-          Size="162.5,42"
+          Size="162.4,41.6"
           Id="Package\CodeBook\GenderOfCasualty"
           TopLeft="496,283" />
         <NodeLayout
-          Size="153.5,42"
+          Size="153.6,41.6"
           Id="Package\CodeBook\Derived Column"
           TopLeft="35.7142863224964,91.0000012762407" />
         <NodeLayout
-          Size="156,42"
+          Size="156,41.6"
           Id="Package\CodeBook\AccidentSeverity"
           TopLeft="30.9999996594019,10.5882346291856" />
         <EdgeLayout
@@ -8465,28 +8451,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\CodeBook.Paths[Excel Source Output8]"
-          TopLeft="656.314290324523,57.0823523084186">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,34.188227883342"
-              Start="0,0"
-              End="0,26.688227883342">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,26.688227883342" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output7]"
           TopLeft="339.057144779089,325.4">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8508,7 +8472,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output6]"
+          Id="Package\CodeBook.Paths[Excel Source Output7]"
           TopLeft="412.342857349649,58.6705876668844">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8542,7 +8506,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output5]"
+          Id="Package\CodeBook.Paths[Excel Source Output6]"
           TopLeft="1281.72858128767,53.0352935599623">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8564,7 +8528,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output4]"
+          Id="Package\CodeBook.Paths[Excel Source Output5]"
           TopLeft="828,319">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8598,7 +8562,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output3]"
+          Id="Package\CodeBook.Paths[Excel Source Output4]"
           TopLeft="577.6,324.6">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8632,7 +8596,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output2]"
+          Id="Package\CodeBook.Paths[Excel Source Output3]"
           TopLeft="1077.1428648428,48.8588228430304">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8654,7 +8618,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output1]"
+          Id="Package\CodeBook.Paths[Excel Source Output2]"
           TopLeft="107,322.8">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8688,7 +8652,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Excel Source Output]"
+          Id="Package\CodeBook.Paths[Excel Source Output1]"
           TopLeft="888.17143455014,46.1529405222634">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8710,141 +8674,29 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\CodeBook.Paths[Excel Source Output]"
+          TopLeft="656.314290324523,57.0823523084186">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,34.188227883342"
+              Start="0,0"
+              End="0,26.688227883342">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,26.688227883342" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\CodeBook.Paths[Derived Column Output9]"
-          TopLeft="422.300002639635,142.15293468802">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,44.270594777368"
-              Start="0,0"
-              End="0,36.770594777368">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36.770594777368" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output8]"
-          TopLeft="135.685714699298,392.764703705236">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-30.7142862373469,46.9058850555687"
-              Start="0,0"
-              End="-30.7142862373469,39.4058850555687">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,19.4529425277844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,19.4529425277844"
-                    Point2="0,23.4529425277844"
-                    Point3="-4,23.4529425277844" />
-                  <mssgle:LineSegment
-                    End="-26.7142862373469,23.4529425277844" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-26.7142862373469,23.4529425277844"
-                    Point2="-30.7142862373469,23.4529425277844"
-                    Point3="-30.7142862373469,27.4529425277844" />
-                  <mssgle:LineSegment
-                    End="-30.7142862373469,39.4058850555687" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output7]"
-          TopLeft="341.057144779089,400.870586208324">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,52.1058850555683"
-              Start="0,0"
-              End="0,44.6058850555683">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.6058850555683" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output6]"
-          TopLeft="1280.68573419853,120.423523448825">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.914265801468,51.7764765511749"
-              Start="0,0"
-              End="17.914265801468,44.2764765511749">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,21.8882382755874" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,21.8882382755874"
-                    Point2="0,25.8882382755874"
-                    Point3="4,25.8882382755874" />
-                  <mssgle:LineSegment
-                    End="13.914265801468,25.8882382755874" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.914265801468,25.8882382755874"
-                    Point2="17.914265801468,25.8882382755874"
-                    Point3="17.914265801468,29.8882382755874" />
-                  <mssgle:LineSegment
-                    End="17.914265801468,44.2764765511749" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output5]"
-          TopLeft="113.303571580624,133.000001276241">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,42.1764692583713"
-              Start="0,0"
-              End="0,34.6764692583713">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.6764692583713" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output4]"
           TopLeft="597.114293985951,399.329405404952">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8878,19 +8730,19 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output3]"
-          TopLeft="659.385718914198,132.870580191761">
+          Id="Package\CodeBook.Paths[Derived Column Output8]"
+          TopLeft="1077.55715052668,124.729404493351">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,41.8470667705406"
+              EndConnector="0,52.4705955066485"
               Start="0,0"
-              End="0,34.3470667705406">
+              End="0,44.9705955066485">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,34.3470667705406" />
+                    End="0,44.9705955066485" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8900,7 +8752,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output2]"
+          Id="Package\CodeBook.Paths[Derived Column Output7]"
           TopLeft="887.14286309724,124.070582379602">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8922,19 +8774,153 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\CodeBook.Paths[Derived Column Output1]"
-          TopLeft="1077.55715052668,124.729404493351">
+          Id="Package\CodeBook.Paths[Derived Column Output6]"
+          TopLeft="659.385718914198,132.870580191761">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,52.4705955066485"
+              EndConnector="0,41.8470667705406"
               Start="0,0"
-              End="0,44.9705955066485">
+              End="0,34.3470667705406">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,44.9705955066485" />
+                    End="0,34.3470667705406" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output5]"
+          TopLeft="422.300002639635,142.15293468802">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,44.270594777368"
+              Start="0,0"
+              End="0,36.770594777368">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,36.770594777368" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output4]"
+          TopLeft="113.303571580624,133.000001276241">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,42.1764692583713"
+              Start="0,0"
+              End="0,34.6764692583713">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.6764692583713" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output3]"
+          TopLeft="1280.68573419853,120.423523448825">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.914265801468,51.7764765511749"
+              Start="0,0"
+              End="17.914265801468,44.2764765511749">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.8882382755874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.8882382755874"
+                    Point2="0,25.8882382755874"
+                    Point3="4,25.8882382755874" />
+                  <mssgle:LineSegment
+                    End="13.914265801468,25.8882382755874" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.914265801468,25.8882382755874"
+                    Point2="17.914265801468,25.8882382755874"
+                    Point3="17.914265801468,29.8882382755874" />
+                  <mssgle:LineSegment
+                    End="17.914265801468,44.2764765511749" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output2]"
+          TopLeft="341.057144779089,400.870586208324">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,52.1058850555683"
+              Start="0,0"
+              End="0,44.6058850555683">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.6058850555683" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\CodeBook.Paths[Derived Column Output1]"
+          TopLeft="135.685714699298,392.764703705236">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-30.7142862373469,46.9058850555687"
+              Start="0,0"
+              End="-30.7142862373469,39.4058850555687">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.4529425277844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.4529425277844"
+                    Point2="0,23.4529425277844"
+                    Point3="-4,23.4529425277844" />
+                  <mssgle:LineSegment
+                    End="-26.7142862373469,23.4529425277844" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-26.7142862373469,23.4529425277844"
+                    Point2="-30.7142862373469,23.4529425277844"
+                    Point3="-30.7142862373469,27.4529425277844" />
+                  <mssgle:LineSegment
+                    End="-30.7142862373469,39.4058850555687" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9244,17 +9230,17 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\LSOA">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="182,42"
+          Size="182.4,41.6"
           Id="Package\LSOA\LSOA_Postcode Table"
           TopLeft="552.803566499214,220.654498231565" />
         <NodeLayout
-          Size="123,42"
+          Size="123.2,41.6"
           Id="Package\LSOA\Split pcds"
           TopLeft="589,114" />
         <NodeLayout
-          Size="194,42"
+          Size="193.6,41.6"
           Id="Package\LSOA\LSOA_Postcode Sources"
           TopLeft="329.976847243875,5.16534392364599" />
         <EdgeLayout
@@ -9276,9 +9262,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9312,9 +9296,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9402,13 +9384,13 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
     design-time-name="Package\Vehicles">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="146,42"
+          Size="145.6,41.6"
           Id="Package\Vehicles\Vehicles Table"
           TopLeft="62.499999962747,130.133332031568" />
         <NodeLayout
-          Size="158,42"
+          Size="158.4,41.6"
           Id="Package\Vehicles\Vehicles Sources"
           TopLeft="60,60" />
         <EdgeLayout
@@ -9430,9 +9412,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
