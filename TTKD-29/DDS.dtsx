@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="46"
-  DTS:VersionGUID="{CCD0DEB3-4256-4D1E-86C9-E79349985261}">
+  DTS:VersionBuild="47"
+  DTS:VersionGUID="{DE202503-653C-4DA2-B258-5BC99631E6FE}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -568,8 +568,8 @@ order by Date</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Accident
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -3146,8 +3146,8 @@ where [refTable].[AgeBandID] = ?</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Casualty
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -5863,8 +5863,8 @@ where VehicleID=?</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Vehicle
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -6502,8 +6502,8 @@ where [refTable].[VehicleTypeID] = ?</property>
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Location
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -7429,8 +7429,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from AccidentSeverity
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -7630,8 +7630,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Ageband 
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -7831,8 +7831,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from Area 
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -8032,8 +8032,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from CasualtySeverity
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -8233,8 +8233,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from CasualtyType 
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -8434,8 +8434,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from GenderOfCasualty
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -9985,8 +9985,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from JourneyPurpose
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -10186,8 +10186,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from LocalAuthorityDistrict
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -12837,8 +12837,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from RoadType
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -14568,8 +14568,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                   description="The SQL command to be executed."
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from VehicleType
-where (CreatedDate&gt;? and CreatedDate&lt;=?) or
-(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+where (CreatedDate&lt;=? and CreatedDate&gt;?) or
+(UpdatedDate&lt;=? and UpdatedDate&gt;?)</property>
                 <property
                   dataType="System.String"
                   description="The variable that contains the SQL command to be executed."
@@ -14963,7 +14963,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F7604299-D808-47AD-B871-6BFDED94AC92}"
-          SQLTask:SqlStatementSource="update Data_flow&#xA; set LSET=getdate() &#xA;where name='DDS'&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="update Data_flow&#xA; set CET=getdate() &#xA;where name='DDS'&#xA;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
@@ -14980,7 +14980,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{F7604299-D808-47AD-B871-6BFDED94AC92}"
-          SQLTask:SqlStatementSource="update Data_flow set CET=LSET where name='DDS'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+          SQLTask:SqlStatementSource="update Data_flow set LSET=CET where name='DDS'" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
   </DTS:Executables>
@@ -15324,7 +15324,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="178.4,41.6"
           Id="Package\Fact Accident\LocalAuthorityDistrict"
-          TopLeft="459.5,70.6" />
+          TopLeft="472.5,68.6" />
         <NodeLayout
           Size="100.8,41.6"
           Id="Package\Fact Accident\Date"
@@ -15340,7 +15340,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="112,41.6"
           Id="Package\Fact Accident\Update"
-          TopLeft="34.2857148695965,415.235299941165" />
+          TopLeft="36.2857148695965,448.235299941165" />
         <NodeLayout
           Size="153.6,41.6"
           Id="Package\Fact Accident\Derived Column"
@@ -15411,49 +15411,49 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Accident.Paths[Lookup Match Output1]"
-          TopLeft="638,94.3">
+          TopLeft="650.9,93.35">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="108,0"
+              EndConnector="95.0999999999999,0"
               Start="0,0"
-              End="100.5,0">
+              End="87.5999999999999,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="100.5,0" />
+                    End="87.5999999999999,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="2.05861328125,5,96.3827734375,11.609375"
+              BoundingBox="-4.39138671875005,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Accident.Paths[Lookup Match Output]"
-          TopLeft="390,91.8">
+          TopLeft="390,90.85">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="69.5,0"
+              EndConnector="82.5000000000001,0"
               Start="0,0"
-              End="62,0">
+              End="75.0000000000001,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="62,0" />
+                    End="75.0000000000001,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-17.19138671875,5,96.3827734375,11.609375"
+              BoundingBox="-10.69138671875,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15545,37 +15545,37 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Accident.Paths[Lookup No Match Output]"
-          TopLeft="106.178571793498,378.676475092614">
+          TopLeft="106.228571793498,378.776475092614">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-15.8928569239014,36.558824848551"
+              EndConnector="-13.9428569239014,69.4588248485509"
               Start="0,0"
-              End="-15.8928569239014,29.058824848551">
+              End="-13.9428569239014,61.9588248485509">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.2794124242755" />
+                    End="0,30.7294124242755" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.2794124242755"
-                    Point2="0,18.2794124242755"
-                    Point3="-4,18.2794124242755" />
+                    Point1="0,30.7294124242755"
+                    Point2="0,34.7294124242755"
+                    Point3="-4,34.7294124242755" />
                   <mssgle:LineSegment
-                    End="-11.8928569239014,18.2794124242755" />
+                    End="-9.94285692390142,34.7294124242755" />
                   <mssgle:CubicBezierSegment
-                    Point1="-11.8928569239014,18.2794124242755"
-                    Point2="-15.8928569239014,18.2794124242755"
-                    Point3="-15.8928569239014,22.2794124242755" />
+                    Point1="-9.94285692390142,34.7294124242755"
+                    Point2="-13.9428569239014,34.7294124242755"
+                    Point3="-13.9428569239014,38.7294124242755" />
                   <mssgle:LineSegment
-                    End="-15.8928569239014,29.058824848551" />
+                    End="-13.9428569239014,61.9588248485509" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-63.7528151807007,23.2794124242755,111.6127734375,11.609375"
+              BoundingBox="-62.7778151807007,39.7294124242755,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15753,7 +15753,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15763,7 +15763,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15894,129 +15894,45 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="106.5,41.5"
-          Id="Package\Fact Casualty\Insert"
-          TopLeft="926.57143357092,323.364707169318" />
-        <NodeLayout
-          Size="141,41.5"
+          Size="140.8,41.6"
           Id="Package\Fact Casualty\Fact Casualty"
           TopLeft="734,182" />
         <NodeLayout
-          Size="141,41.5"
-          Id="Package\Fact Casualty\CasualtyType"
-          TopLeft="301,63" />
-        <NodeLayout
-          Size="141.5,41.5"
-          Id="Package\Fact Casualty\Casualty NDS"
-          TopLeft="74,66" />
-        <NodeLayout
-          Size="113,41.5"
-          Id="Package\Fact Casualty\Gender"
-          TopLeft="751,64.6" />
-        <NodeLayout
-          Size="112,41.5"
+          Size="112,41.6"
           Id="Package\Fact Casualty\Update"
           TopLeft="385.857143076099,365.658824848551" />
         <NodeLayout
-          Size="156,41.5"
-          Id="Package\Fact Casualty\CasualtySeverity"
-          TopLeft="521,62.6" />
+          Size="140.8,41.6"
+          Id="Package\Fact Casualty\CasualtyType"
+          TopLeft="301,63" />
         <NodeLayout
-          Size="141,41.5"
+          Size="112.8,41.6"
+          Id="Package\Fact Casualty\Gender"
+          TopLeft="751,64.6" />
+        <NodeLayout
+          Size="141.6,41.6"
+          Id="Package\Fact Casualty\Casualty NDS"
+          TopLeft="74,66" />
+        <NodeLayout
+          Size="140.8,41.6"
           Id="Package\Fact Casualty\Fact Accident"
           TopLeft="947,180.2" />
         <NodeLayout
-          Size="120,41.5"
+          Size="156,41.6"
+          Id="Package\Fact Casualty\CasualtySeverity"
+          TopLeft="521,62.6" />
+        <NodeLayout
+          Size="120,41.6"
           Id="Package\Fact Casualty\AgeBand"
           TopLeft="953,68.6" />
         <NodeLayout
-          Size="169.5,41.5"
+          Size="106.4,41.6"
+          Id="Package\Fact Casualty\Insert"
+          TopLeft="926.57143357092,323.364707169318" />
+        <NodeLayout
+          Size="169.6,41.6"
           Id="Package\Fact Casualty\Check real changes"
           TopLeft="370,279.6" />
-        <EdgeLayout
-          Id="Package\Fact Casualty.Paths[Lookup Match Output5]"
-          TopLeft="804.4,223.6">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-349.6,56"
-              Start="0,0"
-              End="-349.6,48.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,24" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,24"
-                    Point2="0,28"
-                    Point3="-4,28" />
-                  <mssgle:LineSegment
-                    End="-345.6,28" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-345.6,28"
-                    Point2="-349.6,28"
-                    Point3="-349.6,32" />
-                  <mssgle:LineSegment
-                    End="-349.6,48.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-222.99138671875,33,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact Casualty.Paths[Lookup Match Output4]"
-          TopLeft="947,201.9">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-72.2,0"
-              Start="0,0"
-              End="-64.7,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-64.7,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-80.54138671875,5,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Fact Casualty.Paths[Lookup Match Output3]"
-          TopLeft="1015.2,110.2">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,70"
-              Start="0,0"
-              End="0,62.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,62.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,25.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Casualty.Paths[Lookup Match Output2]"
           TopLeft="863.8,87.4">
@@ -16183,6 +16099,90 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Casualty.Paths[Lookup Match Output5]"
+          TopLeft="804.4,223.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-349.6,56"
+              Start="0,0"
+              End="-349.6,48.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24"
+                    Point2="0,28"
+                    Point3="-4,28" />
+                  <mssgle:LineSegment
+                    End="-345.6,28" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-345.6,28"
+                    Point2="-349.6,28"
+                    Point3="-349.6,32" />
+                  <mssgle:LineSegment
+                    End="-349.6,48.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-222.99138671875,33,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Casualty.Paths[Lookup Match Output4]"
+          TopLeft="947,201.9">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-72.2,0"
+              Start="0,0"
+              End="-64.7,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-64.7,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-80.54138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Casualty.Paths[Lookup Match Output3]"
+          TopLeft="1015.2,110.2">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,25.4453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -16269,7 +16269,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -16279,7 +16279,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -16651,7 +16651,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -16661,7 +16661,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
+          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
