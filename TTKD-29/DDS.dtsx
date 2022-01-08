@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="45"
-  DTS:VersionGUID="{229FBE9E-4E6E-4DC3-9AEE-1012B9927B44}">
+  DTS:VersionBuild="46"
+  DTS:VersionGUID="{4F3C8234-85E0-48FF-BC5E-67E189DA249E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -9825,6 +9825,141 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
               </outputs>
             </component>
             <component
+              refId="Package\No Reference\Insert Destination 9"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Destination 9"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[DimVehicleType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\No Reference\Insert Destination 9.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].Columns[VehicleTypeID]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeID"
+                      externalMetadataColumnId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeID]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeID]" />
+                    <inputColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].Columns[VehicleTypeCode]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeCode"
+                      externalMetadataColumnId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeCode]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]" />
+                    <inputColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].Columns[VehicleTypeLabel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VehicleTypeLabel"
+                      externalMetadataColumnId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeLabel]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeID]"
+                      dataType="i4"
+                      name="VehicleTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeCode]"
+                      dataType="i4"
+                      name="VehicleTypeCode" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input].ExternalColumns[VehicleTypeLabel]"
+                      dataType="wstr"
+                      length="255"
+                      name="VehicleTypeLabel" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\No Reference\Insert Destination 9.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\No Reference\Insert Destination 9.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\Insert Destination 9.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\No Reference\Insert Destination 9.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\Insert Destination 9.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\No Reference\JourneyPurpose"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
@@ -11444,6 +11579,251 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                       refId="Package\No Reference\OLE DB Command 17.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       dataType="i4"
                       lineageId="Package\No Reference\OLE DB Command 17.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\No Reference\OLE DB Command 18"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 18"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimVehicleType] SET [VehicleTypeID] = ?,[VehicleTypeLabel] = ? WHERE [VehicleTypeCode] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\No Reference\OLE DB Command 18.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].Columns[VehicleTypeCode]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeCode"
+                      externalMetadataColumnId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]" />
+                    <inputColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].Columns[VehicleTypeID]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeID"
+                      externalMetadataColumnId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeID]" />
+                    <inputColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].Columns[VehicleTypeLabel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VehicleTypeLabel"
+                      externalMetadataColumnId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="i4"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      dataType="i4"
+                      name="Param_2">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\OLE DB Command 18.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\No Reference\OLE DB Command 19"
+              componentClassID="Microsoft.OLEDBCommand"
+              contactInfo="OLE DB Command;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;2"
+              description="Runs an SQL statement for each row in a data flow. For example, call a 'new employee setup' stored procedure for each row in the 'new employees' table. Note: running an SQL statement for each row of a large data flow may take a long time."
+              name="OLE DB Command 19"
+              usesDispositions="true"
+              version="2">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimVehicleType] SET [VehicleTypeLabel] = ? WHERE [VehicleTypeCode] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\No Reference\OLE DB Command 19.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input]"
+                  errorOrTruncationOperation="Command Execution"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Command Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].Columns[VehicleTypeCode]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeCode"
+                      externalMetadataColumnId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]" />
+                    <inputColumn
+                      refId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].Columns[VehicleTypeLabel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VehicleTypeLabel"
+                      externalMetadataColumnId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
+                      dataType="wstr"
+                      length="255"
+                      name="Param_0">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">65</property>
+                      </properties>
+                    </externalMetadataColumn>
+                    <externalMetadataColumn
+                      refId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
+                      dataType="i4"
+                      name="Param_1">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
+                          name="DBParamInfoFlags">81</property>
+                      </properties>
+                    </externalMetadataColumn>
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Output]"
+                  exclusionGroup="1"
+                  name="OLE DB Command Output"
+                  synchronousInputId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Command Error Output"
+                  synchronousInputId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\OLE DB Command 19.Outputs[OLE DB Command Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -13092,6 +13472,159 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
               </outputs>
             </component>
             <component
+              refId="Package\No Reference\Slowly Changing Dimension 2 1"
+              componentClassID="Microsoft.SCD"
+              contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
+              description="Updates a SQL Server Analysis Services data warehouse dimension. Update dimension records that are already present and  insert dimension records that aren't. For example, update the DimProduct table of the AdventureWorksDW OLAP database with data from the Products table in the AdventureWorks OLTP database."
+              name="Slowly Changing Dimension 2 1"
+              version="3">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SELECT statement used to create a schema rowset."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [VehicleTypeCode], [VehicleTypeLabel] FROM [dbo].[DimVehicleType]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
+                  name="CurrentRowWhere"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether historical attribute updates are directed to the transformation output for changing attribute updates."
+                  name="UpdateChangingAttributeHistory">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when columns with fixed attributes contain changes."
+                  name="FailOnFixedAttributeChange">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the column name for the inferred member."
+                  name="InferredMemberIndicator"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether inferred member updates are detected."
+                  name="EnableInferredMember">true</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the transformation fails when a lookup of an existing record fails."
+                  name="FailOnLookupFailure">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies that all rows in the input are new or the transformation detects the change type."
+                  name="IncomingRowChangeType"
+                  typeConverter="IncomingRowChangeType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Connections[LookupConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_DDS]"
+                  description="Defines the connection to use for lookups in the dimension table"
+                  name="LookupConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]"
+                  name="Slowly Changing Dimension Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].Columns[VehicleTypeCode]"
+                      cachedDataType="i4"
+                      cachedName="VehicleTypeCode"
+                      externalMetadataColumnId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[VehicleTypeCode]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].Columns[VehicleTypeLabel]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="VehicleTypeLabel"
+                      externalMetadataColumnId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[VehicleTypeLabel]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          name="ColumnType"
+                          typeConverter="ColumnType">2</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[VehicleTypeCode]"
+                      dataType="i4"
+                      name="VehicleTypeCode" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input].ExternalColumns[VehicleTypeLabel]"
+                      dataType="wstr"
+                      length="255"
+                      name="VehicleTypeLabel" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Unchanged Output]"
+                  description="Unchanged rows"
+                  exclusionGroup="1"
+                  name="Unchanged Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[New Output]"
+                  description="New rows"
+                  exclusionGroup="1"
+                  name="New Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Fixed Attribute Output]"
+                  description="Rows with changes in columns tagged FixedAttribute"
+                  exclusionGroup="1"
+                  name="Fixed Attribute Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Changing Attribute Updates Output]"
+                  description="These rows contain new information for ChangingAttribute (Type 1) column changes"
+                  exclusionGroup="1"
+                  name="Changing Attribute Updates Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Historical Attribute Inserts Output]"
+                  description="HistoricalAttribute (Type 2) changes result in these new rows"
+                  exclusionGroup="2"
+                  name="Historical Attribute Inserts Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Inferred Member Updates Output]"
+                  description="Information to update unpopulated initial dimension row"
+                  exclusionGroup="1"
+                  name="Inferred Member Updates Output"
+                  synchronousInputId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\No Reference\Slowly Changing Dimension 3"
               componentClassID="Microsoft.SCD"
               contactInfo="Slowly Changing Dimension;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;3"
@@ -14009,6 +14542,207 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                 </output>
               </outputs>
             </component>
+            <component
+              refId="Package\No Reference\VehicleType NDS"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="VehicleType NDS"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Area]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from VehicleType
+where (CreatedDate&gt;? and CreatedDate&lt;=?) or
+(UpdatedDate&gt;? and UpdatedDate&lt;?)</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{D8E3A5C9-6752-440C-A2AE-DBE929C4470D};"Parameter1:Input",{0147EE92-69F3-4BFE-A795-A350CDA963CB};"Parameter2:Input",{D8E3A5C9-6752-440C-A2AE-DBE929C4470D};"Parameter3:Input",{0147EE92-69F3-4BFE-A795-A350CDA963CB};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\No Reference\VehicleType NDS.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.UK_Accidents_NDS]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[SourceID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[SourceID]"
+                      name="SourceID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[CreatedDate]"
+                      name="CreatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[UpdatedDate]"
+                      name="UpdatedDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeID]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeID]"
+                      name="VehicleTypeID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeCode]"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]"
+                      name="VehicleTypeCode"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeLabel]"
+                      length="255"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]"
+                      name="VehicleTypeLabel"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[SourceID]"
+                      dataType="i4"
+                      name="SourceID" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      name="CreatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      name="UpdatedDate" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeID]"
+                      dataType="i4"
+                      name="VehicleTypeID" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeCode]"
+                      dataType="i4"
+                      name="VehicleTypeCode" />
+                    <externalMetadataColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output].ExternalColumns[VehicleTypeLabel]"
+                      dataType="wstr"
+                      length="255"
+                      name="VehicleTypeLabel" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeID]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeID]"
+                      name="VehicleTypeID" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeCode]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeCode]"
+                      name="VehicleTypeCode" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeLabel]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[VehicleTypeLabel]"
+                      name="VehicleTypeLabel" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[SourceID]"
+                      name="SourceID" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[CreatedDate]"
+                      name="CreatedDate" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[UpdatedDate]"
+                      name="UpdatedDate" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
           </components>
           <paths>
             <path
@@ -14017,172 +14751,187 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
               name="Changing Attribute Updates Output"
               startId="Package\No Reference\Slowly Changing Dimension 1.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output1]"
-              endId="Package\No Reference\OLE DB Command 9.Inputs[OLE DB Command Input]"
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output8]"
+              endId="Package\No Reference\OLE DB Command 17.Inputs[OLE DB Command Input]"
               name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[Changing Attribute Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output2]"
-              endId="Package\No Reference\OLE DB Command 7.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 3.Outputs[Changing Attribute Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output3]"
-              endId="Package\No Reference\OLE DB Command 1.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output4]"
-              endId="Package\No Reference\OLE DB Command 5.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[Changing Attribute Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output5]"
-              endId="Package\No Reference\OLE DB Command 15.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[Changing Attribute Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output6]"
-              endId="Package\No Reference\OLE DB Command 11.Inputs[OLE DB Command Input]"
-              name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 5.Outputs[Changing Attribute Updates Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[Changing Attribute Updates Output]" />
             <path
               refId="Package\No Reference.Paths[Changing Attribute Updates Output7]"
               endId="Package\No Reference\OLE DB Command 13.Inputs[OLE DB Command Input]"
               name="Changing Attribute Updates Output"
               startId="Package\No Reference\Slowly Changing Dimension 6.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Changing Attribute Updates Output8]"
-              endId="Package\No Reference\OLE DB Command 17.Inputs[OLE DB Command Input]"
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output6]"
+              endId="Package\No Reference\OLE DB Command 11.Inputs[OLE DB Command Input]"
               name="Changing Attribute Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[Changing Attribute Updates Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 5.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output7]"
-              endId="Package\No Reference\OLE DB Command 4.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[Inferred Member Updates Output]" />
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output5]"
+              endId="Package\No Reference\OLE DB Command 15.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output6]"
-              endId="Package\No Reference\OLE DB Command 8.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[Inferred Member Updates Output]" />
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output9]"
+              endId="Package\No Reference\OLE DB Command 19.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output5]"
-              endId="Package\No Reference\OLE DB Command.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output3]"
+              endId="Package\No Reference\OLE DB Command 1.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension.Outputs[Changing Attribute Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output4]"
-              endId="Package\No Reference\OLE DB Command 12.Inputs[OLE DB Command Input]"
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output2]"
+              endId="Package\No Reference\OLE DB Command 7.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 3.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output1]"
+              endId="Package\No Reference\OLE DB Command 9.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Changing Attribute Updates Output4]"
+              endId="Package\No Reference\OLE DB Command 5.Inputs[OLE DB Command Input]"
+              name="Changing Attribute Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[Changing Attribute Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output9]"
+              endId="Package\No Reference\OLE DB Command 18.Inputs[OLE DB Command Input]"
               name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 6.Outputs[Inferred Member Updates Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[Inferred Member Updates Output]" />
             <path
               refId="Package\No Reference.Paths[Inferred Member Updates Output8]"
-              endId="Package\No Reference\OLE DB Command 10.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 5.Outputs[Inferred Member Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output2]"
-              endId="Package\No Reference\OLE DB Command 16.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[Inferred Member Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output1]"
-              endId="Package\No Reference\OLE DB Command 14.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[Inferred Member Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output]"
-              endId="Package\No Reference\OLE DB Command 2.Inputs[OLE DB Command Input]"
-              name="Inferred Member Updates Output"
-              startId="Package\No Reference\Slowly Changing Dimension 1.Outputs[Inferred Member Updates Output]" />
-            <path
-              refId="Package\No Reference.Paths[Inferred Member Updates Output3]"
               endId="Package\No Reference\OLE DB Command 6.Inputs[OLE DB Command Input]"
               name="Inferred Member Updates Output"
               startId="Package\No Reference\Slowly Changing Dimension 3.Outputs[Inferred Member Updates Output]" />
             <path
-              refId="Package\No Reference.Paths[New Output8]"
-              endId="Package\No Reference\Insert Destination 6.Inputs[OLE DB Destination Input]"
+              refId="Package\No Reference.Paths[Inferred Member Updates Output7]"
+              endId="Package\No Reference\OLE DB Command 2.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 1.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output6]"
+              endId="Package\No Reference\OLE DB Command 14.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output5]"
+              endId="Package\No Reference\OLE DB Command 16.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output3]"
+              endId="Package\No Reference\OLE DB Command 12.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 6.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output2]"
+              endId="Package\No Reference\OLE DB Command.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output1]"
+              endId="Package\No Reference\OLE DB Command 8.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output]"
+              endId="Package\No Reference\OLE DB Command 4.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[Inferred Member Updates Output4]"
+              endId="Package\No Reference\OLE DB Command 10.Inputs[OLE DB Command Input]"
+              name="Inferred Member Updates Output"
+              startId="Package\No Reference\Slowly Changing Dimension 5.Outputs[Inferred Member Updates Output]" />
+            <path
+              refId="Package\No Reference.Paths[New Output9]"
+              endId="Package\No Reference\Insert Destination 9.Inputs[OLE DB Destination Input]"
               name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 6.Outputs[New Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 2 1.Outputs[New Output]" />
+            <path
+              refId="Package\No Reference.Paths[New Output8]"
+              endId="Package\No Reference\Insert Destination.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\No Reference\Slowly Changing Dimension.Outputs[New Output]" />
             <path
               refId="Package\No Reference.Paths[New Output7]"
-              endId="Package\No Reference\Insert Destination 7.Inputs[OLE DB Destination Input]"
+              endId="Package\No Reference\Insert Destination 1.Inputs[OLE DB Destination Input]"
               name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[New Output]" />
-            <path
-              refId="Package\No Reference.Paths[New Output5]"
-              endId="Package\No Reference\Insert Destination 8.Inputs[OLE DB Destination Input]"
-              name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[New Output]" />
-            <path
-              refId="Package\No Reference.Paths[New Output4]"
-              endId="Package\No Reference\Insert Destination 4.Inputs[OLE DB Destination Input]"
-              name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[New Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 1.Outputs[New Output]" />
             <path
               refId="Package\No Reference.Paths[New Output6]"
+              endId="Package\No Reference\Insert Destination 2.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[New Output]" />
+            <path
+              refId="Package\No Reference.Paths[New Output4]"
               endId="Package\No Reference\Insert Destination 5.Inputs[OLE DB Destination Input]"
               name="New Output"
               startId="Package\No Reference\Slowly Changing Dimension 5.Outputs[New Output]" />
             <path
+              refId="Package\No Reference.Paths[New Output3]"
+              endId="Package\No Reference\Insert Destination 4.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\No Reference\Slowly Changing Dimension 4.Outputs[New Output]" />
+            <path
               refId="Package\No Reference.Paths[New Output2]"
+              endId="Package\No Reference\Insert Destination 8.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\No Reference\Slowly Changing Dimension 8.Outputs[New Output]" />
+            <path
+              refId="Package\No Reference.Paths[New Output]"
+              endId="Package\No Reference\Insert Destination 6.Inputs[OLE DB Destination Input]"
+              name="New Output"
+              startId="Package\No Reference\Slowly Changing Dimension 6.Outputs[New Output]" />
+            <path
+              refId="Package\No Reference.Paths[New Output5]"
               endId="Package\No Reference\Insert Destination 3.Inputs[OLE DB Destination Input]"
               name="New Output"
               startId="Package\No Reference\Slowly Changing Dimension 3.Outputs[New Output]" />
             <path
               refId="Package\No Reference.Paths[New Output1]"
-              endId="Package\No Reference\Insert Destination 2.Inputs[OLE DB Destination Input]"
+              endId="Package\No Reference\Insert Destination 7.Inputs[OLE DB Destination Input]"
               name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 2.Outputs[New Output]" />
+              startId="Package\No Reference\Slowly Changing Dimension 7.Outputs[New Output]" />
             <path
-              refId="Package\No Reference.Paths[New Output]"
-              endId="Package\No Reference\Insert Destination 1.Inputs[OLE DB Destination Input]"
-              name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension 1.Outputs[New Output]" />
-            <path
-              refId="Package\No Reference.Paths[New Output3]"
-              endId="Package\No Reference\Insert Destination.Inputs[OLE DB Destination Input]"
-              name="New Output"
-              startId="Package\No Reference\Slowly Changing Dimension.Outputs[New Output]" />
-            <path
-              refId="Package\No Reference.Paths[OLE DB Source Output7]"
+              refId="Package\No Reference.Paths[OLE DB Source Output]"
               endId="Package\No Reference\Slowly Changing Dimension 2.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\AgeBand NDS.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output]"
+              refId="Package\No Reference.Paths[OLE DB Source Output1]"
               endId="Package\No Reference\Slowly Changing Dimension 4.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\CasualtySeverity.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output1]"
+              refId="Package\No Reference.Paths[OLE DB Source Output2]"
               endId="Package\No Reference\Slowly Changing Dimension 5.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\RoadType.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output2]"
+              refId="Package\No Reference.Paths[OLE DB Source Output3]"
               endId="Package\No Reference\Slowly Changing Dimension 3.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\CasualtyType.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output3]"
+              refId="Package\No Reference.Paths[OLE DB Source Output4]"
               endId="Package\No Reference\Slowly Changing Dimension 8.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\AccidentSeverity.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output4]"
+              refId="Package\No Reference.Paths[OLE DB Source Output5]"
               endId="Package\No Reference\Slowly Changing Dimension 7.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\JourneyPurpose.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output5]"
+              refId="Package\No Reference.Paths[OLE DB Source Output6]"
               endId="Package\No Reference\Slowly Changing Dimension 6.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\GenderOfCasualty.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\No Reference.Paths[OLE DB Source Output6]"
+              refId="Package\No Reference.Paths[OLE DB Source Output7]"
               endId="Package\No Reference\Slowly Changing Dimension.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\Area NDS.Outputs[OLE DB Source Output]" />
@@ -14191,6 +14940,11 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
               endId="Package\No Reference\Slowly Changing Dimension 1.Inputs[Slowly Changing Dimension Input]"
               name="OLE DB Source Output"
               startId="Package\No Reference\LocalAuthorityDistrict.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\No Reference.Paths[OLE DB Source Output9]"
+              endId="Package\No Reference\Slowly Changing Dimension 2 1.Inputs[Slowly Changing Dimension Input]"
+              name="OLE DB Source Output"
+              startId="Package\No Reference\VehicleType NDS.Outputs[OLE DB Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -14925,6 +15679,29 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Accident\RoadType">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimRoadType]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Accident\Fact Accident">
     <Properties>
       <Property>
@@ -14971,6 +15748,29 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Accident\AccidentSeverity">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimAccidentSeverity]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Accident\Urban Area">
     <Properties>
       <Property>
@@ -14987,29 +15787,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <Name>TableInfoObjectType</Name>
         <Value
           type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact Accident\Check real changes">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[FactAccident]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -15040,29 +15817,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Accident\Date">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimDate]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fact Accident\Insert">
     <Properties>
       <Property>
@@ -15072,29 +15826,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Fact Accident\AccidentSeverity">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimAccidentSeverity]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -15112,7 +15843,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Accident\RoadType">
+    design-time-name="Package\Fact Accident\Date">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
@@ -15122,7 +15853,30 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>UsedTableName</Name>
         <Value
-          type="q3:string">[dbo].[DimRoadType]</Value>
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Accident\Check real changes">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[FactAccident]</Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -15433,19 +16187,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Casualty\Insert">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fact Casualty\Fact Casualty">
     <Properties>
       <Property>
@@ -15492,14 +16233,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Casualty\Casualty NDS">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fact Casualty\Gender">
     <Properties>
       <Property>
@@ -15511,6 +16244,37 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <Name>UsedTableName</Name>
         <Value
           type="q3:string">[dbo].[DimGender]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Casualty\Casualty NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Casualty\Fact Accident">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
@@ -15546,29 +16310,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Fact Casualty\Fact Accident">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Fact Casualty\AgeBand">
     <Properties>
       <Property>
@@ -15592,12 +16333,25 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
+    design-time-name="Package\Fact Casualty\Insert">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Fact Casualty\Check real changes">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -15987,7 +16741,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -16234,19 +16988,19 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="217.5,41.5"
           Id="Package\No Reference\Slowly Changing Dimension 3"
-          TopLeft="5146.25,106.999999999999" />
+          TopLeft="4443.25,106.999999999999" />
         <NodeLayout
           Size="178.5,41.5"
           Id="Package\No Reference\LocalAuthorityDistrict"
-          TopLeft="234.75,5.49999999999989" />
+          TopLeft="234.75,5.5" />
         <NodeLayout
           Size="180,41.5"
           Id="Package\No Reference\OLE DB Command 10"
-          TopLeft="2334,208.75" />
+          TopLeft="1651,208.75" />
         <NodeLayout
           Size="180,41.5"
           Id="Package\No Reference\OLE DB Command 11"
-          TopLeft="2575,208.75" />
+          TopLeft="1892,208.75" />
         <NodeLayout
           Size="180,41.5"
           Id="Package\No Reference\OLE DB Command 16"
@@ -16258,7 +17012,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="125.5,41.5"
           Id="Package\No Reference\RoadType"
-          TopLeft="2361.25,5.49999999999966" />
+          TopLeft="1678.25,5.49999999999977" />
         <NodeLayout
           Size="217.5,41.5"
           Id="Package\No Reference\Slowly Changing Dimension 6"
@@ -16266,7 +17020,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="123,41.5"
           Id="Package\No Reference\Area NDS"
-          TopLeft="1663.5,5.49999999999977" />
+          TopLeft="2376.5,5.49999999999966" />
         <NodeLayout
           Size="171,41.5"
           Id="Package\No Reference\Insert Destination 6"
@@ -16274,15 +17028,15 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="217.5,41.5"
           Id="Package\No Reference\Slowly Changing Dimension 4"
-          TopLeft="4443.25,106.999999999999" />
+          TopLeft="5146.25,106.999999999999" />
         <NodeLayout
           Size="172,42"
           Id="Package\No Reference\Insert Destination 3"
-          TopLeft="4935,208.499999999999" />
+          TopLeft="4232,208.499999999999" />
         <NodeLayout
           Size="174.5,42"
           Id="Package\No Reference\OLE DB Command 9"
-          TopLeft="4699.75,208.499999999999" />
+          TopLeft="5402.75,208.499999999999" />
         <NodeLayout
           Size="180,41.5"
           Id="Package\No Reference\OLE DB Command 15"
@@ -16294,23 +17048,23 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="217.5,41.5"
           Id="Package\No Reference\Slowly Changing Dimension 5"
-          TopLeft="2315.25,107" />
+          TopLeft="1632.25,107" />
         <NodeLayout
           Size="174.5,42"
           Id="Package\No Reference\OLE DB Command 5"
-          TopLeft="3996.75,208.499999999999" />
+          TopLeft="3996.75,208.5" />
         <NodeLayout
           Size="153,41.5"
           Id="Package\No Reference\JourneyPurpose"
-          TopLeft="3060.5,5.49999999999955" />
+          TopLeft="3060.5,5.49999999999966" />
         <NodeLayout
           Size="171,41.5"
           Id="Package\No Reference\Insert Destination 5"
-          TopLeft="2102.5,208.75" />
+          TopLeft="1419.5,208.75" />
         <NodeLayout
           Size="174.5,41.5"
           Id="Package\No Reference\OLE DB Command 1"
-          TopLeft="1867.75,208.75" />
+          TopLeft="2580.75,208.75" />
         <NodeLayout
           Size="171,41.5"
           Id="Package\No Reference\Insert Destination 1"
@@ -16326,7 +17080,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="174.5,42"
           Id="Package\No Reference\OLE DB Command 8"
-          TopLeft="4464.75,208.499999999999" />
+          TopLeft="5167.75,208.499999999999" />
         <NodeLayout
           Size="144,41.5"
           Id="Package\No Reference\AgeBand NDS"
@@ -16350,27 +17104,27 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="141,41.5"
           Id="Package\No Reference\CasualtyType"
-          TopLeft="5184.5,5.49999999999932" />
+          TopLeft="4481.5,5.49999999999943" />
         <NodeLayout
           Size="172,42"
           Id="Package\No Reference\Insert Destination 4"
-          TopLeft="4232,208.499999999999" />
+          TopLeft="4935,208.499999999999" />
         <NodeLayout
           Size="162.5,41.5"
           Id="Package\No Reference\Insert Destination"
-          TopLeft="1419.75,208.75" />
+          TopLeft="2132.75,208.75" />
         <NodeLayout
           Size="208,41.5"
           Id="Package\No Reference\Slowly Changing Dimension"
-          TopLeft="1621,107" />
+          TopLeft="2334,107" />
         <NodeLayout
           Size="165,41.5"
           Id="Package\No Reference\OLE DB Command"
-          TopLeft="1642.5,208.75" />
+          TopLeft="2355.5,208.75" />
         <NodeLayout
           Size="174.5,42"
           Id="Package\No Reference\OLE DB Command 7"
-          TopLeft="5402.75,208.499999999999" />
+          TopLeft="4699.75,208.499999999999" />
         <NodeLayout
           Size="217.5,41.5"
           Id="Package\No Reference\Slowly Changing Dimension 2"
@@ -16378,7 +17132,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="156,41.5"
           Id="Package\No Reference\CasualtySeverity"
-          TopLeft="4474,5.49999999999943" />
+          TopLeft="5177,5.49999999999932" />
         <NodeLayout
           Size="172,42"
           Id="Package\No Reference\Insert Destination 2"
@@ -16390,7 +17144,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="174.5,42"
           Id="Package\No Reference\OLE DB Command 6"
-          TopLeft="5167.75,208.499999999999" />
+          TopLeft="4464.75,208.499999999999" />
         <NodeLayout
           Size="171,41.5"
           Id="Package\No Reference\Insert Destination 7"
@@ -16406,79 +17160,13 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         <NodeLayout
           Size="156,41.5"
           Id="Package\No Reference\AccidentSeverity"
-          TopLeft="5881,5.4999999999992" />
+          TopLeft="5881,5.49999999999932" />
         <NodeLayout
           Size="174.5,41.5"
           Id="Package\No Reference\OLE DB Command 2"
           TopLeft="236.75,208.75" />
         <EdgeLayout
           Id="Package\No Reference.Paths[OLE DB Source Output3]"
-          TopLeft="5959,46.9999999999992">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[OLE DB Source Output2]"
-          TopLeft="5255,46.9999999999993">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[OLE DB Source Output1]"
-          TopLeft="2424,46.9999999999997">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[OLE DB Source Output]"
           TopLeft="4552,46.9999999999994">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16500,50 +17188,116 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[New Output8]"
-          TopLeft="975.625,148.5">
+          Id="Package\No Reference.Paths[OLE DB Source Output2]"
+          TopLeft="1741,46.9999999999998">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-183.625,60.25"
+              EndConnector="0,60"
               Start="0,0"
-              End="-183.625,52.75">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="-4,20.5698334595004" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[OLE DB Source Output1]"
+          TopLeft="5255,46.9999999999993">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-179.625,20.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.625,20.5698334595004"
-                    Point2="-183.625,20.5698334595004"
-                    Point3="-183.625,24.5698334595004" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[OLE DB Source Output]"
+          TopLeft="3849,46.9999999999995">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="-183.625,52.75" />
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output8]"
+          TopLeft="2388,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-174,60.2500000000001"
+              Start="0,0"
+              End="-174,52.7500000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5917721518988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5917721518988"
+                    Point2="0,20.5917721518988"
+                    Point3="-4,20.5917721518988" />
+                  <mssgle:LineSegment
+                    End="-170,20.5917721518988" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-170,20.5917721518988"
+                    Point2="-174,20.5917721518988"
+                    Point3="-174,24.5917721518988" />
+                  <mssgle:LineSegment
+                    End="-174,52.7500000000001" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
+              BoundingBox="-114.09138671875,25.5917721518988,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[New Output7]"
-          TopLeft="3084.625,148.5">
+          TopLeft="271.625,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-183.625,60.2500000000001"
+              EndConnector="-180.625,60.25"
               Start="0,0"
-              End="-183.625,52.7500000000001">
+              End="-180.625,52.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -16554,205 +17308,25 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                     Point2="0,20.5698334595004"
                     Point3="-4,20.5698334595004" />
                   <mssgle:LineSegment
-                    End="-179.625,20.5698334595004" />
+                    End="-176.625,20.5698334595004" />
                   <mssgle:CubicBezierSegment
-                    Point1="-179.625,20.5698334595004"
-                    Point2="-183.625,20.5698334595004"
-                    Point3="-183.625,24.5698334595004" />
+                    Point1="-176.625,20.5698334595004"
+                    Point2="-180.625,20.5698334595004"
+                    Point3="-180.625,24.5698334595004" />
                   <mssgle:LineSegment
-                    End="-183.625,52.7500000000001" />
+                    End="-180.625,52.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
+              BoundingBox="-117.40388671875,25.5698334595004,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[New Output6]"
-          TopLeft="2371.625,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-183.625,60.25"
-              Start="0,0"
-              End="-183.625,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="-4,20.5698334595004" />
-                  <mssgle:LineSegment
-                    End="-179.625,20.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.625,20.5698334595004"
-                    Point2="-183.625,20.5698334595004"
-                    Point3="-183.625,24.5698334595004" />
-                  <mssgle:LineSegment
-                    End="-183.625,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[New Output5]"
-          TopLeft="5906.625,148.499999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-183.625,60.2500000000001"
-              Start="0,0"
-              End="-183.625,52.7500000000001">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="-4,20.5698334595004" />
-                  <mssgle:LineSegment
-                    End="-179.625,20.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-179.625,20.5698334595004"
-                    Point2="-183.625,20.5698334595004"
-                    Point3="-183.625,24.5698334595004" />
-                  <mssgle:LineSegment
-                    End="-183.625,52.7500000000001" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[New Output4]"
-          TopLeft="4499.625,148.499999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.625,60"
-              Start="0,0"
-              End="-181.625,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4844814534444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4844814534444"
-                    Point2="0,20.4844814534444"
-                    Point3="-4,20.4844814534444" />
-                  <mssgle:LineSegment
-                    End="-177.625,20.4844814534444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.625,20.4844814534444"
-                    Point2="-181.625,20.4844814534444"
-                    Point3="-181.625,24.4844814534444" />
-                  <mssgle:LineSegment
-                    End="-181.625,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-117.90388671875,25.4844814534444,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[New Output3]"
-          TopLeft="1675,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-174,60.25"
-              Start="0,0"
-              End="-174,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.5917721518987" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5917721518987"
-                    Point2="0,20.5917721518987"
-                    Point3="-4,20.5917721518987" />
-                  <mssgle:LineSegment
-                    End="-170,20.5917721518987" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-170,20.5917721518987"
-                    Point2="-174,20.5917721518987"
-                    Point3="-174,24.5917721518987" />
-                  <mssgle:LineSegment
-                    End="-174,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-114.09138671875,25.5917721518987,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[New Output2]"
-          TopLeft="5202.625,148.499999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-181.625,60"
-              Start="0,0"
-              End="-181.625,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,16.4844814534444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.4844814534444"
-                    Point2="0,20.4844814534444"
-                    Point3="-4,20.4844814534444" />
-                  <mssgle:LineSegment
-                    End="-177.625,20.4844814534444" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-177.625,20.4844814534444"
-                    Point2="-181.625,20.4844814534444"
-                    Point3="-181.625,24.4844814534444" />
-                  <mssgle:LineSegment
-                    End="-181.625,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-117.90388671875,25.4844814534444,54.1827734375,11.43359375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[New Output1]"
           TopLeft="3796.625,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16788,14 +17362,50 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[New Output]"
-          TopLeft="271.625,148.5">
+          Id="Package\No Reference.Paths[New Output5]"
+          TopLeft="4499.625,148.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-180.625,60.2500000000001"
+              EndConnector="-181.625,60"
               Start="0,0"
-              End="-180.625,52.7500000000001">
+              End="-181.625,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4844814534444"
+                    Point2="0,20.4844814534444"
+                    Point3="-4,20.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-177.625,20.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.625,20.4844814534444"
+                    Point2="-181.625,20.4844814534444"
+                    Point3="-181.625,24.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-181.625,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-117.90388671875,25.4844814534444,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output4]"
+          TopLeft="1688.625,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-183.625,60.25"
+              Start="0,0"
+              End="-183.625,52.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -16806,73 +17416,169 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
                     Point2="0,20.5698334595004"
                     Point3="-4,20.5698334595004" />
                   <mssgle:LineSegment
-                    End="-176.625,20.5698334595004" />
+                    End="-179.625,20.5698334595004" />
                   <mssgle:CubicBezierSegment
-                    Point1="-176.625,20.5698334595004"
-                    Point2="-180.625,20.5698334595004"
-                    Point3="-180.625,24.5698334595004" />
+                    Point1="-179.625,20.5698334595004"
+                    Point2="-183.625,20.5698334595004"
+                    Point3="-183.625,24.5698334595004" />
                   <mssgle:LineSegment
-                    End="-180.625,52.7500000000001" />
+                    End="-183.625,52.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-117.40388671875,25.5698334595004,54.1827734375,11.43359375"
+              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output3]"
+          TopLeft="5202.625,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-181.625,60.0000000000001"
+              Start="0,0"
+              End="-181.625,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4844814534444"
+                    Point2="0,20.4844814534444"
+                    Point3="-4,20.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-177.625,20.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-177.625,20.4844814534444"
+                    Point2="-181.625,20.4844814534444"
+                    Point3="-181.625,24.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-181.625,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-117.90388671875,25.4844814534444,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output2]"
+          TopLeft="5906.625,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-183.625,60.25"
+              Start="0,0"
+              End="-183.625,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5698334595004"
+                    Point2="0,20.5698334595004"
+                    Point3="-4,20.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-179.625,20.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-179.625,20.5698334595004"
+                    Point2="-183.625,20.5698334595004"
+                    Point3="-183.625,24.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-183.625,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output1]"
+          TopLeft="3084.625,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-183.625,60.25"
+              Start="0,0"
+              End="-183.625,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5698334595004"
+                    Point2="0,20.5698334595004"
+                    Point3="-4,20.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-179.625,20.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-179.625,20.5698334595004"
+                    Point2="-183.625,20.5698334595004"
+                    Point3="-183.625,24.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-183.625,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output]"
+          TopLeft="975.625,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-183.625,60.25"
+              Start="0,0"
+              End="-183.625,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5698334595004"
+                    Point2="0,20.5698334595004"
+                    Point3="-4,20.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-179.625,20.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-179.625,20.5698334595004"
+                    Point2="-183.625,20.5698334595004"
+                    Point3="-183.625,24.5698334595004" />
+                  <mssgle:LineSegment
+                    End="-183.625,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-118.90388671875,25.5698334595004,54.1827734375,11.43359375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[Inferred Member Updates Output8]"
-          TopLeft="2424,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.25"
-              Start="0,0"
-              End="0,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output7]"
-          TopLeft="3849,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output6]"
           TopLeft="4552,148.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -16896,127 +17602,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output5]"
-          TopLeft="1725,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.25"
-              Start="0,0"
-              End="0,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output4]"
-          TopLeft="1028,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.25"
-              Start="0,0"
-              End="0,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output3]"
-          TopLeft="5255,148.499999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output2]"
-          TopLeft="5959,148.499999999999">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.25"
-              Start="0,0"
-              End="0,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output1]"
-          TopLeft="3137,148.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60.25"
-              Start="0,0"
-              End="0,52.75">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.75" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[Inferred Member Updates Output]"
+          Id="Package\No Reference.Paths[Inferred Member Updates Output7]"
           TopLeft="324,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -17040,44 +17626,176 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[Changing Attribute Updates Output8]"
-          TopLeft="6011.375,148.499999999999">
+          Id="Package\No Reference.Paths[Inferred Member Updates Output6]"
+          TopLeft="3137,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="188.625,60.25"
+              EndConnector="0,60.25"
               Start="0,0"
-              End="188.625,52.75">
+              End="0,52.75">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="4,20.5698334595004" />
-                  <mssgle:LineSegment
-                    End="184.625,20.5698334595004" />
-                  <mssgle:CubicBezierSegment
-                    Point1="184.625,20.5698334595004"
-                    Point2="188.625,20.5698334595004"
-                    Point3="188.625,24.5698334595004" />
-                  <mssgle:LineSegment
-                    End="188.625,52.75" />
+                    End="0,52.75" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.77859375,25.5698334595004,157.0678125,11.6630859375"
+              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[Changing Attribute Updates Output7]"
-          TopLeft="1080.375,148.5">
+          Id="Package\No Reference.Paths[Inferred Member Updates Output5]"
+          TopLeft="5959,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.25"
+              Start="0,0"
+              End="0,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output4]"
+          TopLeft="1741,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.25"
+              Start="0,0"
+              End="0,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output3]"
+          TopLeft="1028,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.25"
+              Start="0,0"
+              End="0,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output2]"
+          TopLeft="2438,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60.25"
+              Start="0,0"
+              End="0,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.5458984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output1]"
+          TopLeft="5255,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output]"
+          TopLeft="3849,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Changing Attribute Updates Output8]"
+          TopLeft="6011.375,148.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17112,8 +17830,44 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\No Reference.Paths[Changing Attribute Updates Output7]"
+          TopLeft="1080.375,148.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.625,60.25"
+              Start="0,0"
+              End="188.625,52.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.5698334595004"
+                    Point2="0,20.5698334595004"
+                    Point3="4,20.5698334595004" />
+                  <mssgle:LineSegment
+                    End="184.625,20.5698334595004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.625,20.5698334595004"
+                    Point2="188.625,20.5698334595004"
+                    Point3="188.625,24.5698334595004" />
+                  <mssgle:LineSegment
+                    End="188.625,52.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.77859375,25.5698334595004,157.0678125,11.6630859375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\No Reference.Paths[Changing Attribute Updates Output6]"
-          TopLeft="2476.375,148.5">
+          TopLeft="1793.375,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17153,33 +17907,33 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="188.625,60.25"
+              EndConnector="188.625,60.2499999999999"
               Start="0,0"
-              End="188.625,52.75">
+              End="188.625,52.7499999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5698334595004" />
+                    End="0,16.5698334595003" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="4,20.5698334595004" />
+                    Point1="0,16.5698334595003"
+                    Point2="0,20.5698334595003"
+                    Point3="4,20.5698334595003" />
                   <mssgle:LineSegment
-                    End="184.625,20.5698334595004" />
+                    End="184.625,20.5698334595003" />
                   <mssgle:CubicBezierSegment
-                    Point1="184.625,20.5698334595004"
-                    Point2="188.625,20.5698334595004"
-                    Point3="188.625,24.5698334595004" />
+                    Point1="184.625,20.5698334595003"
+                    Point2="188.625,20.5698334595003"
+                    Point3="188.625,24.5698334595003" />
                   <mssgle:LineSegment
-                    End="188.625,52.75" />
+                    End="188.625,52.7499999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="15.77859375,25.5698334595004,157.0678125,11.6630859375"
+              BoundingBox="15.77859375,25.5698334595003,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -17189,39 +17943,39 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="182.625,59.9999999999999"
+              EndConnector="182.625,60"
               Start="0,0"
-              End="182.625,52.4999999999999">
+              End="182.625,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.4844814534443" />
+                    End="0,16.4844814534444" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.4844814534443"
-                    Point2="0,20.4844814534443"
-                    Point3="4,20.4844814534443" />
+                    Point1="0,16.4844814534444"
+                    Point2="0,20.4844814534444"
+                    Point3="4,20.4844814534444" />
                   <mssgle:LineSegment
-                    End="178.625,20.4844814534443" />
+                    End="178.625,20.4844814534444" />
                   <mssgle:CubicBezierSegment
-                    Point1="178.625,20.4844814534443"
-                    Point2="182.625,20.4844814534443"
-                    Point3="182.625,24.4844814534443" />
+                    Point1="178.625,20.4844814534444"
+                    Point2="182.625,20.4844814534444"
+                    Point3="182.625,24.4844814534444" />
                   <mssgle:LineSegment
-                    End="182.625,52.4999999999999" />
+                    End="182.625,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="12.77859375,25.4844814534443,157.0678125,11.6630859375"
+              BoundingBox="12.77859375,25.4844814534444,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[Changing Attribute Updates Output3]"
-          TopLeft="1775,148.5">
+          TopLeft="2488,148.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17257,7 +18011,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[Changing Attribute Updates Output2]"
-          TopLeft="5307.375,148.499999999999">
+          TopLeft="4604.375,148.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17293,7 +18047,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[Changing Attribute Updates Output1]"
-          TopLeft="4604.375,148.499999999999">
+          TopLeft="5307.375,148.499999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17333,39 +18087,39 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="182.625,60.25"
+              EndConnector="182.625,60.2499999999999"
               Start="0,0"
-              End="182.625,52.75">
+              End="182.625,52.7499999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,16.5698334595004" />
+                    End="0,16.5698334595003" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,16.5698334595004"
-                    Point2="0,20.5698334595004"
-                    Point3="4,20.5698334595004" />
+                    Point1="0,16.5698334595003"
+                    Point2="0,20.5698334595003"
+                    Point3="4,20.5698334595003" />
                   <mssgle:LineSegment
-                    End="178.625,20.5698334595004" />
+                    End="178.625,20.5698334595003" />
                   <mssgle:CubicBezierSegment
-                    Point1="178.625,20.5698334595004"
-                    Point2="182.625,20.5698334595004"
-                    Point3="182.625,24.5698334595004" />
+                    Point1="178.625,20.5698334595003"
+                    Point2="182.625,20.5698334595003"
+                    Point3="182.625,24.5698334595003" />
                   <mssgle:LineSegment
-                    End="182.625,52.75" />
+                    End="182.625,52.7499999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="12.77859375,25.5698334595004,157.0678125,11.6630859375"
+              BoundingBox="12.77859375,25.5698334595003,157.0678125,11.6630859375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[OLE DB Source Output8]"
-          TopLeft="324,46.9999999999999">
+          TopLeft="324,47">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17387,7 +18141,7 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[OLE DB Source Output7]"
-          TopLeft="3849,46.9999999999995">
+          TopLeft="2438,46.9999999999997">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17409,28 +18163,6 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
         </EdgeLayout>
         <EdgeLayout
           Id="Package\No Reference.Paths[OLE DB Source Output6]"
-          TopLeft="1725,46.9999999999998">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\No Reference.Paths[OLE DB Source Output5]"
           TopLeft="1028,46.9999999999999">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -17452,8 +18184,8 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\No Reference.Paths[OLE DB Source Output4]"
-          TopLeft="3137,46.9999999999995">
+          Id="Package\No Reference.Paths[OLE DB Source Output5]"
+          TopLeft="3137,46.9999999999997">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -17471,6 +18203,166 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\No Reference.Paths[OLE DB Source Output4]"
+          TopLeft="5959,46.9999999999993">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="159,42"
+          Id="Package\No Reference\VehicleType NDS"
+          TopLeft="7072,5.49999999999909" />
+        <NodeLayout
+          Size="217.5,41.5"
+          Id="Package\No Reference\Slowly Changing Dimension 2 1"
+          TopLeft="7035.25,106.999999999999" />
+        <EdgeLayout
+          Id="Package\No Reference.Paths[OLE DB Source Output9]"
+          TopLeft="7147.75,47.4999999999991">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.5"
+              Start="0,0"
+              End="0,52">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="172,42"
+          Id="Package\No Reference\Insert Destination 9"
+          TopLeft="6821,208.499999999999" />
+        <EdgeLayout
+          Id="Package\No Reference.Paths[New Output9]"
+          TopLeft="7091.625,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-184.625,60.0000000000001"
+              Start="0,0"
+              End="-184.625,52.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4844814534444"
+                    Point2="0,20.4844814534444"
+                    Point3="-4,20.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-180.625,20.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-180.625,20.4844814534444"
+                    Point2="-184.625,20.4844814534444"
+                    Point3="-184.625,24.4844814534444" />
+                  <mssgle:LineSegment
+                    End="-184.625,52.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-119.40388671875,25.4844814534444,54.1827734375,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180.5,42"
+          Id="Package\No Reference\OLE DB Command 18"
+          TopLeft="7053.75,208.499999999999" />
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Inferred Member Updates Output9]"
+          TopLeft="7144,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-74.40298828125,20.4208984375,148.8059765625,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="180.5,42"
+          Id="Package\No Reference\OLE DB Command 19"
+          TopLeft="7294.75,208.499999999999" />
+        <EdgeLayout
+          Id="Package\No Reference.Paths[Changing Attribute Updates Output9]"
+          TopLeft="7196.375,148.499999999999">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="188.625,60"
+              Start="0,0"
+              End="188.625,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.4844814534444"
+                    Point2="0,20.4844814534444"
+                    Point3="4,20.4844814534444" />
+                  <mssgle:LineSegment
+                    End="184.625,20.4844814534444" />
+                  <mssgle:CubicBezierSegment
+                    Point1="184.625,20.4844814534444"
+                    Point2="188.625,20.4844814534444"
+                    Point3="188.625,24.4844814534444" />
+                  <mssgle:LineSegment
+                    End="188.625,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="15.77859375,25.4844814534444,157.0678125,11.6630859375"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -18000,6 +18892,64 @@ where (CreatedDate&gt;? and CreatedDate&lt;=?) or
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\No Reference\VehicleType NDS">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\No Reference\Slowly Changing Dimension 2 1">
+    <Properties>
+      <Property>
+        <Name>SCDMetadata</Name>
+        <Value
+          type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SCDWizardMetadata xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionID&gt;{9B212883-57DF-4CF1-8FEE-E62CA7635302}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimVehicleType]&lt;/TableName&gt;
+  &lt;InputToColumnsCollection&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;AgeBand NDS 1.Outputs[OLE DB Source Output].Columns[VehicleTypeCode]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;VehicleTypeCode&lt;/ColumnName&gt;
+      &lt;KeyType&gt;BusinessKey&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;AgeBand NDS 1.Outputs[OLE DB Source Output].Columns[VehicleTypeID]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;VehicleTypeID&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;AgeBand NDS 1.Outputs[OLE DB Source Output].Columns[VehicleTypeLabel]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;VehicleTypeLabel&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;ChangingAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+  &lt;/InputToColumnsCollection&gt;
+  &lt;GeneratedComponentsIdentificationStrings&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;Insert Destination 9&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 18&lt;/anyType&gt;
+    &lt;anyType xsi:type="xsd:string"&gt;OLE DB Command 19&lt;/anyType&gt;
+  &lt;/GeneratedComponentsIdentificationStrings&gt;
+  &lt;FailFixedAttribute&gt;false&lt;/FailFixedAttribute&gt;
+  &lt;FailChangeAttribute&gt;false&lt;/FailChangeAttribute&gt;
+  &lt;UseStartEndDate&gt;false&lt;/UseStartEndDate&gt;
+  &lt;CurrentIndicatorColumn /&gt;
+  &lt;InferredIndicatorColumn /&gt;
+  &lt;ValueCurrent /&gt;
+  &lt;ValueExpired /&gt;
+  &lt;StartDateColumn /&gt;
+  &lt;EndDateColumn /&gt;
+  &lt;DateVariable /&gt;
+  &lt;EnableInferredSupport&gt;true&lt;/EnableInferredSupport&gt;
+&lt;/SCDWizardMetadata&gt;</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
