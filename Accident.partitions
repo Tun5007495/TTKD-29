@@ -1,0 +1,165 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="fd4b5c1d-6a2a-4df0-b2c0-e8f4bf7bbbcf" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>UK Accidents DDS</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Fact Vehicle</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="075c0e7d-285a-4385-bef4-17564f465721">
+          <ID>Fact Vehicle</ID>
+          <Name>Fact Vehicle</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="448a267a-d4cb-4af7-a91c-e6ea8015e4f2">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_FactVehicle</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Fact Accident</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="a9b13cb5-b489-4eb8-bf82-47bface5d554">
+          <ID>Fact Accident</ID>
+          <Name>Fact Accident</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="78a9f198-a6a5-4112-bef5-66e5f5ac5503">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_FactAccident</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Date</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9841698d-73ad-4891-85cc-50419373deeb">
+          <ID>Dim Date</ID>
+          <Name>Dim Date</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="1c14f588-f41b-471b-b493-61b4a424b8ba">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimDate</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Location</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="6d6a0c91-7712-4622-88b0-61e8ee310d17">
+          <ID>Dim Location</ID>
+          <Name>Dim Location</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="7fbfe66f-1129-4a02-a80e-bc1545950077">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimLocation</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Journey Purpose</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="9fa68890-3538-4467-a2db-5d169f19a975">
+          <ID>Dim Journey Purpose</ID>
+          <Name>Dim Journey Purpose</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="f72f50b0-b120-42b2-a7c8-03de42dc7f9e">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimJourneyPurpose</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Local Authority District</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="34f0a995-74b7-42e5-ac42-94a5ffa48b6f">
+          <ID>Dim Local Authority District</ID>
+          <Name>Dim Local Authority District</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="22937c60-c4d3-4df2-89fd-6e727e893828">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimLocalAuthorityDistrict</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Road Type</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="f02327f4-bc2b-434e-adcd-272e2a2018b9">
+          <ID>Dim Road Type</ID>
+          <Name>Dim Road Type</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="a5d61d36-8b2d-443c-bab7-44511fbc4134">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimRoadType</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Dim Vehicle Type</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="1bdb6680-6ca9-4239-9b98-31ec81631596">
+          <ID>Dim Vehicle Type</ID>
+          <Name>Dim Vehicle Type</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="98d3b62d-5418-4ce4-a65c-e01c3177c208">
+            <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+            <TableID>dbo_DimVehicleType</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
