@@ -3,22 +3,7 @@ GO
 USE [UK_Accidents_NDS]
 GO
 
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-IF NOT EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'[dbo].[MetaData]') AND type in (N'U'))
-BEGIN
-CREATE TABLE [dbo].[MetaData](
-	[Index] [int] IDENTITY(1,1) NOT NULL,
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL
- CONSTRAINT [PK_Metadata] PRIMARY KEY CLUSTERED 
-(
-	[Index] ASC
-)WITH (IGNORE_DUP_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-END
+
 GO
 
 /****** Object:  Table [dbo].[Accident]    Script Date: 12/31/2021 5:20:18 PM ******/
@@ -72,26 +57,8 @@ CREATE TABLE [dbo].[AgeBand](
 	[UpdatedDate] [datetime] NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[AgeGroup]    Script Date: 12/30/2021 5:20:18 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[AgeGroup](
-	[AgeGroupID] [int] identity(1,1) not null PRIMARY KEY,
-	[AgeGroupCode] [int] NULL,
-	[AgeGroupLabel] [varchar](50) NULL,
-	[AgeFrom] [int] NULL,
-	[AgeGroup] [int] NULL,
-	[SourceID] [int] NULL,
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Area]    Script Date: 12/30/2021 5:20:18 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
+
+
 GO
 CREATE TABLE [dbo].[Area](
 	[AreaID] [int] identity(1,1) not null PRIMARY KEY,
@@ -101,25 +68,6 @@ CREATE TABLE [dbo].[Area](
 	[CreatedDate] [datetime] NULL,
 	[UpdatedDate] [datetime] NULL
 ) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[BuiltUpRoad]    Script Date: 12/30/2021 5:20:18 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[BuiltUpRoad](
-	[BuiltUpRoadID] [int] identity(1,1) not null PRIMARY KEY,
-	[BuiltUpRoadCode] [int] NULL,
-	[BuildUpRoadLabel] [varchar](50) NULL,
-	[SourceID] [int] NULL,
-	[CreatedDate] [datetime] NULL,
-	[UpdatedDate] [datetime] NULL
-) ON [PRIMARY]
-GO
-/****** Object:  Table [dbo].[Casualties]    Script Date: 12/30/2021 5:20:18 PM ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Casualty](
 	[CasualtyID] [int] identity(1,1) not null PRIMARY KEY,
@@ -168,7 +116,7 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[SexOfCasualty](
+CREATE TABLE [dbo].[GenderOfCasualty](
 	[GenderID] [int] identity(1,1) not null PRIMARY KEY,
 	[GenderCode] [int] NULL,
 	[GenderLabel] [nvarchar](255) NULL,
@@ -326,10 +274,10 @@ GO
  FOREIGN KEY (LocationID)
  REFERENCES   Location(LocationID)
  GO
-  ALTER TABLE Casualty
+  ALTER TABLE Casualty 
  ADD CONSTRAINT fk_Accident_GenderOfCasualty
  FOREIGN KEY (GenderID)
- REFERENCES   SexOfCasualty(GenderID)
+ REFERENCES   GenderOfCasualty(GenderID)
  GO
  GO
   ALTER TABLE Casualty
@@ -361,4 +309,7 @@ GO
  FOREIGN KEY (JourneyPurposeID)
  REFERENCES  JourneyPurpose(JourneyPurposeID)
  GO
+ alter table Casualty add constraint FK_Accident_Casualty foreign key (AccidentID) references Accident(AccidentID)
+ go
+alter table Vehicle add constraint FK_Accident_Vehicle foreign key (AccidentID) references Accident(AccidentID)
   
