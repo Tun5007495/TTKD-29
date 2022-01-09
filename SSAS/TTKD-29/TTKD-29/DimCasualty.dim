@@ -1,0 +1,528 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="bda4fbb0-ed17-4394-aad5-a8f22f92b652" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>DimCasualty</ID>
+  <Name>DimCasualty</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="705df732-b574-4277-916f-dcc197905f17">
+    <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="ecdc2cf4-d6d5-4c33-a9b1-1243bc530972">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="b3ed5a3f-9317-47a8-be88-22930bafc98c">
+      <ID>Casualty ID</ID>
+      <Name>Casualty ID</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="d32e30f2-75f9-4fe6-9fea-62126c8ffdf1">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="09233191-6e1e-40f7-bc12-7e16a7dccd00">
+            <TableID>dbo_FactCasualty</TableID>
+            <ColumnID>CasualtyID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="50dfc560-90c3-4232-ad30-253091e8a6c9">
+          <AttributeID>Age</AttributeID>
+          <Name>Age</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2ef8882-63de-42aa-9a46-b52383757c04">
+          <AttributeID>Age Group</AttributeID>
+          <Name>Age Group</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="caf0b38d-9885-412f-9e88-e8ebaec570bd">
+          <AttributeID>Casualty Type ID</AttributeID>
+          <Name>Casualty Type ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="0b608a57-86f9-4feb-91d4-bab3744bd6ec">
+          <AttributeID>Casualty Severity ID</AttributeID>
+          <Name>Casualty Severity ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9a85569c-0a2c-4b83-911e-fdb1bf430eb9">
+          <AttributeID>Date ID</AttributeID>
+          <Name>Date ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="e3aea648-531d-4017-b127-b054d6ece999">
+          <AttributeID>Local Authority District ID</AttributeID>
+          <Name>Local Authority District ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="20c2f150-e2a6-40dc-a2b0-4373f3b4f424">
+          <AttributeID>Accident ID</AttributeID>
+          <Name>Accident ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3768cfc1-b97b-4758-b320-a8638f41a1a9">
+          <AttributeID>Gender ID</AttributeID>
+          <Name>Gender ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="d2b6a5a8-77d8-4ff9-a5f6-febcbfa9f14f">
+          <AttributeID>Age Band ID</AttributeID>
+          <Name>Age Band ID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="171cc9d2-953d-4075-9656-64b11427631a">
+      <ID>Age</ID>
+      <Name>Age</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="080ab9c9-8415-4015-8b25-82cba836e6dc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="dff469f3-7748-4d6d-b5d9-5dbf8f4cdd40">
+            <TableID>dbo_FactCasualty</TableID>
+            <ColumnID>Age</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="c3e7e6ee-2257-4174-9eb6-2ef2c7acd0d1">
+      <ID>Age Group</ID>
+      <Name>Age Group</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="80cd5b0a-1006-4f61-9a1a-2bc577fe32d9">
+          <DataType>WChar</DataType>
+          <DataSize>11</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="54d1743a-eff5-4799-a234-f41e0e23ac30">
+            <TableID>dbo_FactCasualty</TableID>
+            <ColumnID>AgeGroup</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="4437e88b-a188-4ecc-a579-7599ec8225fa">
+      <ID>Casualty Type ID</ID>
+      <Name>Casualty Type ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="897fb82a-4466-4272-8565-6cca4fd2e872">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="fe7a758e-8e39-48f2-8962-7a305c20b9c3">
+            <TableID>dbo_DimCasualtyType</TableID>
+            <ColumnID>CasualtyTypeID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="aa2b2e75-6d74-437c-9115-49332c62695d">
+          <AttributeID>Casualty Type Label</AttributeID>
+          <Name>Casualty Type Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bb145cee-e628-42ec-b305-bc36edeba0e0">
+      <ID>Casualty Type Label</ID>
+      <Name>Casualty Type Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="46f95f1b-760a-424d-b266-97f16ace69bb">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="70bd7d6d-351e-4d9b-9eb5-44c68808a54d">
+            <TableID>dbo_DimCasualtyType</TableID>
+            <ColumnID>CasualtyTypeLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ec6f3342-be7e-4454-b42e-78fb0d3de33b">
+      <ID>Casualty Severity ID</ID>
+      <Name>Casualty Severity ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="15c3011d-7326-4010-a5dc-5651d1c02456">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="33957b18-c9ba-4fd7-b74f-c13e05a406b4">
+            <TableID>dbo_DimCasualtySeverity</TableID>
+            <ColumnID>CasualtySeverityID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="bef64d5c-bd2f-42c1-9a9f-b83b966dda23">
+          <AttributeID>Casualty Severity Label</AttributeID>
+          <Name>Casualty Severity Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="47346b0c-10db-4115-830c-6ea509304a00">
+      <ID>Casualty Severity Label</ID>
+      <Name>Casualty Severity Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="664def5a-22ef-4b75-97f3-b1d4fc0f256f">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="ccb117c3-5e5b-4c2b-8422-60f2f5cd4f9f">
+            <TableID>dbo_DimCasualtySeverity</TableID>
+            <ColumnID>CasualtySeverityLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="8b9122bc-daa4-4317-8ae7-d35b129d78a2">
+      <ID>Date ID</ID>
+      <Name>Date ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="802d039c-ae73-4786-8969-b2802edc03b9">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="16f25f75-49ea-449e-a0c3-eb0d6aa52cf5">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>DateID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="433734a9-f6c9-45a5-ac29-70192a4d03c9">
+          <AttributeID>Full Date</AttributeID>
+          <Name>Full Date</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c9c5a54e-23a1-4918-87e2-2d52f1635133">
+          <AttributeID>Day</AttributeID>
+          <Name>Day</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="b451c188-bdb1-445a-9293-a7dd944b96d2">
+          <AttributeID>Month</AttributeID>
+          <Name>Month</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="273ce401-2ca2-4d6f-8d43-645abf3a8e16">
+          <AttributeID>Quarter</AttributeID>
+          <Name>Quarter</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c60c4708-7109-43e0-ad1d-082adc21a922">
+          <AttributeID>Year</AttributeID>
+          <Name>Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d91a0e68-2cdc-4373-9354-e6cddde5f023">
+      <ID>Full Date</ID>
+      <Name>Full Date</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="43e50b80-4768-4035-9340-e7ebb91a94b2">
+          <DataType>Date</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="1019258a-f2c9-462f-8f89-08fa3f2e9764">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>FullDate</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="eb8e23b6-b1c9-4fb0-9746-efa0bd991a7c">
+      <ID>Day</ID>
+      <Name>Day</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="92223149-a890-489b-8ba3-28b33b77956c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f483181-451f-4caf-8683-987be5ba3a33">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>Day</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="34ebc6ac-6ea6-4ccc-8535-3097a35149c7">
+      <ID>Month</ID>
+      <Name>Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="228fe333-2814-4726-be13-95b201010c3b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7e6b69df-6ce6-43cc-ad3b-c6db73b372a1">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>Month</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="cf198c06-872a-449e-9301-02dc598cb953">
+      <ID>Quarter</ID>
+      <Name>Quarter</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="341f13f9-5215-481a-860d-82d7c30e7c75">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="547af7ae-5316-4175-876a-843a4fc6b98c">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>Quarter</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="bf42fade-9989-4099-9062-d1973930b9c1">
+      <ID>Year</ID>
+      <Name>Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a627fe0e-48fb-4029-8495-4814ec9e7493">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f7062a0b-9f31-47ae-9dd6-893d8af9fca9">
+            <TableID>dbo_DimDate</TableID>
+            <ColumnID>Year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="db5b4df8-f4eb-4eb7-b7c1-d99fc1520a09">
+      <ID>Local Authority District ID</ID>
+      <Name>Local Authority District ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b24229e1-63b6-4e77-b61a-19bdd93e7b65">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e080711-43c0-44a7-8cff-b96029200558">
+            <TableID>dbo_DimLocalAuthorityDistrict</TableID>
+            <ColumnID>LocalAuthorityDistrictID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="f14a25c7-f81b-4a3f-b1f1-21fbf10ad8d3">
+          <AttributeID>Local Authority District Label</AttributeID>
+          <Name>Local Authority District Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="754f43cf-7303-4f48-9b4a-d8622a1cf7f0">
+      <ID>Local Authority District Label</ID>
+      <Name>Local Authority District Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0fc8ecb6-b3b2-4510-95bc-19ab8f3bb5e3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="49a9f94f-5776-4e27-9f4d-9dee83bbd665">
+            <TableID>dbo_DimLocalAuthorityDistrict</TableID>
+            <ColumnID>LocalAuthorityDistrictLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d68c8fd1-4362-492d-bcea-13d4835ac027">
+      <ID>Accident ID</ID>
+      <Name>Accident ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e081fbd0-d948-471d-8f7b-af4a66d5536b">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="388e1fc2-83c9-4c44-9679-760ef38bec53">
+            <TableID>dbo_FactAccident</TableID>
+            <ColumnID>AccidentID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="681a4fec-d3f6-4f4a-aa4f-d0feb1dde632">
+          <AttributeID>Accident Severity ID</AttributeID>
+          <Name>Accident Severity ID</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5ba9d534-3f61-42c8-a83c-509664ccf01d">
+      <ID>Accident Severity ID</ID>
+      <Name>Accident Severity ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="0d40cb05-0375-45ef-a3ac-fdf78356049a">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="7337c522-90a4-4725-9a3f-b5deb29953eb">
+            <TableID>dbo_DimAccidentSeverity</TableID>
+            <ColumnID>AccidentSeverityID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="ec96e385-86cf-49e6-b3ac-b849c6c834a3">
+          <AttributeID>Accident Severity Label</AttributeID>
+          <Name>Accident Severity Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="5fc9b68e-43f8-440d-b79f-6a8c9ab057be">
+      <ID>Accident Severity Label</ID>
+      <Name>Accident Severity Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e576adbb-830d-4c44-808b-89cb6420cbbf">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="33aa5d08-fe69-4165-a873-56dced1afa12">
+            <TableID>dbo_DimAccidentSeverity</TableID>
+            <ColumnID>AccidentSeverityLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="018b9b62-75ca-4387-a5cd-caab8deff73f">
+      <ID>Gender ID</ID>
+      <Name>Gender ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5a20ed53-e27a-4c00-b800-983c3a04066f">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f216c882-08cb-438c-9097-86c7840bb091">
+            <TableID>dbo_DimGender</TableID>
+            <ColumnID>GenderID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="0e4de66e-fecf-4e9c-8515-cf749daeeb41">
+          <AttributeID>Gender Label</AttributeID>
+          <Name>Gender Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ef4f4a12-9ca2-4069-8158-fdb0228711a0">
+      <ID>Gender Label</ID>
+      <Name>Gender Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="baaa9ed9-b8c6-4013-9810-2a92403c3a64">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="c3842641-5583-4b27-9ba7-572458943305">
+            <TableID>dbo_DimGender</TableID>
+            <ColumnID>GenderLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="d89b92cc-b39b-4ac5-a601-c04ae53ed798">
+      <ID>Age Band ID</ID>
+      <Name>Age Band ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="a04077ea-8205-4c7b-bb22-4e805b4fc123">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="400dc6db-175c-4433-853c-6c2e0b962bd9">
+            <TableID>dbo_DimAgeBand</TableID>
+            <ColumnID>AgeBandID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="aa5be495-4496-49e2-a9c8-cdc05b8dc5fc">
+          <AttributeID>Age Band Label</AttributeID>
+          <Name>Age Band Label</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3c218ecb-ccf4-4348-8ca4-96c15da1bc28">
+      <ID>Age Band Label</ID>
+      <Name>Age Band Label</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="1cdcba6e-e3bb-41f4-8cfd-2d48d1b632c3">
+          <DataType>WChar</DataType>
+          <DataSize>255</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3601f5f7-38fb-4ecd-b108-52a263b124eb">
+            <TableID>dbo_DimAgeBand</TableID>
+            <ColumnID>AgeBandLabel</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

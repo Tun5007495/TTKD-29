@@ -17,6 +17,16 @@
         </ProjectItem>
       </Dependencies>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Fact.cube</Name>
+      <FullPath>Fact.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>Fact.partitions</Name>
+          <FullPath>Fact.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
   </Cubes>
   <Dimensions>
     <ProjectItem>
@@ -32,8 +42,8 @@
       <FullPath>Dim Date.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
-      <Name>Fact Accident.dim</Name>
-      <FullPath>Fact Accident.dim</FullPath>
+      <Name>Accident.dim</Name>
+      <FullPath>Accident.dim</FullPath>
     </ProjectItem>
     <ProjectItem>
       <Name>Dim Age Band.dim</Name>
@@ -70,6 +80,26 @@
     <ProjectItem>
       <Name>Dim Area.dim</Name>
       <FullPath>Dim Area.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Vehicle.dim</Name>
+      <FullPath>Vehicle.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Casualty.dim</Name>
+      <FullPath>Casualty.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DimAccident.dim</Name>
+      <FullPath>DimAccident.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DimCasualty.dim</Name>
+      <FullPath>DimCasualty.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>DimVehicle.dim</Name>
+      <FullPath>DimVehicle.dim</FullPath>
     </ProjectItem>
   </Dimensions>
   <DataSources>

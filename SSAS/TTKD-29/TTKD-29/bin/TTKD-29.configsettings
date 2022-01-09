@@ -22,9 +22,6 @@
         <ID>Dim Date</ID>
       </Dimension>
       <Dimension>
-        <ID>Fact Accident</ID>
-      </Dimension>
-      <Dimension>
         <ID>Dim Age Band</ID>
       </Dimension>
       <Dimension>
@@ -50,6 +47,24 @@
       </Dimension>
       <Dimension>
         <ID>Dim Area</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Accident</ID>
+      </Dimension>
+      <Dimension>
+        <ID>Fact Casualty</ID>
+      </Dimension>
+      <Dimension>
+        <ID>DimVehicle</ID>
+      </Dimension>
+      <Dimension>
+        <ID>DimAccident</ID>
+      </Dimension>
+      <Dimension>
+        <ID>DimCasualty</ID>
+      </Dimension>
+      <Dimension>
+        <ID>DimVehicle 1</ID>
       </Dimension>
     </Dimensions>
     <Cubes>
@@ -77,6 +92,35 @@
             <Partitions>
               <Partition>
                 <ID>Fact Accident</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+        </MeasureGroups>
+      </Cube>
+      <Cube>
+        <ID>Fact</ID>
+        <MeasureGroups>
+          <MeasureGroup>
+            <ID>Fact Accident</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Accident</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Vehicle</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Vehicle</ID>
+              </Partition>
+            </Partitions>
+          </MeasureGroup>
+          <MeasureGroup>
+            <ID>Fact Casualty</ID>
+            <Partitions>
+              <Partition>
+                <ID>Fact Casualty</ID>
               </Partition>
             </Partitions>
           </MeasureGroup>

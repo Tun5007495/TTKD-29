@@ -1,0 +1,2947 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="7a05f006-b69c-44ac-8e5a-2fbebf8bd69d" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Fact</ID>
+  <Name>Fact</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="33" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-564" scrolltop="11158" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="55" x="16679" y="9356" backcolor="16777215" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimLocalAuthorityDistrict" left="23161" top="16171" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4636" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00001c1200009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimLocalAuthorityDistrict" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactCasualty" left="12313" top="16821" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3620" height="4826" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000240e0000da120000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactCasualty" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimGender" left="9402" top="29121" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3000" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimGender" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimLocation" left="6709" top="5333" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimLocation" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimCasualtyType" left="18333" top="20434" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3641" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000390e00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCasualtyType" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimCasualtySeverity" left="14802" top="29121" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="4043" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000cb0f00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimCasualtySeverity" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimAgeBand" left="6865" top="24775" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="3048" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e80b00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimAgeBand" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimRoadType" left="12585" top="0" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3217" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000910c00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimRoadType" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimAccidentSeverity" left="18679" top="5873" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="4043" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000cb0f00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimAccidentSeverity" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactAccident" left="12109" top="4347" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="4170" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00004a10000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactAccident" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimDate" left="6442" top="11748" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimDate" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="FactVehicle" left="486" top="13921" logicalid="12" controlid="12" masterid="0" hint1="0" hint2="0" width="3556" height="3027" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000e40d0000d30b0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_FactVehicle" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimArea" left="25369" top="11747" logicalid="13" controlid="13" masterid="0" hint1="0" hint2="0" width="3000" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimArea" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimVehicleType" left="6442" top="17175" logicalid="14" controlid="14" masterid="0" hint1="0" hint2="0" width="3471" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e00008f0d00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimVehicleType" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="DimJourneyPurpose" left="20" top="19348" logicalid="15" controlid="15" masterid="0" hint1="0" hint2="0" width="4022" height="1947" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b60f00009b070000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_DimJourneyPurpose" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15633" top="16745" logicalid="16" controlid="16" masterid="0" hint1="0" hint2="0" width="7828" height="1689" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_LocalAuthorityDistrict]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="2" sourceattachpoint="20" destattachpoint="19" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="23161" y="17144" />
+              <point x="17133" y="17144" />
+              <point x="17133" y="18134" />
+              <point x="15933" y="18134" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14444" top="9047" logicalid="17" controlid="17" masterid="0" hint1="0" hint2="0" width="11435" height="7624" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_LocalAuthorityDistrict]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="1" destid="10" sourceattachpoint="8" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="25479" y="16171" />
+              <point x="25479" y="12717" />
+              <point x="14744" y="12717" />
+              <point x="14744" y="9347" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15633" top="19484" logicalid="18" controlid="18" masterid="0" hint1="0" hint2="0" width="3000" height="2323" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_CasualtyType]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="5" destid="2" sourceattachpoint="16" destattachpoint="25" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18333" y="21407" />
+              <point x="17133" y="21407" />
+              <point x="17133" y="19784" />
+              <point x="15933" y="19784" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14373" top="21347" logicalid="19" controlid="19" masterid="0" hint1="0" hint2="0" width="2850" height="8274" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_CasualtySeverity]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="6" destid="2" sourceattachpoint="6" destattachpoint="9" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="16823" y="29121" />
+              <point x="16823" y="25384" />
+              <point x="14673" y="25384" />
+              <point x="14673" y="21647" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9142" top="12862" logicalid="20" controlid="20" masterid="0" hint1="0" hint2="0" width="3471" height="5572" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_Date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="2" sourceattachpoint="15" destattachpoint="18" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9442" y="13261" />
+              <point x="10877" y="13261" />
+              <point x="10877" y="18134" />
+              <point x="12313" y="18134" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13795" top="8848" logicalid="21" controlid="21" masterid="0" hint1="0" hint2="0" width="799" height="8273" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_Accident]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="2" sourceattachpoint="7" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14194" y="9347" />
+              <point x="14194" y="13084" />
+              <point x="14123" y="13084" />
+              <point x="14123" y="16821" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="10503" top="21347" logicalid="22" controlid="22" masterid="0" hint1="0" hint2="0" width="2820" height="8274" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_Gender]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="3" destid="2" sourceattachpoint="4" destattachpoint="3" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="10902" y="29121" />
+              <point x="10902" y="25384" />
+              <point x="13023" y="25384" />
+              <point x="13023" y="21647" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9613" top="19484" logicalid="23" controlid="23" masterid="0" hint1="0" hint2="0" width="3000" height="6664" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Casualty_AgeBand]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="7" destid="2" sourceattachpoint="13" destattachpoint="24" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9913" y="25748" />
+              <point x="11113" y="25748" />
+              <point x="11113" y="19784" />
+              <point x="12313" y="19784" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="9409" top="6447" logicalid="24" controlid="24" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_Location]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="4" destid="10" sourceattachpoint="15" destattachpoint="22" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="9709" y="6846" />
+              <point x="10909" y="6846" />
+              <point x="10909" y="6847" />
+              <point x="12109" y="6847" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="13794" top="1448" logicalid="25" controlid="25" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_RoadType]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="8" destid="10" sourceattachpoint="5" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="14193" y="1947" />
+              <point x="14193" y="3147" />
+              <point x="14194" y="3147" />
+              <point x="14194" y="4347" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="15979" top="6447" logicalid="26" controlid="26" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_AccidentSeverity]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="9" destid="10" sourceattachpoint="16" destattachpoint="23" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="18679" y="6846" />
+              <point x="17479" y="6846" />
+              <point x="17479" y="6847" />
+              <point x="16279" y="6847" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="7543" top="9047" logicalid="27" controlid="27" masterid="0" hint1="0" hint2="0" width="6401" height="3201" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_Date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="10" sourceattachpoint="4" destattachpoint="5" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="7942" y="11748" />
+              <point x="7942" y="10548" />
+              <point x="13644" y="10548" />
+              <point x="13644" y="9347" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="14994" top="9047" logicalid="28" controlid="28" masterid="0" hint1="0" hint2="0" width="12275" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Accident_UrbanOrRuralArea]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="13" destid="10" sourceattachpoint="4" destattachpoint="11" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="26869" y="11747" />
+              <point x="26869" y="10547" />
+              <point x="15294" y="10547" />
+              <point x="15294" y="9347" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1964" top="8848" logicalid="29" controlid="29" masterid="0" hint1="0" hint2="0" width="11530" height="5373" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Vehicle_Accident]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="10" destid="12" sourceattachpoint="3" destattachpoint="6" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="13094" y="9347" />
+              <point x="13094" y="11634" />
+              <point x="2264" y="11634" />
+              <point x="2264" y="13921" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3742" top="12862" logicalid="30" controlid="30" masterid="0" hint1="0" hint2="0" width="3000" height="1772" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Vehicle_Date]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="11" destid="12" sourceattachpoint="14" destattachpoint="15" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6442" y="13261" />
+              <point x="5242" y="13261" />
+              <point x="5242" y="14334" />
+              <point x="4042" y="14334" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="1632" top="16648" logicalid="31" controlid="31" masterid="0" hint1="0" hint2="0" width="932" height="3200" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Vehicle_JourneyPurpose]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="15" destid="12" sourceattachpoint="6" destattachpoint="7" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="2031" y="19348" />
+              <point x="2031" y="18148" />
+              <point x="2264" y="18148" />
+              <point x="2264" y="16948" />
+            </connector>
+          </ddscontrol>
+          <ddscontrol controlprogid="MSDDS.Polyline" left="3742" top="15684" logicalid="32" controlid="32" masterid="0" hint1="0" hint2="0" width="3000" height="2864" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobj>
+                <polyline endtypedst="6" endtypesrc="3" usercolor="0" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
+              </ddsxmlobj>
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dataSet.Relations[FK_Vehicle_VehicleType]" vartype="8" />
+                <property name="Virtual" value="0" vartype="11" />
+                <property name="VisibleAP" value="0" vartype="3" />
+              </ddsxmlobj>
+            </layoutobject>
+            <connector lineroutestyle="MSDDS.Rectilinear" sourceid="14" destid="12" sourceattachpoint="12" destattachpoint="21" segmenteditmode="0" bendpointeditmode="0" bendpointvisibility="0" relatedid="0" virtual="0">
+              <point x="6442" y="18148" />
+              <point x="5242" y="18148" />
+              <point x="5242" y="15984" />
+              <point x="4042" y="15984" />
+            </connector>
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-564</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>11158</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>55</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Dimensions>
+    <Dimension dwd:design-time-name="009eda42-0dcc-4adf-8cc0-d6d227dbeda6">
+      <ID>Accident</ID>
+      <Name>Accident</Name>
+      <DimensionID>Fact Accident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="b3eb9644-6a12-4e5b-b5c6-ac5be8fb4a8d">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2cf55296-e6b2-40fc-b655-b99bde58864a">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6310ca0-970f-44f6-93f5-17ce0e72189d">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e525b37d-4aab-4691-80f1-630d3281d8c0">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2fb75c8-2013-416f-af86-50dcc18bbe80">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="eb5fc1d4-873e-4acd-80d8-77410177492c">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a4b3eee6-8720-40fa-9210-21fd8d1645a7">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fe093be2-db86-4389-abc6-f32f0db92eaa">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f852eb58-4ad4-4382-b708-125312fa9d96">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="5884a594-70d6-42fd-a388-326b72943d79">
+      <ID>DimAccident</ID>
+      <Name>DimAccident</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8934896d-1d4d-43db-9876-e22d76aa0d41">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="401df346-472c-4598-b9d5-73d2aad45924">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="758196be-7f1f-49f3-a523-0ef697ac3ec6">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1463363-dce8-41dd-9d06-515ce99c0cc1">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5acd3474-9a2c-4727-b96b-48b26c113d72">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7331023-d776-44d8-b3cf-2892be8f9cec">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="37874c08-19a3-4b70-89fd-092dbd0be277">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91a63f6a-c494-496b-bb12-6ac5854d68c4">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="51fea0e1-f2b2-4c09-93fa-6e788be41106">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18002a8c-2f8d-4f76-bfab-87c19188a5ea">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c8f4ebe3-8eb6-447d-bb0b-49617fc4cc6a">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66a55c86-d2e5-41d5-8f50-677be41d2c65">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2f06fec2-c319-478e-acb1-5f98c2cd9f50">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="733db99d-a572-43b8-aa1b-b18c896b7967">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3efac14c-5c5c-478b-b475-380fdd48604c">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23995451-6e66-4d94-a5b4-247e184f632b">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="66edacfc-e1c1-4887-8dcc-5d68bf7e9c62">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b08061b6-2d61-4114-b249-a5fc6f284241">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="10cded35-565f-4c7e-bd7b-9f41ed9da68c">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff0d30f0-9546-4624-b22b-6caf5ad64b5a">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4db7b057-9999-4265-9ce1-d392945aa003">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="631f10d2-7356-4714-bb10-52ed37579518">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7d2b186f-71aa-4437-a376-bcc0ead45a81">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="7dcc2f2e-9020-44c2-9004-13d3fa99290f">
+      <ID>Dim Date</ID>
+      <Name>Dim Date</Name>
+      <DimensionID>Dim Date</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="5f0f444c-d1e8-4412-9a77-907bc6b37f0f">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b8a8c01f-46b0-4ada-8ef5-06bb64f18419">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ad73150e-c8e4-401a-b173-c92945fc521f">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="de649691-b44b-47ec-9b05-aa042f78ebd2">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0792f78e-7392-42be-b06b-82ee5f24812a">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="017346f5-2de3-41ca-bb2f-309f300424e0">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3b9e38f0-39a6-4492-9225-2f6635460497">
+      <ID>Dim Area</ID>
+      <Name>Dim Area</Name>
+      <DimensionID>Dim Area</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e3dfd0a0-bfbe-43ae-b786-ec0b2a23b1c4">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="c333f161-d9de-489d-a02b-000a296c5734">
+      <ID>Dim Location</ID>
+      <Name>Dim Location</Name>
+      <DimensionID>Dim Location</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="ab516c10-52b2-4195-9baf-d9522611b72f">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7a11e2c7-7eee-4040-a5f2-c74ccc64b56d">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2ec86fe4-b011-4b22-acb3-0db2f7aaa537">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="489e680f-6f18-4bc5-ae7b-2423aba3966a">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ca15aef1-7257-405e-8671-41019282951c">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+      </Attributes>
+      <Hierarchies>
+        <Hierarchy dwd:design-time-name="2b4d48f0-8598-4843-9351-151e341ffa11">
+          <HierarchyID>Hierarchy</HierarchyID>
+        </Hierarchy>
+      </Hierarchies>
+    </Dimension>
+    <Dimension dwd:design-time-name="3deda3ee-90f8-48de-9dfb-e2c0797692e5">
+      <ID>Dim Road Type</ID>
+      <Name>Dim Road Type</Name>
+      <DimensionID>Dim Road Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8f31a9e2-fe5d-4d51-a9fd-33a4931e88e6">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="54a1b19e-7668-4314-8fd3-c96d3ee4881e">
+      <ID>Dim Accident Severity</ID>
+      <Name>Dim Accident Severity</Name>
+      <DimensionID>Dim Accident Severity</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f10bb0d1-4a68-406b-a164-b4cf003c151d">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4c7db8af-9647-49c2-a0d6-bd21736d053b">
+      <ID>Dim Local Authority District</ID>
+      <Name>Dim Local Authority District</Name>
+      <DimensionID>Dim Local Authority District</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9682a2c1-f6c9-4f19-9d7a-2374608851bb">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1cb2c0fe-afcf-4c16-b3cf-5a701121dfd2">
+      <ID>Vehicle</ID>
+      <Name>Vehicle</Name>
+      <DimensionID>DimVehicle</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="adc575a8-8f14-4698-a687-5fdc092eac33">
+          <AttributeID>Vehicle ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="18c2e43e-d9c0-4bc0-ace4-afac82d6e9ef">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f461e2a0-aeed-4b45-a8e0-6f41be0d9b09">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a7acd7de-9bd8-48a2-bb38-c1423da2bb41">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e82e7550-f1d7-42d0-bd13-1514a8be2400">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="14bab867-982e-42ae-99ac-467f8ad73d2b">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9aff0c10-d170-4733-951d-644c5520ebd9">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f4c7b88e-744e-4d95-86bf-ba9b104fd5f8">
+      <ID>DimVehicle</ID>
+      <Name>DimVehicle</Name>
+      <DimensionID>DimVehicle 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="967cfe19-92ed-415f-b488-70693488cbe3">
+          <AttributeID>Vehicle ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cdd99caa-db22-439a-8bc2-b5ecef95a2fb">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="79c4017b-5961-4da0-92d1-27f63297d820">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0c5d3888-f9c1-4a85-a22e-4fa67143849c">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="78407318-4d7c-4d51-9df3-81bb99985d2d">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="79b3a532-0b84-44ea-a3b2-d0ee83b8c2b4">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f42b03c-d856-4e2b-bbbd-ea98f9b3c19c">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="468067d6-ec28-40d5-b8b1-7b35bc7dd9df">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="38ff035c-4198-4bdf-8d61-3b8933612656">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2b16f54b-db25-4382-8a1c-2682dada1075">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7693ef72-ce64-42c1-ab18-f974140316cc">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="df5b9768-1162-47c4-bfc2-21fa67080836">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="46ddf9ad-652e-4929-afc5-8b14a3af5935">
+          <AttributeID>Journey Purpose Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e13bfe5-38de-4a91-82b0-99b29190180f">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e36e238-f4a4-4b2e-8ad0-9c385efbfe6d">
+          <AttributeID>Vehicle Type Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="27083a86-df9a-4b11-a004-424f99e2c9ea">
+      <ID>Dim Journey Purpose</ID>
+      <Name>Dim Journey Purpose</Name>
+      <DimensionID>Dim Journey Purpose</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="c57b71c8-7428-4324-ba36-57ebcf4dd4a1">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="72a0b219-f09c-40cb-8675-f3ab0c3b417d">
+      <ID>Dim Vehicle Type</ID>
+      <Name>Dim Vehicle Type</Name>
+      <DimensionID>Dim Vehicle Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="34bc31b8-db86-4e09-9ace-7a08efe13c1c">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="ffd2bc0e-3393-4685-848e-00671f4078f7">
+      <ID>Casualty</ID>
+      <Name>Casualty</Name>
+      <DimensionID>Fact Casualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e25a9451-c013-4ad0-8be6-2f7e728a6108">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89c924d6-eb8b-408f-9c6b-aeb9a1447888">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="286598ed-3918-45f2-a298-f288a9f9e8a7">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fe9e065f-bf0f-4aa3-a75f-572940bdbcb8">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e0e3e8d9-67f2-4ba4-96bc-7ff0db8e0681">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="31db32d7-016e-4561-9cb2-e20b0e27509e">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6e55caff-1487-4dc0-bd13-eaaec37270b0">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="15960874-2130-4cb2-9945-31dd1f2bac3a">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2b4de067-66a1-4486-b389-7f2071c588ef">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5e3d1471-6ad8-44a0-b3b6-0525fa5471b8">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69c54bfb-bb22-40a6-b1e2-2a4f6f2bef97">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a0ac6916-affc-4a5d-acef-2a5bfa1b7ef6">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bfd63212-03e4-4187-801f-30095d63f07d">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f7a3995d-9b4f-4416-93e0-3da38863c7c1">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1c2358eb-0928-48a5-8dbb-b7908bfafb09">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a382624c-4b21-418d-b452-26292ca51158">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a3a18dd-ec29-4c53-b71e-b43a25e8e71d">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="361a1f3a-426c-47bb-aa11-3fe41b737332">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="87d6c62c-1191-42ec-bb7a-5f7359f81ef3">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="13d44725-a3b1-4672-b265-1b72b02f40f3">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a6fa5694-38a1-4e42-97b6-b0f13798779b">
+      <ID>DimCasualty</ID>
+      <Name>DimCasualty</Name>
+      <DimensionID>DimCasualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="9d3398ca-76e4-422b-ab83-6f0e1910e8da">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4b7528e-b439-4e00-93e2-bdbb430632ab">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2d3e8e1b-5929-49df-8220-f121772d1f35">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b228a2dc-5c4e-4325-9341-6fbd451aaf34">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="11296af5-9460-460d-8648-9eb91f579d97">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="24d22012-e280-48cf-8cdd-1a443964e4b2">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d1a30fe1-6ede-473f-a872-062a1ac3aaba">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="92b4b5d6-e4e9-4834-a074-0a0933784eee">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58336a3f-6481-4a1d-9fc6-2da38532e7f7">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="98f1a061-7832-4b23-826c-939a2fabc8e4">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd12444d-41fe-40ed-98ed-641520a1970b">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4ee94d5-15c4-4e0c-ad7b-4366b3ecdf7d">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4845180c-1c09-4025-b191-8526337f3e82">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1bc789a3-bdb1-4cab-aa5a-4b4dd3657a78">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bffd85f8-d187-469d-825b-bb1710b6ff4c">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d55773b-bdeb-42ba-9b9f-3fcf16b98962">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2abfc838-f005-45b8-880c-32c71401a8cc">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="85226741-cb27-4a83-877b-9227b5ecd1a6">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da735ae9-65ce-40fa-b538-483ab60c5279">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4cf9b266-d47e-4817-a321-3152f9b62bdf">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="465fd07e-3015-453f-ab97-44134789ed18">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c2cb51cc-2e15-48b3-b110-d9454896ea97">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="aff6c31c-da43-44e2-a9f2-7ff022b8e8d3">
+      <ID>Dim Casualty Type</ID>
+      <Name>Dim Casualty Type</Name>
+      <DimensionID>Dim Casualty Type</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="0e2a02e3-0a1b-4cbf-9079-0b76870aa752">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="55297dfc-7cfd-4063-8b01-29fb38448ed2">
+      <ID>Dim Casualty Severity</ID>
+      <Name>Dim Casualty Severity</Name>
+      <DimensionID>Dim Casualty Severity</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="e9049b4d-b7f2-4e43-8c54-4287357aa04e">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="1caa9fd8-645c-4a0b-84fd-a29ef276a33e">
+      <ID>Dim Gender</ID>
+      <Name>Dim Gender</Name>
+      <DimensionID>Dim Gender</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="cbc6b64e-cb02-428a-ace0-95532fd05a96">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4466b18b-985d-43ae-9fbb-9ce851888b2b">
+      <ID>Dim Age Band</ID>
+      <Name>Dim Age Band</Name>
+      <DimensionID>Dim Age Band</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="3b7312a5-7915-4001-ad6e-62a2734466e2">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4d7b462d-3c94-4b9e-9e9f-31a42a819a93">
+      <ID>Accident - Local Authority District</ID>
+      <Name>Accident - Local Authority District</Name>
+      <DimensionID>Fact Casualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="36a6bead-f7af-4f56-b607-7ff640e8b0a7">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09f96cb7-03bb-404d-92ba-0006f2ebf257">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fc61f522-e143-415c-ace9-632a4650708a">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="575cc14b-1157-4a2b-8a10-ad7786b56f9c">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8024c0ce-0c7e-4218-bddb-a672ed729e3b">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c781bd2a-182c-492f-9427-a39221706454">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5b937619-4912-4b03-8180-ea2d6c6cff92">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd3e8370-7aa2-4ebf-8d9c-a8bb126b8453">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="429ab474-eaa3-4ce0-9c52-f94de1f1879e">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9dddcbe7-e174-4ae1-b690-b892b69615c8">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="23e67505-fbfd-4c6b-bbe3-7a5918815bdd">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="77a88674-afbc-4d7f-92e9-1a99fb0327a8">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a079eaf1-fcd7-43d5-99bd-58e6c25367ca">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="09aeb7ce-10d8-43bf-9649-18144f4e2648">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4ea28e00-1c0e-45db-a695-09432cc3ba6a">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="afa4ff03-b367-444c-acab-01b84b4f215a">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f08112d-baf3-4888-8f22-5cbc857d5d0a">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6a305618-75d5-4408-81cc-ffd49e9168ad">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="065d08e1-835d-4412-bca1-8ac92be5104d">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6ed0a517-01ce-4e76-9dbf-994402798965">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="3e48be50-3856-4361-8f6d-ee9608ae1bcb">
+      <ID>Accident - Local Authority District 1</ID>
+      <Name>Accident - Local Authority District 1</Name>
+      <DimensionID>DimCasualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="fad5c707-3f60-4450-a4c1-24463aca30e7">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="038f371b-66d6-4270-87a2-4ad0534473fc">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="67ecac23-750e-4e6a-86b9-c7521889b627">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2554755b-c185-4063-89f6-6342e1df121d">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="537d7b5f-e229-4f5c-bb4e-d816367520c5">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b2dce237-4d20-4352-9c17-495f7132d9c3">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4b469070-e828-4922-9847-fc01d8860a4e">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="16259720-41e2-4016-adcc-0ce080bbe424">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ee561147-f92f-47c0-acda-266932a76d99">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3def9b7c-b175-4dde-a19d-61a56cf85777">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a77508e-5e93-4479-8fdb-10a1e6b559a7">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4e03a98-6e2d-4a7f-8626-8887a8ae6dbd">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3d20771c-87bc-4458-8640-0dcce5a3b096">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="74f66692-9daa-4358-b0b8-8d083380cf12">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="106d5d5c-e196-4ebc-abe1-c18ef4c4e5e2">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f3640454-d047-4074-a841-e8a9169a2f60">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9f41ad57-7931-488f-aa26-cb64a5697b37">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cc09fa6b-4b15-42bf-b24e-e7b84c668bc5">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c0e2bce0-146c-4b4d-a1f5-36ce85fb6009">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6dbc9264-1423-420b-8dd9-19fc0ea6bef1">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30bd3f55-2e31-4111-b1ac-b09463eaca31">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e50dc0a-29f5-4d4b-bfce-cde758fb2acd">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e4186781-ad1d-4362-a545-a79d0d3c0df7">
+      <ID>Accident - Accident Severity</ID>
+      <Name>Accident - Accident Severity</Name>
+      <DimensionID>DimVehicle</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="7d5681df-374a-4ef9-80ba-075c499d8135">
+          <AttributeID>Vehicle ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1e275fb2-9c0b-4ebf-aa7e-5398a12e2d64">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6cb5948-43d6-4981-9b9e-2368a6dfccf9">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="da080384-24e9-478e-a3ea-2d25461cd4d1">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9aabc9d8-0875-4225-ac0c-aebb2a0da8a8">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f36db961-05c3-4893-9b3e-f1324cb15663">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="852e6369-dfe1-435f-969c-a7e755067771">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="65291706-6ada-45f8-a595-2f2829c313cb">
+      <ID>Accident - Accident Severity 1</ID>
+      <Name>Accident - Accident Severity 1</Name>
+      <DimensionID>DimVehicle 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="32a54e67-1ce1-4ba6-8b2f-ace8f739b947">
+          <AttributeID>Vehicle ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e40ebf2f-2944-452e-abfc-563b2351bbaf">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8b64c577-e865-49af-89db-3fae79b9d939">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="08c0dfc8-31de-482c-8367-036ec50ba441">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ca82dd2-0920-45df-80b9-a5857b03abb6">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="39af350d-09a0-49c3-ae22-583495a50a11">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="249a13e0-2c62-4764-9123-8420602816b8">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="88655937-e4eb-4084-83d2-42a2fd8c11e2">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2bcd5a62-c59a-47cb-99f4-63f28122ae65">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ff667c3f-250b-4240-bbd5-4782547f0d85">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89bf50b1-8887-4ccf-9fa7-38b01e400982">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e9560a2b-9d45-474a-8baa-a0cfef43097a">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1d9d330e-5959-4a1c-bdf2-dddd9218e019">
+          <AttributeID>Journey Purpose Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b7421e41-15e2-4074-985a-d88afe9e9a43">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5a70f940-225a-40e8-98a1-d3472ffd1cd9">
+          <AttributeID>Vehicle Type Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="4cd84a82-6716-4178-811b-670ba0e5679e">
+      <ID>Accident - Local Authority District 2</ID>
+      <Name>Accident - Local Authority District 2</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="bdf3d852-8497-4643-a25f-293974f6ae2e">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="caa0cc38-5e6e-4f3c-959e-8b7665647495">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="775c0ae4-033b-47c6-8029-63ab63ac7436">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1a0b512d-7ce8-4fab-b993-b89d44e50316">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1bc46fc0-0473-47ce-ac56-60059964267f">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1be6e19b-7ce0-4840-816c-732b4777403f">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a61db2f1-a17e-49ba-9351-21952a0238fd">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="844be8a9-7501-4d12-9cf8-865485273cb8">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="97f60a05-7101-4806-aec9-15580cbb681b">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c7cffafd-8f96-4fc8-be86-c39694daa9e2">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9217042f-3a49-4ca3-abcf-9ac88ba4a267">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26671b7d-7eb0-48d6-b9cc-56986239a668">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8518f738-d6e8-413b-9309-f9504463f879">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="339b4902-d4ec-40a1-a459-b395d831adff">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b6a3cae1-d0c1-4310-b33d-bec4b623723c">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5bfe9339-0a9c-43ad-b79d-f96634b68696">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91613a9f-168c-4f55-8d35-e3fc4148e53e">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2a67f4a1-4eb1-4230-af76-78629c5089ff">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c6e05aa8-293a-4f59-9424-4b62349a427b">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f4760616-5325-43ed-9bca-8c2e1c97a618">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d72f938d-f060-45c8-aa6d-688199609198">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="58451bd5-f54c-4842-8755-d7ab13ba7f09">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="779788e6-75cb-4889-9bcc-eb2630ffa69b">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="f83a3ccb-e5aa-466f-86a7-25ad5142b3c2">
+      <ID>Accident - Accident Severity 2</ID>
+      <Name>Accident - Accident Severity 2</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="921fe06a-7982-44be-b392-dcf9c3c8e7a5">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="03e65340-98a1-40ed-977a-fd6d0b077ae7">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="95e996bd-95e9-4597-a185-d02e2e13443a">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6891066d-12ca-4f9c-9c79-82e605c0cb26">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="68d8c161-b6ba-48dd-92de-0b9a6d070c3c">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="59d32c14-57eb-49c5-8045-68ba6d9d43b3">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4a2ff4db-b77e-42a2-9f42-fbfd1c0db683">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5cbdb6e-e190-4f17-9f9a-0f99bb1bcd27">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="72fe7de2-d07d-4875-9df9-6ebcce11b0ba">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="83effd64-b583-4cb7-9f4a-a4725f2f6e7e">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="452b7482-cf2b-46d5-9616-3593b432322f">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b77060e2-eec4-46d8-bc03-dcaf3e3a4120">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="abd55d29-caa8-441b-ba91-665011a51bb5">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ce1bf9ff-539a-44ba-adde-936b99f6e5a9">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3a408df7-788e-48ae-890a-70ef287ab7f9">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d6fbfd47-c88f-4c16-bd48-368661e3a911">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47faa069-a4ff-4e34-a428-0a8ec45db506">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1650f358-ffb5-4263-a124-4c99f3544fdb">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5c358bb9-094a-4cdf-b758-c4fbce13505d">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2e631a0f-60ff-4f38-b644-4850d56502fe">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f74ac943-88ef-4328-8448-36bd4f9ccd0d">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2033f885-0c72-4bf5-95aa-9258d08e7bfe">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ec1872c0-1e64-4363-87e1-4ff36b0c5cd7">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="90d3778c-b162-477b-b0fd-393508063342">
+      <ID>Accident - Accident Severity 3</ID>
+      <Name>Accident - Accident Severity 3</Name>
+      <DimensionID>DimCasualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="42d8cc00-5615-4c61-b96c-bf7ff70dbaca">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="67184950-3cc8-43f9-b7f8-33e8378f7889">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d50ab61b-6a1d-4142-8be6-3221b8f46a27">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f5eff037-7359-4ec2-936a-9b3470257d1b">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f7a2c5a-5172-4678-931e-17d7f5294b23">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5ee53df-b743-4585-986f-34cb67549b00">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="241ecb7d-de9a-4ae2-be9e-e94a044a68c8">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3213d710-ad79-442c-a02c-cbc12a00e806">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d10f3a58-1927-4460-819a-f57948916ca1">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="79fb9a36-4b15-4462-892e-0b891d9c30e3">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ade9585b-bf5a-4d2e-88b2-31d294748787">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69c6fe8d-cb80-4534-86df-d87c795274e7">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9397f32c-cab1-407f-a3a8-03d5b10d8a40">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="03c09957-36cb-4690-9191-f23454861750">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0330b495-77d2-4a1f-a71f-6e668b3fc3e9">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f0e8e281-204f-4037-93bf-71b3f1aabc5e">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="53feaa3c-02b4-4279-836d-74e6d45262a6">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4c23e92-dc84-4cfc-95fc-ac20f30c33cc">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d210d2b2-3273-47e6-ae0a-97c11ba346d0">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34646890-ab6a-493d-8d57-ca979aa41c2d">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fea89f07-c931-4886-97fe-b181052fa18e">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64cf60ab-bb39-4a47-9cfa-61759bac28b5">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e3172d7a-c7ab-43ba-8b6a-959b388a769d">
+      <ID>Accident - Road Type</ID>
+      <Name>Accident - Road Type</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="8029b35c-a1f6-41ee-baec-9d0dbddaee5d">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c9a075a-705b-4582-9490-f060e95f63d7">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4996a0bb-8e5b-4956-8c23-c367f5a23793">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aae3153f-769f-46fe-8d49-3561ffd47340">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c9a361e3-b14c-4c1c-aed2-37682cbd8f6f">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="65368bf7-a41a-4497-b2c4-69286f9e2052">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="04ce41d4-3863-4ddb-b136-500c74bd33d8">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a5fe6f47-19dd-4e29-8afe-190e79e83589">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d8c51a0e-1128-4b10-a578-a7e03424cf19">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6cc80de7-03ef-444b-bd2a-987ead24c390">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0a7af199-a3c1-4284-b246-ef76e043f93f">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="709d1c11-d595-4f49-a2f6-334e95cf2a42">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="51827861-86b5-40b9-9761-115f98973571">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="28726936-a5fe-4545-8ca2-0ba86e402196">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0217015b-6c88-4342-a999-8166575e59e0">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="89a132a9-bf42-42ea-ba6d-0dde28bccef6">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c360447b-a06c-406f-80ef-5e33e2610ae7">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3424a52f-84f6-48b8-bd69-abcce45e414f">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0e5286a7-266d-4ae1-93e0-9377883ecd90">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9ba6c998-72c9-4411-b534-8cb383d6b23e">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a66de693-81b6-4ed8-be90-4cbdc0b6a75e">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="57ede757-70a6-470d-8769-e327c24d4dd4">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4e375b0a-0bd7-4a41-b91a-22d600f44f07">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="dbf499d5-cc5c-4d35-a348-d66bdb936dc9">
+      <ID>Accident - Location</ID>
+      <Name>Accident - Location</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="00c1c613-0541-400f-8b5a-0a57b7cb761f">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="362ebbd6-e45f-4035-8724-bcc374327c3c">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a224dcaf-4de9-4171-8366-12d1a2e19a4a">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="6b2f28ec-2cdd-4cef-bc7d-18455b05603a">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9d7f2808-ea18-496c-8ceb-bf8efda7263b">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ab1b629f-cd23-4a94-af92-3fb5765ee5bf">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f9b08c86-644a-4aad-950c-51f242125c16">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="69f02d69-6318-43a4-a07b-90491f7df344">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e197cbf1-1038-46d2-9f6f-ef699c3d1353">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c4975d6e-a1af-4cb0-a26f-bc880e5aaf75">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e6c21e45-2ba9-4aa1-9c4e-46800f037e31">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3edd21ee-96cb-4a73-8231-5e5d4a1c3ff8">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f9c7bca-d490-4fb8-8f22-971f4904fb49">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d3ae3c15-b03d-441e-a31c-e15f716aa9d8">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a69be460-d915-4e6b-9e1b-e540277cb623">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="91be1bdd-f2d8-4edd-ae7c-da2135ab8097">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="26d8257f-766c-4aea-98c9-a7f94587041f">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7f6d5970-1def-4479-9e07-ca5eba520609">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa3053d8-b2fb-4b47-8447-dfb0b29e3fa1">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5ed6f31f-5ddf-4d50-b835-8e164ee8561f">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3912d10-20af-445e-a74a-3a21b13095a1">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19967f22-0850-44f9-bfae-bf67cb037c50">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7b27fba5-e82b-4fec-9b15-8a2169fab60a">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="cfae0395-66ec-41ab-bad4-885d127e74c1">
+      <ID>Accident - Area</ID>
+      <Name>Accident - Area</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="f80916f2-0e6e-443b-868e-6aefe1fd63ac">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="64797a02-44f4-4f88-aa6f-94822cfe4281">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e9de367d-7377-4ea3-b0d3-0a0451d021cb">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ae2bae37-8c1b-4eef-8b45-c65b3808ac08">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aac41b6e-d4f5-43d2-9ecb-e4ac26fac847">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3b841528-4079-4adf-b05c-ed4265e82c94">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="19e1b8fd-e29a-49d0-90d4-11b4d1fbd002">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8301be32-f1dc-4d49-ad80-732d489a1ec5">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dd349406-2767-409a-81c4-29334411e5aa">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1c707bd7-f57c-47c0-9afd-b048b1a2f089">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="203b672d-7dbf-4c44-a181-cf820c706c2f">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d02d9227-6094-462e-9020-62207afd8018">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8eabdde7-2a56-4993-9677-4618879671b3">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2c6bd77f-464e-492c-9d47-88f549283b43">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="30249bcd-955d-4f4e-b261-11523c5e625c">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="961e4059-7ce3-4de4-8d8b-1a954c9d0b66">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="34ad6a18-6de3-4b55-90ee-41488001b5a1">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e3712adc-255a-4ffe-83e1-baf57bac61c3">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="424eda8c-cfc3-4c2d-969f-b3be62bb0373">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="aa74f861-a9da-41a1-8284-67c9657cb6d0">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35b1573d-ddcb-4805-8997-a9cd76da94c8">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bce916e0-3e38-4a5d-8a45-952c3a401911">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="720b2c0b-31c7-48ba-aa67-b2a2d2646d56">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="e87fc03c-1aa4-4c13-9321-a04c53958652">
+      <ID>Accident - Date</ID>
+      <Name>Accident - Date</Name>
+      <DimensionID>DimAccident</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="110366ac-f7cc-4c19-853f-743cfd83ed0c">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7aba56aa-f388-438f-96c5-5e8490d6448a">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="ba3170df-43aa-4663-8547-a2fd00f83bcd">
+          <AttributeID>Time Of Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="583bcaa6-7416-4414-b274-d4ef47e5bb5c">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="648078fe-cca0-449b-bce6-dc8a949c8282">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="140c4819-cd94-4fbf-a7a9-1dfca4b29622">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5be06caa-63b8-4ce7-bdbc-f23ecc2c9d44">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e06db695-e21b-4c53-8afe-75dc08052775">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc808d6c-2226-4567-a5dc-47fbbdcc25ae">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7e8c63ca-4324-42c3-94b2-1f9be557fb38">
+          <AttributeID>Area ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3ddc0001-7d64-4d99-afee-d864ef473b7b">
+          <AttributeID>Area Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1adeefc8-b072-4066-b228-4c0fc500cf9a">
+          <AttributeID>Location ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bf361c5c-6277-448c-baf8-5a530bea25bd">
+          <AttributeID>Postcode</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="32966b51-265d-4bbd-b898-9361b985eafc">
+          <AttributeID>City</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1d20abc3-957e-43cd-a6b4-211b6adb9f79">
+          <AttributeID>County</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12a7b7f5-890c-46b3-8f61-c1d99e00a1e1">
+          <AttributeID>Region</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f2cfb182-c21a-461a-a61a-0ff4fc91c8b1">
+          <AttributeID>Country</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="12e689b1-744f-4348-8da8-ad0b26942959">
+          <AttributeID>Road Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="072e783f-654a-4b6e-8edc-581380fd3d97">
+          <AttributeID>Road Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3e1f1edd-df6a-442b-9b9c-78805dd143e1">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f109859b-ba9d-45da-8f0a-3838662f3dbf">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="5d8cdb51-3f5c-40f9-9bc5-214fb86e36c3">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d62cee5-a32d-4a7d-9a53-6c259599421d">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="214ae18d-cc5d-480a-8379-7c8b59f22621">
+      <ID>Accident - Date 1</ID>
+      <Name>Accident - Date 1</Name>
+      <DimensionID>DimVehicle 1</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="50c7222e-72aa-4b0c-946d-0cd3a22f48c6">
+          <AttributeID>Vehicle ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fbea4f7f-4f61-4138-b37f-5669e1c1ec00">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1ee9aa20-ede1-4316-bce5-23c989b2bebc">
+          <AttributeID>Built Up Road</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="47eebff1-eb48-44c1-96e7-64b624869064">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="269d0e9c-550f-4450-9022-46070af9f99a">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="1337002a-d149-458c-b6e1-5c0592abf362">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c2a4dd7c-bfbc-4cbd-b905-5b467b43574b">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="734e1dc6-8808-4619-b639-254845e4b586">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0593e220-5de5-4c1d-993d-be101163defc">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="732930a7-8838-4a62-8989-50859ba10614">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="0005a065-b010-461b-b836-ecfc3d1b96af">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fa378815-4714-47a3-808f-941c216037fc">
+          <AttributeID>Journey Purpose ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c02fc986-48cf-4554-9317-967c3db92d41">
+          <AttributeID>Journey Purpose Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b9c0fb1c-e3ff-4b13-89b6-6870c53c9975">
+          <AttributeID>Vehicle Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36e48ba6-a097-4216-8f18-44f6d941f3d9">
+          <AttributeID>Vehicle Type Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a10743a9-e265-4343-bada-961659cbd7ae">
+      <ID>Accident - Date 2</ID>
+      <Name>Accident - Date 2</Name>
+      <DimensionID>Fact Casualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4a8695d7-3bfc-45b6-a6f8-9342b49bf1df">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="fd9c3be0-dafd-4548-86c7-8c6ca3b6692f">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8c9062ac-0285-4350-bbc9-9cf4f902057b">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="50bca281-bd2f-4fcb-99f0-23bc4ab988cf">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d6d9fde-49d6-4e3a-ba05-f84759897f92">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="9c6eefcc-24f1-4947-b321-14ae65ae3b02">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dff7a8b0-3bf3-4f3d-b052-dfacd70a5dec">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="caf1b1bf-d353-4b29-92ad-e27c0ee6d674">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d7511271-9ecc-4395-a544-4c26de813f4b">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7129a9ad-af71-41c3-9c77-2a4000e5f699">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a53884fd-695c-4524-9cca-92eb165d5468">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e1571b7a-2f4e-4394-b27f-a88654a43e5a">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="a2bc3de0-cf52-431b-8877-12319e8acd20">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cd4e2610-5f06-4a0f-b050-39f8e23f97c7">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="dc601e88-8f9b-4bb1-b4f2-0edc5da3b236">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2846fd2c-54ba-4784-ac50-e7a51a90d53d">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f3b92c41-a7bd-41e4-9d7e-1b504c14d94e">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="36409572-0dfa-4c4c-a9e4-8efb3f63b66c">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="4d166daa-3ac4-40c4-b3e8-a8b4fcbff978">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="bd950145-6d4f-482c-8c17-041e37e6cb7a">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+    <Dimension dwd:design-time-name="a3487edb-6c8f-4d3f-9a84-77ab775028aa">
+      <ID>Accident - Date 3</ID>
+      <Name>Accident - Date 3</Name>
+      <DimensionID>DimCasualty</DimensionID>
+      <Attributes>
+        <Attribute dwd:design-time-name="4f5928a2-399b-4a53-ac3e-368c40bd8a51">
+          <AttributeID>Casualty ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f1601b75-4fd3-4fd7-abb3-9525e464be49">
+          <AttributeID>Age</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="d520740c-04b8-4121-b86b-d73d118e1e8c">
+          <AttributeID>Age Group</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="998f3af8-ac7f-4165-8457-b051847153a9">
+          <AttributeID>Casualty Type ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="f6f7a656-40cf-44c5-b317-0f090da7815c">
+          <AttributeID>Casualty Type Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e24aa7e-20cd-45ad-8351-ec08b5408112">
+          <AttributeID>Casualty Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3f83af36-fdd5-43f6-bf92-83172c4c05ce">
+          <AttributeID>Casualty Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="82cc44d2-c706-4390-9066-bdbe99171750">
+          <AttributeID>Date ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="2b75251a-896a-4433-85cc-0fe4820204b5">
+          <AttributeID>Full Date</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="b817f93f-112b-4f7b-a822-0c2527aedfe7">
+          <AttributeID>Day</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="3a1efef4-cf0a-4c00-b505-2088a245c11c">
+          <AttributeID>Month</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="e4060ce8-a373-4cb4-ae0e-15f49db55efa">
+          <AttributeID>Quarter</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="115ca7f7-e90c-4efe-872c-c72eb6d310ba">
+          <AttributeID>Year</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="cbe25fdf-13e7-4cd8-a6d3-7293bc151a21">
+          <AttributeID>Local Authority District ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="02d9b4e7-50a5-4f0e-8207-d338f7088b32">
+          <AttributeID>Local Authority District Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="877c734e-fb33-48b7-be3d-1ca3a886701b">
+          <AttributeID>Accident ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="8e707869-7814-43b3-89ed-6ebfd9114b91">
+          <AttributeID>Accident Severity ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="35b282ab-9482-43a9-8127-41254527991a">
+          <AttributeID>Accident Severity Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="7223f3c0-8538-453b-b05a-73360d16f912">
+          <AttributeID>Gender ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="119c100b-168e-4cbf-9ef6-c48fd2d48675">
+          <AttributeID>Gender Label</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="c619c53b-d849-41ae-bdc8-4c0d297e61c2">
+          <AttributeID>Age Band ID</AttributeID>
+        </Attribute>
+        <Attribute dwd:design-time-name="73f04f20-741a-45ca-816b-da4877ba7ac1">
+          <AttributeID>Age Band Label</AttributeID>
+        </Attribute>
+      </Attributes>
+    </Dimension>
+  </Dimensions>
+  <MeasureGroups>
+    <MeasureGroup dwd:design-time-name="fda8b63e-775b-4f68-a545-441310d41040">
+      <ID>Fact Accident</ID>
+      <Name>Fact Accident</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="9f763b62-67af-447b-bc6a-02f5f88de008">
+          <ID>Number Of Vehicles</ID>
+          <Name>Number Of Vehicles</Name>
+          <Source dwd:design-time-name="3f7e6cd9-9fac-40b1-9fd4-bf981f71a654">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="5b381c00-63ed-4778-bb5a-a32a94327083">
+              <TableID>dbo_FactAccident</TableID>
+              <ColumnID>NumberOfVehicles</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="27b15478-f635-4575-a086-19d84475ffd2">
+          <ID>Number Of Casualties</ID>
+          <Name>Number Of Casualties</Name>
+          <Source dwd:design-time-name="f0b7b4fa-b107-4fc6-b482-d9e7716f13e5">
+            <DataType>Integer</DataType>
+            <Source xsi:type="ColumnBinding" dwd:design-time-name="34315144-5261-4d2b-b493-e1ca4ff9b25a">
+              <TableID>dbo_FactAccident</TableID>
+              <ColumnID>NumberOfCasualties</ColumnID>
+            </Source>
+          </Source>
+        </Measure>
+        <Measure dwd:design-time-name="569c011f-cb2e-4a17-8358-77239fca654b">
+          <ID>Fact Accident Count</ID>
+          <Name>Fact Accident Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b8923c3e-3e93-4c83-a77e-9635f03e5094">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="d73f99be-aa25-4959-9d9d-ce9cedaf73db">
+              <TableID>dbo_FactAccident</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="192346dd-b040-4018-b4f3-d98411029e12">
+          <CubeDimensionID>Accident</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0bdd6071-cf39-40a8-80e2-4a61934f77b1">
+              <AttributeID>Accident ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fed74793-e027-44f1-be9c-c5334fc9fbe0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="a40288dc-9f68-452e-bd02-80b52014b70c">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>AccidentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="730c11c0-ec11-45ce-ae56-c774090dd165">
+          <CubeDimensionID>DimAccident</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6ff42112-b919-4a2c-974c-be06ee07bab4">
+              <AttributeID>Accident ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1283c16d-e375-479e-93a0-45c6a70d5eca">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3072520d-93ec-4994-97a9-aa03c417594f">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>AccidentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c01a7868-7b6c-4367-a7a3-ab7e723fed21">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="026f2311-5781-4541-90f4-f09bdef9abdd">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e320b331-2f4c-4a9a-8c9d-9f73717040a4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="8a10575d-bad4-434b-b1d5-811a9df7303e">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e93b67ff-8750-4400-a5fe-2bedcb91a120">
+          <CubeDimensionID>Dim Area</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="857321e4-9a47-4bbd-a96b-a318f06eeb6c">
+              <AttributeID>Area ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="d199907b-cb58-4d40-b70c-df506cb08fda">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3a8ca809-72be-4a7c-a2ed-f7f6ae6ea0ed">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>AreaID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e6274da8-032a-4c85-a37c-af4166c81d8f">
+          <CubeDimensionID>Dim Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="be3621a5-41d6-4712-8e3b-82c10a59b488">
+              <AttributeID>Location ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="b1f7e11e-d6fe-4954-aa2d-c65af78f92b0">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9db38ee3-a270-481b-878d-5140b20711c3">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>LocationID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="22155326-f3ad-4bdb-a603-ab5f77514481">
+          <CubeDimensionID>Dim Road Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6d77d67e-f5bd-4584-8b1e-41fd00079828">
+              <AttributeID>Road Type ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="fcdc94c9-614b-40ae-aa55-0a110669e75a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="49d5c392-0215-408c-8a58-d699d5a1e738">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>RoadTypeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="183c1d33-c495-4115-83a7-ebaf02d99ecd">
+          <CubeDimensionID>Dim Accident Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ee0afe75-1368-430e-b940-9878e5b3ea0a">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="65d562f7-176c-4ca5-b572-0f70b94fcec4">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="3e7d9ac0-b5d7-4daa-8955-ae0684881926">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>AccidentSeverityID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e09b310d-0f21-4817-8c2e-3d17e1a9b3ba">
+          <CubeDimensionID>Dim Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ac75de02-654f-422d-84e2-dc5b2a28df76">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f2b790c3-1516-4c6b-a26a-347c6b4d9e0e">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2958b78e-7285-4e6b-aa84-ec5793b055d7">
+                    <TableID>dbo_FactAccident</TableID>
+                    <ColumnID>LocalAuthorityDistrictID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="af8a77fc-3df4-414f-a46e-57ed3df0949a">
+          <CubeDimensionID>Accident - Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="9458fd6f-0958-40e7-b2c7-ea2ce4d5390b">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="2fc7e229-80b4-4490-9455-de8b5a472a24">
+          <CubeDimensionID>Accident - Local Authority District 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47b89b74-54a6-4a18-a754-8ded6dc3a1ce">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="adfa7862-c50f-42e8-9cd6-e982492e9f36">
+          <CubeDimensionID>Accident - Accident Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="4f096ab7-a8fb-4b31-b082-3949b5068aef">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d91bd396-02ea-4086-88f1-72365803132d">
+          <CubeDimensionID>Accident - Accident Severity 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ba39a556-f280-4423-b853-7ab42ddac023">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="ebd622d5-7daa-48f4-a9d7-df16192d2cf4">
+      <ID>Fact Vehicle</ID>
+      <Name>Fact Vehicle</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="1d0df6a6-fd1d-4456-8379-37c79fe1d210">
+          <ID>Fact Vehicle Count</ID>
+          <Name>Fact Vehicle Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="f25dd535-dd76-486f-8b31-a5227c9f5fb8">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="178f4b93-a738-44e2-b920-c9c3150df77e">
+              <TableID>dbo_FactVehicle</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="73b4888c-7a76-4107-9b6a-a31845e5d543">
+          <CubeDimensionID>Vehicle</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="08f50ae3-e2f2-4ef0-b462-eaf122095eef">
+              <AttributeID>Vehicle ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="6cc2a7b5-9249-4564-b437-a635c5d0241a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="80a9c234-606f-4127-ad67-e18e2a8fc654">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>VehicleID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="3b04c017-365e-4dd4-ad55-5851c2c5862f">
+          <CubeDimensionID>DimVehicle</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="8f9345b0-c82e-487c-911f-50bccbb13a78">
+              <AttributeID>Vehicle ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="2f7a34bb-4cf1-4a6a-b25b-d9d61098b68a">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6ec1affa-e98d-4e09-8067-5dc8452280ef">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>VehicleID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="c6302f00-83a7-43f5-91f1-5e509b4d1e5b">
+          <CubeDimensionID>Accident</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2a099b0f-5ae5-4613-9829-2caeb6b45884">
+              <AttributeID>Accident ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7963d5c4-01fb-49e3-9d85-436f17c9db21">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="80b3b108-6318-4a35-9327-0f0e25462ce7">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>AccidentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="14e977d7-d0a6-4d48-9905-d17c59240be4">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="e709fbe9-02a8-49ce-bfd6-2047f089f144">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="a3bc0971-cd01-4d32-a51b-bfff46932eb7">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bbcdb27c-68aa-4474-9fef-8bbe7d4d5a4f">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="ea3ff68c-aeee-43f2-be1a-4e384a755618">
+          <CubeDimensionID>Dim Journey Purpose</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="325792f3-0a91-4851-ac97-152ebe1dc2e7">
+              <AttributeID>Journey Purpose ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="4fe7b4ed-8e87-4ade-8448-a2fca4430a61">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2ad1ca24-f270-4701-97eb-0fa3d8dae0b7">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>JourneyPurposeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="dcb00861-7688-4ae3-8fb7-7c9df6587066">
+          <CubeDimensionID>Dim Vehicle Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2822b43e-dafa-4061-8c4a-2487c56be297">
+              <AttributeID>Vehicle Type ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="0ca6b709-cf1f-4e67-a898-e236251ed541">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2241af0e-6114-46a8-a43c-b0c330b0d0c8">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>VehicleTypeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="9b9e6607-ccbc-4820-ac6f-dd38cda84707">
+          <CubeDimensionID>Accident - Local Authority District 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1ef81ee3-0086-4603-83db-9f2fcd11f5b1">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="3e2fde46-2de4-424a-ab6f-902ab22b9a5d">
+          <CubeDimensionID>Accident - Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c6f7de5f-3367-49dc-9780-ba68399ded40">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d33c9e62-e5cd-4b4f-984d-cff729d46695">
+          <CubeDimensionID>Accident - Local Authority District 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a54a933d-635f-481c-9b57-3b499c614758">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="cf096375-d715-45ac-b6ec-a5b9778fdb49">
+          <CubeDimensionID>Accident - Accident Severity 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2e879dd4-9e39-4bed-8467-efae8615b81a">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="88e245ef-1013-4065-985e-90f7f9a3ff61">
+          <CubeDimensionID>Accident - Accident Severity 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="bfc53f94-0a2f-4168-a282-1a69b1068162">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="12b13738-9de2-4af5-9813-88343e82d771">
+          <CubeDimensionID>Accident - Accident Severity 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f1fb9b0e-a0fa-4d04-a950-4c0d379ce9bf">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b53e4d14-7e4f-42e5-8c78-b00e764a1ad4">
+          <CubeDimensionID>Accident - Road Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6c1fa686-48bd-4096-8d12-efaeaab6aa08">
+              <AttributeID>Road Type ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Road Type ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="67bd822b-d524-4638-9b20-7a54f445b421">
+          <CubeDimensionID>Accident - Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="47935e60-ccfb-423d-ae80-96a75094a8c9">
+              <AttributeID>Location ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Location ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d83b2a52-b678-458f-a396-1742665602a3">
+          <CubeDimensionID>Accident - Area</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="0fc9f156-4c4c-4975-8eec-fe1b5f4e700e">
+              <AttributeID>Area ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Area ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="c2246850-c12e-4b75-b1df-a29cab86b3b0">
+          <CubeDimensionID>Accident - Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="c3e4ae74-9cf2-4caa-a813-d5ff84a9b026">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="9abab9c8-1160-4c40-81ad-c860f4bc1f1e">
+          <CubeDimensionID>Accident - Date 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b1c5b682-8bed-4135-b9de-a795ac1f6ed4">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="93bedba4-3a32-4e1b-aeae-c6b001e9a7d4">
+          <CubeDimensionID>Accident - Date 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="63a877a3-3017-4c68-aeed-9c8959a8bc25">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="13e7a664-6563-4c67-9347-806096ff4920">
+          <CubeDimensionID>Accident - Date 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="42ce4872-c2e2-4a78-bcda-ff4eff8eea2e">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="b96ca971-aa9b-48bb-8f30-4ecd21748151">
+          <CubeDimensionID>Accident - Accident Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="40705e3d-5870-4359-a79a-f177fa7506e7">
+              <AttributeID>Vehicle ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="5d81c18f-3dbd-4aae-9f4e-81627ec7a363">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="773ff21f-487d-4f19-ada7-15140a34580d">
+                    <TableID>dbo_FactVehicle</TableID>
+                    <ColumnID>VehicleID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+    <MeasureGroup dwd:design-time-name="6285e4c0-7f00-4f04-8026-3be48f06b28b">
+      <ID>Fact Casualty</ID>
+      <Name>Fact Casualty</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Measures>
+        <Measure dwd:design-time-name="23757cb6-5866-45a2-8a2a-71240d48098a">
+          <ID>Fact Casualty Count</ID>
+          <Name>Fact Casualty Count</Name>
+          <AggregateFunction>Count</AggregateFunction>
+          <Source dwd:design-time-name="b8974cf0-7394-4eb7-86c4-7bb4806dfd71">
+            <DataType>Integer</DataType>
+            <DataSize>4</DataSize>
+            <Source xsi:type="RowBinding" dwd:design-time-name="de79cf96-edc1-4da8-9496-63012b46c609">
+              <TableID>dbo_FactCasualty</TableID>
+            </Source>
+          </Source>
+        </Measure>
+      </Measures>
+      <StorageMode>Molap</StorageMode>
+      <ProcessingMode>Regular</ProcessingMode>
+      <Dimensions>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="9a8ee79b-1a06-43e1-aaa0-5b62e013cd6e">
+          <CubeDimensionID>Casualty</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="939ed75a-77b4-46c6-9305-6076c1f66ab4">
+              <AttributeID>Casualty ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="1ff4983b-a042-4b5f-8844-dfdeb34cddae">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="be42afeb-57b1-407c-8cd7-20388aa11cd7">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtyID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="6280173b-f0d3-43a1-884d-da44199d1624">
+          <CubeDimensionID>DimCasualty</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="5904167d-cbc5-432e-b6b3-8013f3be3c94">
+              <AttributeID>Casualty ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="129b8320-79df-43cb-bc39-036ec5a9410b">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="b2edac40-591b-4c76-96cc-849d212b4b72">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtyID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e419d9c2-8c43-4a40-a0e4-7dae24c9f902">
+          <CubeDimensionID>Dim Casualty Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="2244a867-0e6d-491d-9258-34bb9bfae339">
+              <AttributeID>Casualty Type ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="3e253148-7e18-463b-8d28-5696ca52e269">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="9af64f23-2f80-4bf3-8cba-cc4f349b8944">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtyTypeID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4058fcc2-14ef-430e-851b-0a6803a60321">
+          <CubeDimensionID>Dim Casualty Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3e94aab3-2c38-4931-bb93-11ed32e7db07">
+              <AttributeID>Casualty Severity ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="89e90c21-7648-4e92-8245-adc765d306a2">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="68cf94e6-f7c3-4ff5-ae3f-1e1767721b02">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtySeverityID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="4aeffa40-4e10-4f26-bc46-bb0149833a79">
+          <CubeDimensionID>Dim Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="00f29385-6f68-45d3-9208-0abd861e11f2">
+              <AttributeID>Date ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="e3321cb1-1370-4154-8da9-f26b6b94bc22">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="2c279ff6-0c45-4895-b124-f00d2262b4ec">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>DateID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="8b1d9476-fa97-4fe6-b910-f134fc39a755">
+          <CubeDimensionID>Dim Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="f223b6e2-eb45-40cd-86e4-52402f560e2f">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="45d2d903-29dd-48c2-9041-bd64be4eda92">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="fb2a745f-5e8b-4290-8638-e6b7742e40f5">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>LADID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="fad84cc3-8bfc-4b1a-a389-e28c8f24071c">
+          <CubeDimensionID>Accident</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="1a357f73-ca27-4499-a61f-da76c35c629a">
+              <AttributeID>Accident ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="eaf76279-4ad9-4749-ba25-4d09ab179193">
+                  <DataType>Integer</DataType>
+                  <NullProcessing>UnknownMember</NullProcessing>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="bce9c385-3203-426c-b933-e6f1212097f3">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>AccidentID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="79370011-3140-4929-a650-50ea3cb2acdc">
+          <CubeDimensionID>Dim Gender</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fc82854e-f841-4ce1-9e42-0ad52b3a286a">
+              <AttributeID>Gender ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f412d048-ee6f-4a59-8209-2c9db144b93f">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="ee360114-d8f6-4887-aaba-220e44e12455">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>GenderID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="RegularMeasureGroupDimension" dwd:design-time-name="e5dc1d39-515e-4a9f-b512-fa107cae7888">
+          <CubeDimensionID>Dim Age Band</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="20b63359-5319-44f4-a899-da682b35758d">
+              <AttributeID>Age Band ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f293aacf-b155-4530-98fc-54c2096547f1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="6505b286-801d-44bd-b7f2-6e6b3db2a9dd">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>AgeBandID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="d94457de-532e-454f-b85c-f8f55da93bda">
+          <CubeDimensionID>Accident - Local Authority District 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="fc937406-8f3b-411d-9b26-744ffddd407f">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="2be32342-8f84-43ba-b7af-d37e219f9aa5">
+          <CubeDimensionID>Accident - Local Authority District 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="55508636-8294-47ee-84b6-f7ee86a5840f">
+              <AttributeID>Local Authority District ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Local Authority District ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="78bd1e32-fc7e-4cdd-9375-35b18b56d589">
+          <CubeDimensionID>Accident - Accident Severity 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="b0da9a03-9689-4f1a-995b-dc5680c50991">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="416b317a-9fef-452d-9262-f8ac1cc4bdaf">
+          <CubeDimensionID>Accident - Accident Severity</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="eb988270-42c7-41ab-9e71-9e2ef05fb3d2">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="ff6fc2e1-082d-4dd8-af2f-4cf89c86d1b9">
+          <CubeDimensionID>Accident - Accident Severity 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="d16362fb-b5e2-495e-89c3-a8b3456dfe52">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="4bf410f5-ad66-43a0-bcc3-02cda6235e0f">
+          <CubeDimensionID>Accident - Accident Severity 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="6e792580-38bd-49ed-ae2c-81e8d54de626">
+              <AttributeID>Accident Severity ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Accident Severity ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="a6557c22-b693-4367-aaa8-6eb3d607b4ac">
+          <CubeDimensionID>Accident - Road Type</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="ac55d8a6-3a46-470f-9cda-3955f7286087">
+              <AttributeID>Road Type ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Road Type ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="a1562ec1-5528-4c49-bea9-00bf73486f9e">
+          <CubeDimensionID>Accident - Location</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="cf4526d7-e9c8-4a46-a29f-cd8c507869d5">
+              <AttributeID>Location ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Location ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="b3992870-6f06-4b00-8697-7da8838951d7">
+          <CubeDimensionID>Accident - Area</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3c2ff8e5-46a8-4d29-bf39-d250dab270b7">
+              <AttributeID>Area ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Area ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="0e0361f8-0083-49de-b635-5b60efa76428">
+          <CubeDimensionID>Accident - Date</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="a0704112-191f-4787-a706-020511a64ec6">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="e251eef4-719e-4a51-9f91-2651663c252e">
+          <CubeDimensionID>Accident - Date 1</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="876fa52b-3de2-46c2-b879-6de533c129b4">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="ReferenceMeasureGroupDimension" dwd:design-time-name="bfc4fc34-8c1e-45cb-850a-15a1e46d1a12">
+          <CubeDimensionID>Accident - Date 3</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3a5e8ccd-f74f-4829-91e1-fbf1df2e8853">
+              <AttributeID>Date ID</AttributeID>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+          <IntermediateCubeDimensionID>Accident</IntermediateCubeDimensionID>
+          <IntermediateGranularityAttributeID>Date ID</IntermediateGranularityAttributeID>
+          <Materialization>Regular</Materialization>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="d1e773c7-b640-4c6f-9201-f71c04275b41">
+          <CubeDimensionID>Accident - Local Authority District</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="3ff4cc46-ea1c-4189-b8ea-ba3ca26d685c">
+              <AttributeID>Casualty ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="7ddb7b7c-d3b1-4957-9cc0-51d9cbd54f2c">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="520fc3b0-26e7-4767-9f46-02c40d2d6466">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtyID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+        <Dimension xsi:type="DegenerateMeasureGroupDimension" dwd:design-time-name="42b83ca5-21aa-47d3-820d-67af3eb6e9fe">
+          <CubeDimensionID>Accident - Date 2</CubeDimensionID>
+          <Attributes>
+            <Attribute dwd:design-time-name="be4ebe87-1ee0-4944-9590-da6aa389f41d">
+              <AttributeID>Casualty ID</AttributeID>
+              <KeyColumns>
+                <KeyColumn dwd:design-time-name="f8dada2e-58e1-4279-af28-dbd44f87bba1">
+                  <DataType>Integer</DataType>
+                  <Source xsi:type="ColumnBinding" dwd:design-time-name="761ff190-3656-4d32-ae6c-72e5e4044759">
+                    <TableID>dbo_FactCasualty</TableID>
+                    <ColumnID>CasualtyID</ColumnID>
+                  </Source>
+                </KeyColumn>
+              </KeyColumns>
+              <Type>Granularity</Type>
+            </Attribute>
+          </Attributes>
+        </Dimension>
+      </Dimensions>
+      <Partitions />
+    </MeasureGroup>
+  </MeasureGroups>
+  <Source dwd:design-time-name="3e611c19-e389-4c21-b5c2-ec730645ad4b">
+    <DataSourceViewID>UK Accidents DDS</DataSourceViewID>
+  </Source>
+</Cube>
