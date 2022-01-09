@@ -81,6 +81,10 @@
       <Name>Dim Accident Severity.dim</Name>
       <FullPath>Dim Accident Severity.dim</FullPath>
     </ProjectItem>
+    <ProjectItem>
+      <Name>Fact Vehicle.dim</Name>
+      <FullPath>Fact Vehicle.dim</FullPath>
+    </ProjectItem>
   </Dimensions>
   <DataSources>
     <ProjectItem>
@@ -94,6 +98,12 @@
       <FullPath>UK Accidents DDS.dsv</FullPath>
     </ProjectItem>
   </DataSourceViews>
+  <MiningModels>
+    <ProjectItem>
+      <Name>Predict Accident Severity.dmm</Name>
+      <FullPath>Predict Accident Severity.dmm</FullPath>
+    </ProjectItem>
+  </MiningModels>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
