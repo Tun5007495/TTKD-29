@@ -1,0 +1,57 @@
+//select [Measures].[Fact Accident Count] on columns,
+//[Dim Date].[Year].Members on rows
+//from [DDS 1];
+
+
+--cau 1:
+select non empty [Dim Casualty Severity].[Casualty Severity Label].members on columns,
+non empty [Dim Local Authority District].[Local Authority District Label].children on rows
+from [DDS 1]
+where [Measures].[Fact Casualty Count];
+
+--cau 2: crossjoin khong dung cho phan cap chieu
+select non empty crossjoin([Dim Date].[Year].children,[Dim Date].[Quarter].children) on columns,
+non empty {([Dim Local Authority District].[Local Authority District Label].children,[Dim Casualty Severity].[Casualty Severity Label].children )}
+on rows
+from [DDS 1]
+where [Measures].[Fact Casualty Count];
+
+--cau 3:
+select non empty crossjoin(crossjoin({[Dim Gender].[Gender Label].[Gender Label]
+-[Dim Gender].[Gender Label].&[Data missing or out of range]},[Dim Casualty Type].[Casualty Type Label].[Casualty Type Label]),
+[Dim Age Band].[Age Band Label].[Age Band Label])
+on rows,
+non empty [Dim Date].[Year].[Year] on columns
+from [DDS 1]
+where [Measures].[Fact Casualty Count];
+
+--cau 4:
+select non empty [Dim Date].[Year].[Year] on columns, non empty
+crossjoin([Dim Accident Severity].[Accident Severity Label].[Accident Severity Label],[Fact Accident].[Time Of Day].[Time Of Day]) on rows
+from [DDS 1]
+where [Measures].[Fact Accident Count];
+
+--cau 5:
+select non empty crossjoin([Dim Date].[Year].[Year],[Dim Area].[Area Label].[Area Label]) on columns, non empty
+crossjoin([Dim Accident Severity].[Accident Severity Label].[Accident Severity Label],
+[Dim Road Type].[Road Type Label].[Road Type Label]) on rows
+from [DDS 1]
+where [Measures].[Fact Accident Count];
+
+--cau 6:
+select non empty [Dim Casualty Severity].[Casualty Severity Label].[Casualty Severity Label] on columns,
+non empty crossjoin([Dim Casualty Type].[Casualty Type Label].[Casualty Type Label], [Fact Casualty].[Age Group].[Age Group]) on rows
+from [DDS 1]
+where [Measures].[Fact Casualty Count];
+
+--cau 7:
+select non empty [Dim Vehicle Type].[Vehicle Type Label].Members on columns,
+non empty [Dim Journey Purpose].[Journey Purpose Label].[Journey Purpose Label] on rows
+from [DDS 1]
+where [Measures].[Fact Vehicles Count];
+
+--cau 9:
+select non empty crossjoin( [Dim Date].[Year].[Year],[Fact Accident].[Built Up Road].[Built Up Road]) on columns,
+non empty crossjoin([Dim Vehicle Type].[Vehicle Type Label].[Vehicle Type Label] ,[Dim Accident Severity].[Accident Severity Label].[Accident Severity Label]) on rows
+from [DDS 1]
+where [Measures].[Fact Vehicles Count];
